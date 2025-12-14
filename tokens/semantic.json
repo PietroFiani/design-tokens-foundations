@@ -582,7 +582,7 @@
             "$value": {
                 "colorSpace": "hsl",
                 "components": [0, 0, 0],
-                "alpha": 0.6,
+                "alpha": "{opacity.60}",
                 "hex": "#000000"
             },
             "$description": "Modal backdrop overlay (60% black). Use for dialog/modal backgrounds."
@@ -592,7 +592,7 @@
             "$value": {
                 "colorSpace": "hsl",
                 "components": [0, 0, 0],
-                "alpha": 0.1,
+                "alpha": "{opacity.10}",
                 "hex": "#000000"
             },
             "$description": "Dropdown overlay (10% black). Subtle background for dropdowns."
@@ -602,7 +602,7 @@
             "$value": {
                 "colorSpace": "hsl",
                 "components": [0, 0, 0],
-                "alpha": 0.05,
+                "alpha": "{opacity.5}",
                 "hex": "#000000"
             },
             "$description": "Hover overlay (5% black). Subtle hover state on images/cards."
