@@ -423,6 +423,16 @@
         }
     },
     "typography": {
+        "display": {
+            "$type": "typography",
+            "$value": {
+                "fontFamily": "{fontFamily.sans}",
+                "fontSize": "{fontSize.6xl}",
+                "fontWeight": "{fontWeight.bold}",
+                "lineHeight": "{lineHeight.tight}"
+            },
+            "$description": "Display text (60px). Largest text for hero sections, marketing pages, landing page headlines. Use sparingly for maximum impact."
+        },
         "heading": {
             "h1": {
                 "$type": "typography",
@@ -528,28 +538,6 @@
                 },
                 "$description": "Small label (12px, medium weight). Compact labels, tags, badges."
             }
-        },
-        "code": {
-            "inline": {
-                "$type": "typography",
-                "$value": {
-                    "fontFamily": "{fontFamily.mono}",
-                    "fontSize": "{fontSize.sm}",
-                    "fontWeight": "{fontWeight.regular}",
-                    "lineHeight": "{lineHeight.normal}"
-                },
-                "$description": "Inline code text. Use within paragraphs for code snippets, variable names."
-            },
-            "block": {
-                "$type": "typography",
-                "$value": {
-                    "fontFamily": "{fontFamily.mono}",
-                    "fontSize": "{fontSize.sm}",
-                    "fontWeight": "{fontWeight.regular}",
-                    "lineHeight": "{lineHeight.relaxed}"
-                },
-                "$description": "Block code text. Use for code blocks, preformatted text. Relaxed line height for readability."
-            }
         }
     },
     "transition": {
@@ -577,56 +565,75 @@
         }
     },
     "overlay": {
-        "modal": {
-            "$type": "color",
-            "$value": "{color.transparency.60}",
-            "$description": "Modal backdrop overlay (60% black). Use for dialog/modal backgrounds."
-        },
-        "dropdown": {
-            "$type": "color",
-            "$value": "{color.transparency.10}",
-            "$description": "Dropdown overlay (10% black). Subtle background for dropdowns."
-        },
-        "hover": {
+        "5": {
             "$type": "color",
             "$value": "{color.transparency.5}",
-            "$description": "Hover overlay (5% black). Subtle hover state on images/cards."
+            "$description": "Overlay at 5% opacity. Extremely subtle overlay for hover states."
+        },
+        "10": {
+            "$type": "color",
+            "$value": "{color.transparency.10}",
+            "$description": "Overlay at 10% opacity. Very subtle overlay for dropdowns and secondary surfaces."
+        },
+        "20": {
+            "$type": "color",
+            "$value": "{color.transparency.20}",
+            "$description": "Overlay at 20% opacity. Subtle overlay for tooltips and popovers."
+        },
+        "60": {
+            "$type": "color",
+            "$value": "{color.transparency.60}",
+            "$description": "Overlay at 60% opacity. Semi-transparent overlay for modals and backdrops."
         }
     },
     "shadow": {
-        "card": {
-            "default": {
-                "$type": "shadow",
-                "$value": "{elevation.5}",
-                "$description": "Default card shadow. Subtle elevation for cards at rest."
-            },
-            "hover": {
-                "$type": "shadow",
-                "$value": "{elevation.10}",
-                "$description": "Card shadow on hover. Increased elevation for interactive feedback."
-            }
-        },
-        "dropdown": {
+        "5": {
             "$type": "shadow",
-            "$value": "{elevation.20}",
-            "$description": "Dropdown shadow. Elevated menus and popovers."
-        },
-        "modal": {
-            "$type": "shadow",
-            "$value": "{elevation.60}",
-            "$description": "Modal shadow. Maximum elevation for dialogs and overlays."
-        },
-        "button": {
-            "default": {
-                "$type": "shadow",
-                "$value": "{elevation.5}",
-                "$description": "Default button shadow. Subtle depth."
+            "$value": {
+                "offsetX": "0px",
+                "offsetY": "1px",
+                "blur": "3px",
+                "spread": "0px",
+                "color": "{color.neutral.900}",
+                "alpha": 0.05
             },
-            "hover": {
-                "$type": "shadow",
-                "$value": "{elevation.10}",
-                "$description": "Button shadow on hover. Lifted appearance."
-            }
+            "$description": "Shadow at 5% opacity (1px offset, 3px blur). Minimal depth for subtle elevation."
+        },
+        "10": {
+            "$type": "shadow",
+            "$value": {
+                "offsetX": "0px",
+                "offsetY": "4px",
+                "blur": "6px",
+                "spread": "-1px",
+                "color": "{color.neutral.900}",
+                "alpha": 0.1
+            },
+            "$description": "Shadow at 10% opacity (4px offset, 6px blur). Subtle depth for standard elevation."
+        },
+        "20": {
+            "$type": "shadow",
+            "$value": {
+                "offsetX": "0px",
+                "offsetY": "10px",
+                "blur": "15px",
+                "spread": "-3px",
+                "color": "{color.neutral.900}",
+                "alpha": 0.2
+            },
+            "$description": "Shadow at 20% opacity (10px offset, 15px blur). Moderate depth for elevated elements."
+        },
+        "60": {
+            "$type": "shadow",
+            "$value": {
+                "offsetX": "0px",
+                "offsetY": "20px",
+                "blur": "25px",
+                "spread": "-5px",
+                "color": "{color.neutral.900}",
+                "alpha": 0.6
+            },
+            "$description": "Shadow at 60% opacity (20px offset, 25px blur). Maximum depth for highest elevation."
         }
     }
 }

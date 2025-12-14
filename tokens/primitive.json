@@ -1087,7 +1087,15 @@
                     "alpha": 0.05,
                     "hex": "#000000"
                 },
-                "$description": "Black at 5% opacity. Extremely subtle overlay."
+                "$description": "Black at 5% opacity. Extremely subtle overlay.",
+                "$extensions": {
+                    "elevation": {
+                        "offsetX": "0px",
+                        "offsetY": "1px",
+                        "blur": "3px",
+                        "spread": "0px"
+                    }
+                }
             },
             "10": {
                 "$type": "color",
@@ -1097,7 +1105,15 @@
                     "alpha": 0.1,
                     "hex": "#000000"
                 },
-                "$description": "Black at 10% opacity. Very subtle overlay."
+                "$description": "Black at 10% opacity. Very subtle overlay.",
+                "$extensions": {
+                    "elevation": {
+                        "offsetX": "0px",
+                        "offsetY": "4px",
+                        "blur": "6px",
+                        "spread": "-1px"
+                    }
+                }
             },
             "20": {
                 "$type": "color",
@@ -1107,7 +1123,15 @@
                     "alpha": 0.2,
                     "hex": "#000000"
                 },
-                "$description": "Black at 20% opacity. Subtle overlay."
+                "$description": "Black at 20% opacity. Subtle overlay.",
+                "$extensions": {
+                    "elevation": {
+                        "offsetX": "0px",
+                        "offsetY": "10px",
+                        "blur": "15px",
+                        "spread": "-3px"
+                    }
+                }
             },
             "60": {
                 "$type": "color",
@@ -1117,7 +1141,15 @@
                     "alpha": 0.6,
                     "hex": "#000000"
                 },
-                "$description": "Black at 60% opacity. Semi-transparent."
+                "$description": "Black at 60% opacity. Semi-transparent.",
+                "$extensions": {
+                    "elevation": {
+                        "offsetX": "0px",
+                        "offsetY": "20px",
+                        "blur": "25px",
+                        "spread": "-5px"
+                    }
+                }
             }
         }
     },
@@ -1497,56 +1529,6 @@
                 "unit": "px"
             },
             "$description": "Thick border (4px). Strong emphasis."
-        }
-    },
-    "elevation": {
-        "5": {
-            "$type": "shadow",
-            "$value": {
-                "offsetX": "0px",
-                "offsetY": "1px",
-                "blur": "3px",
-                "spread": "0px",
-                "color": "{color.neutral.900}",
-                "alpha": 0.05
-            },
-            "$description": "Elevation 5 (1px offset, 3px blur, 5% opacity). Minimal depth."
-        },
-        "10": {
-            "$type": "shadow",
-            "$value": {
-                "offsetX": "0px",
-                "offsetY": "4px",
-                "blur": "6px",
-                "spread": "-1px",
-                "color": "{color.neutral.900}",
-                "alpha": 0.1
-            },
-            "$description": "Elevation 10 (4px offset, 6px blur, 10% opacity). Subtle depth."
-        },
-        "20": {
-            "$type": "shadow",
-            "$value": {
-                "offsetX": "0px",
-                "offsetY": "10px",
-                "blur": "15px",
-                "spread": "-3px",
-                "color": "{color.neutral.900}",
-                "alpha": 0.2
-            },
-            "$description": "Elevation 20 (10px offset, 15px blur, 20% opacity). Moderate depth."
-        },
-        "60": {
-            "$type": "shadow",
-            "$value": {
-                "offsetX": "0px",
-                "offsetY": "20px",
-                "blur": "25px",
-                "spread": "-5px",
-                "color": "{color.neutral.900}",
-                "alpha": 0.6
-            },
-            "$description": "Elevation 60 (20px offset, 25px blur, 60% opacity). Maximum depth."
         }
     }
 }
