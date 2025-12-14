@@ -1197,50 +1197,25 @@
         }
     },
     "fontWeight": {
-        "thin": {
-            "$type": "number",
-            "$value": 100,
-            "$description": "Thin weight. Rarely used."
-        },
-        "extralight": {
-            "$type": "number",
-            "$value": 200,
-            "$description": "Extra light weight."
-        },
-        "light": {
-            "$type": "number",
-            "$value": 300,
-            "$description": "Light weight. Subtle text."
-        },
         "regular": {
             "$type": "number",
             "$value": 400,
-            "$description": "Regular weight. Body text default."
+            "$description": "Regular weight (400). Default for body text and most UI elements."
         },
         "medium": {
             "$type": "number",
             "$value": 500,
-            "$description": "Medium weight. Emphasis."
+            "$description": "Medium weight (500). For emphasis, labels, and navigation items."
         },
         "semibold": {
             "$type": "number",
             "$value": 600,
-            "$description": "Semibold weight. Subheadings."
+            "$description": "Semibold weight (600). For subheadings and strong labels."
         },
         "bold": {
             "$type": "number",
             "$value": 700,
-            "$description": "Bold weight. Headings and strong emphasis."
-        },
-        "extrabold": {
-            "$type": "number",
-            "$value": 800,
-            "$description": "Extra bold weight. Strong headings."
-        },
-        "black": {
-            "$type": "number",
-            "$value": 900,
-            "$description": "Black weight. Maximum emphasis."
+            "$description": "Bold weight (700). For headings, strong emphasis, and CTAs."
         }
     },
     "lineHeight": {
