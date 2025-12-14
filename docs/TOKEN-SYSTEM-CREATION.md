@@ -15,14 +15,86 @@ This guide outlines how to architect and organize a design token system, includi
 
 ## Table of Contents
 
+- [Before You Start: Architecture Questions](#before-you-start-architecture-questions)
 - [System Architecture Overview](#system-architecture-overview)
 - [File Organization](#file-organization)
 - [Layer Architecture](#layer-architecture)
 - [Theme Management](#theme-management)
 - [Platform Configuration](#platform-configuration)
-- [Critical Architecture Questions](#critical-architecture-questions)
 - [System Creation Process](#system-creation-process)
 - [Examples](#examples)
+
+---
+
+## Before You Start: Architecture Questions
+
+**IMPORTANT**: Answer these questions BEFORE creating any files or folders. Your answers determine the entire system structure.
+
+### 1. How many platforms do you need to support?
+
+- [ ] **One platform** → No `platforms/` folder
+- [ ] **Multiple platforms** → Use `platforms/{web,ios,android}/`
+
+---
+
+### 2. How many brand colors do you have?
+
+- [ ] **1 brand color** (Primary only)
+- [ ] **2 brand colors** (Primary + Secondary)
+- [ ] **3+ brand colors** (Primary + Secondary + Tertiary)
+
+**Provide HEX values**: (e.g., Primary: #0A1128, Secondary: #00F5AB, Tertiary: #3B5DCE)
+
+---
+
+### 3. How many themes do you need?
+
+- [ ] **One theme** → No `themes/` folder
+- [ ] **Two themes** (Light + Dark) → Use `themes/` folder
+- [ ] **Three+ themes** → Use `themes/` folder with named files
+
+---
+
+### 4. How many heading levels do you need?
+
+- [ ] **2 levels** (H1, H2)
+- [ ] **3 levels** (H1, H2, H3)
+- [ ] **4 levels** (H1, H2, H3, H4)
+- [ ] **6 levels** (H1-H6)
+
+---
+
+### 5. Do you need WCAG AAA compliance?
+
+- [ ] **No** (WCAG AA - 4.5:1)
+- [ ] **Yes** (WCAG AAA - 7:1) → Add contrast variants
+
+---
+
+### 6. Do platforms need different values?
+
+- [ ] **No** → Single `primitive.json`
+- [ ] **Yes** → Add `primitive-overrides.json` per platform
+
+---
+
+### 7. What is your baseline spacing unit?
+
+- [ ] **4px**
+- [ ] **8px** (most common)
+- [ ] **16px**
+
+---
+
+### 8. How many body text sizes?
+
+- [ ] **1 size** (md only)
+- [ ] **2 sizes** (sm, md)
+- [ ] **3 sizes** (sm, md, lg)
+
+---
+
+**Next**: Based on your answers, proceed to [System Creation Process](#system-creation-process) to create the appropriate structure.
 
 ---
 
@@ -51,33 +123,57 @@ The token system follows a **two-layer architecture** as defined in ADR 001:
 
 ### Directory Structure
 
-Per **ADR 001**:
+Per **ADR 001**, the structure adapts based on your requirements:
 
+**Full Structure** (Multi-platform, Multi-theme):
 ```
 tokens/
-├── primitive.json                 # Single source of truth for raw values
+├── primitive.json
 └── platforms/
     ├── web/
     │   ├── themes/
-    │   │   ├── light.json        # Web light theme semantics
-    │   │   └── dark.json         # Web dark theme semantics
-    │   └── primitive-overrides.json # Optional: Platform-specific primitives
-    ├── ios/
-    │   ├── themes/
     │   │   ├── light.json
     │   │   └── dark.json
-    │   └── primitive-overrides.json
+    │   └── primitive-overrides.json # Optional
+    ├── ios/
+    │   └── themes/
+    │       ├── light.json
+    │       └── dark.json
     └── android/
-        ├── themes/
-        │   ├── light.json
-        │   └── dark.json
-        └── primitive-overrides.json
+        └── themes/
+            ├── light.json
+            └── dark.json
 ```
+
+**Single Platform, Multi-theme** (e.g., Web only with light/dark):
+```
+tokens/
+├── primitive.json
+└── platforms/
+    └── web/
+        └── themes/
+            ├── light.json
+            └── dark.json
+```
+
+**Single Platform, Single Theme** (Simplest):
+```
+tokens/
+├── primitive.json
+└── semantic.json      # No platforms or themes folders needed
+```
+
+**Conditional Rules**:
+- **One platform only**: Skip `platforms/` folder, place semantic file at root
+- **One theme only**: Skip `themes/` folder, place semantic file directly in platform folder
+- **Multiple themes**: Use `themes/` folder with named files (light.json, dark.json)
+- **Multiple platforms**: Use `platforms/` folder with platform subfolders
 
 **Why This Structure?** (ADR 001):
 - ✅ Layer explicit via `primitive.*` and `semantic.*` prefixes
 - ✅ Theme via folders: Easy to add/remove without touching token names
 - ✅ Platform via folders: Clear separation for platform builds
+- ✅ Simplified structure for simple projects
 - ✅ Tool compatibility: Works with Style Dictionary, Figma Tokens, Tokens Studio
 
 ---
@@ -467,16 +563,38 @@ Answer the critical questions above to decide:
 
 ### Step 2: Create Directory Structure
 
-```bash
-# Minimum (web, single theme)
-mkdir -p tokens/platforms/web/themes
-touch tokens/primitive.json tokens/platforms/web/themes/light.json
+Based on your answers from Step 1, create the appropriate structure:
 
-# Full (multi-platform, multi-theme)
+**Single Platform, Single Theme** (Simplest):
+```bash
+mkdir -p tokens
+touch tokens/primitive.json tokens/semantic.json
+```
+
+**Single Platform, Multi-Theme** (e.g., Web with light/dark):
+```bash
+mkdir -p tokens/platforms/web/themes
+touch tokens/primitive.json
+touch tokens/platforms/web/themes/{light,dark}.json
+```
+
+**Multi-Platform, Single Theme**:
+```bash
+mkdir -p tokens/platforms/{web,ios,android}
+touch tokens/primitive.json
+touch tokens/platforms/web/semantic.json
+touch tokens/platforms/ios/semantic.json
+touch tokens/platforms/android/semantic.json
+```
+
+**Multi-Platform, Multi-Theme** (Full structure):
+```bash
 mkdir -p tokens/platforms/{web,ios,android}/themes
 touch tokens/primitive.json
 touch tokens/platforms/{web,ios,android}/themes/{light,dark}.json
 ```
+
+**Remember**: Only create the folders and files you actually need based on your requirements.
 
 ### Step 3: Create Primitive Tokens
 
@@ -518,21 +636,21 @@ npx style-dictionary build --config style-dictionary.config.js
 
 ## Examples
 
-### Example 1: Simple Web-Only System
+### Example 1: Simplest System (Single Platform, Single Theme)
 
-**Requirements**: Web platform, light theme only, 2 brand colors
+**Requirements**: Web platform, light theme only, 1 brand color
 
 **Structure**:
 ```
 tokens/
 ├── primitive.json
-└── platforms/web/themes/light.json
+└── semantic.json      # No platforms/ or themes/ folders
 ```
 
 **Build Config**:
 ```javascript
 module.exports = {
-  source: ['tokens/primitive.json', 'tokens/platforms/web/themes/light.json'],
+  source: ['tokens/primitive.json', 'tokens/semantic.json'],
   platforms: {
     css: {
       transformGroup: 'css',
@@ -542,6 +660,8 @@ module.exports = {
   }
 };
 ```
+
+**When to use**: MVPs, prototypes, single-platform applications with no theme switching
 
 ---
 

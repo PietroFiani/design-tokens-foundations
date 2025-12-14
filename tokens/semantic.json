@@ -1,0 +1,652 @@
+{
+    "color": {
+        "background": {
+            "base": {
+                "default": {
+                    "$type": "color",
+                    "$value": "{color.neutral.0}",
+                    "$description": "Default page background. Pure white for clean, bright layouts.",
+                    "$extensions": {
+                        "contrast": {
+                            "ratio": "21:1",
+                            "level": "AAA",
+                            "foreground": "{color.text.base.default}"
+                        }
+                    }
+                }
+            },
+            "muted": {
+                "default": {
+                    "$type": "color",
+                    "$value": "{color.neutral.50}",
+                    "$description": "Subtle background for secondary areas. Use for cards, panels, sidebars.",
+                    "$extensions": {
+                        "contrast": {
+                            "ratio": "19.5:1",
+                            "level": "AAA",
+                            "foreground": "{color.text.base.default}"
+                        }
+                    }
+                }
+            },
+            "subtle": {
+                "default": {
+                    "$type": "color",
+                    "$value": "{color.neutral.100}",
+                    "$description": "Very subtle background. Use for hover states on light backgrounds."
+                }
+            },
+            "brand": {
+                "default": {
+                    "$type": "color",
+                    "$value": "{color.primary.600}",
+                    "$description": "Primary brand background. Use for CTAs and key interactive elements. Use sparingly (1-3 per screen) to maintain hierarchy. Examples: 'Sign Up' button, 'Submit' CTA.",
+                    "$extensions": {
+                        "contrast": {
+                            "ratio": "4.5:1",
+                            "level": "AA",
+                            "foreground": "{color.text.inverse.default}"
+                        }
+                    }
+                },
+                "hover": {
+                    "$type": "color",
+                    "$value": "{color.primary.700}",
+                    "$description": "Primary brand background on hover. Provides clear interactive feedback.",
+                    "$extensions": {
+                        "contrast": {
+                            "ratio": "5.8:1",
+                            "level": "AA",
+                            "foreground": "{color.text.inverse.default}"
+                        }
+                    }
+                },
+                "active": {
+                    "$type": "color",
+                    "$value": "{color.primary.800}",
+                    "$description": "Primary brand background on active/pressed state."
+                }
+            },
+            "brandSecondary": {
+                "default": {
+                    "$type": "color",
+                    "$value": "{color.secondary.600}",
+                    "$description": "Secondary brand background. Use for secondary CTAs and supporting actions. Examples: 'Learn More', 'Cancel' with accent."
+                },
+                "hover": {
+                    "$type": "color",
+                    "$value": "{color.secondary.700}",
+                    "$description": "Secondary brand background on hover."
+                }
+            },
+            "brandTertiary": {
+                "default": {
+                    "$type": "color",
+                    "$value": "{color.tertiary.600}",
+                    "$description": "Tertiary brand background. Use for tertiary actions and decorative elements."
+                },
+                "hover": {
+                    "$type": "color",
+                    "$value": "{color.tertiary.700}",
+                    "$description": "Tertiary brand background on hover."
+                }
+            },
+            "success": {
+                "default": {
+                    "$type": "color",
+                    "$value": "{color.success.500}",
+                    "$description": "Success background for positive feedback. Examples: Success alerts, confirmation banners."
+                }
+            },
+            "warning": {
+                "default": {
+                    "$type": "color",
+                    "$value": "{color.warning.500}",
+                    "$description": "Warning background for cautionary feedback. Examples: Warning alerts, caution banners."
+                }
+            },
+            "error": {
+                "default": {
+                    "$type": "color",
+                    "$value": "{color.error.500}",
+                    "$description": "Error background for negative feedback. Examples: Error alerts, validation errors."
+                }
+            }
+        },
+        "text": {
+            "base": {
+                "default": {
+                    "$type": "color",
+                    "$value": "{color.neutral.900}",
+                    "$description": "Primary text color. Near-black provides excellent readability. Use for body text, headings, primary content.",
+                    "$extensions": {
+                        "contrast": {
+                            "ratio": "15.8:1",
+                            "level": "AAA",
+                            "background": "{color.background.base.default}"
+                        }
+                    }
+                }
+            },
+            "muted": {
+                "default": {
+                    "$type": "color",
+                    "$value": "{color.neutral.600}",
+                    "$description": "Secondary text color. Use for labels, helper text, timestamps, less important content.",
+                    "$extensions": {
+                        "contrast": {
+                            "ratio": "7.1:1",
+                            "level": "AAA",
+                            "background": "{color.background.base.default}"
+                        }
+                    }
+                }
+            },
+            "subtle": {
+                "default": {
+                    "$type": "color",
+                    "$value": "{color.neutral.500}",
+                    "$description": "Tertiary text color. Use for placeholder text, disabled states. Meets WCAG AA for large text only.",
+                    "$extensions": {
+                        "contrast": {
+                            "ratio": "4.6:1",
+                            "level": "AA",
+                            "background": "{color.background.base.default}"
+                        }
+                    }
+                }
+            },
+            "inverse": {
+                "default": {
+                    "$type": "color",
+                    "$value": "{color.neutral.0}",
+                    "$description": "Inverse text for dark backgrounds. Use on brand backgrounds, dark surfaces. Examples: Text on primary buttons.",
+                    "$extensions": {
+                        "contrast": {
+                            "ratio": "4.5:1",
+                            "level": "AA",
+                            "background": "{color.background.brand.default}"
+                        }
+                    }
+                }
+            },
+            "brand": {
+                "default": {
+                    "$type": "color",
+                    "$value": "{color.primary.600}",
+                    "$description": "Primary brand text. Use for links, brand-colored text. Examples: Hyperlinks, brand labels."
+                },
+                "hover": {
+                    "$type": "color",
+                    "$value": "{color.primary.700}",
+                    "$description": "Primary brand text on hover. Use for link hover states."
+                }
+            },
+            "brandSecondary": {
+                "default": {
+                    "$type": "color",
+                    "$value": "{color.secondary.600}",
+                    "$description": "Secondary brand text. Use for secondary links and accents."
+                }
+            },
+            "brandTertiary": {
+                "default": {
+                    "$type": "color",
+                    "$value": "{color.tertiary.600}",
+                    "$description": "Tertiary brand text. Use for tertiary links and decorative text."
+                }
+            },
+            "success": {
+                "default": {
+                    "$type": "color",
+                    "$value": "{color.success.600}",
+                    "$description": "Success text for positive feedback. Examples: Success messages, confirmation text."
+                }
+            },
+            "warning": {
+                "default": {
+                    "$type": "color",
+                    "$value": "{color.warning.600}",
+                    "$description": "Warning text for cautionary feedback. Examples: Warning messages, caution text."
+                }
+            },
+            "error": {
+                "default": {
+                    "$type": "color",
+                    "$value": "{color.error.600}",
+                    "$description": "Error text for negative feedback. Examples: Error messages, validation text."
+                }
+            }
+        },
+        "border": {
+            "base": {
+                "default": {
+                    "$type": "color",
+                    "$value": "{color.neutral.200}",
+                    "$description": "Default border color. Use for dividers, input borders, card outlines."
+                }
+            },
+            "muted": {
+                "default": {
+                    "$type": "color",
+                    "$value": "{color.neutral.100}",
+                    "$description": "Subtle border color. Use for very subtle dividers."
+                }
+            },
+            "emphasis": {
+                "default": {
+                    "$type": "color",
+                    "$value": "{color.neutral.300}",
+                    "$description": "Emphasized border. Use for focused states, stronger dividers."
+                }
+            },
+            "brand": {
+                "default": {
+                    "$type": "color",
+                    "$value": "{color.primary.600}",
+                    "$description": "Primary brand border. Use for focus rings, brand-accented containers."
+                }
+            },
+            "error": {
+                "default": {
+                    "$type": "color",
+                    "$value": "{color.error.500}",
+                    "$description": "Error border for validation states. Examples: Invalid input borders."
+                }
+            }
+        }
+    },
+    "spacing": {
+        "padding": {
+            "xs": {
+                "$type": "dimension",
+                "$value": "{spacing.1}",
+                "$description": "Extra small padding (4px). Very compact buttons, tight spacing."
+            },
+            "sm": {
+                "$type": "dimension",
+                "$value": "{spacing.2}",
+                "$description": "Small padding (8px). Compact buttons, small chips."
+            },
+            "md": {
+                "$type": "dimension",
+                "$value": "{spacing.4}",
+                "$description": "Medium padding (16px). Default buttons, input fields, cards."
+            },
+            "lg": {
+                "$type": "dimension",
+                "$value": "{spacing.6}",
+                "$description": "Large padding (24px). Spacious buttons, large cards."
+            },
+            "xl": {
+                "$type": "dimension",
+                "$value": "{spacing.8}",
+                "$description": "Extra large padding (32px). Hero sections, major containers."
+            }
+        },
+        "gap": {
+            "xs": {
+                "$type": "dimension",
+                "$value": "{spacing.1}",
+                "$description": "Extra small gap (4px). Tight element spacing."
+            },
+            "sm": {
+                "$type": "dimension",
+                "$value": "{spacing.2}",
+                "$description": "Small gap (8px). Compact layouts, button groups."
+            },
+            "md": {
+                "$type": "dimension",
+                "$value": "{spacing.4}",
+                "$description": "Medium gap (16px). Standard element spacing."
+            },
+            "lg": {
+                "$type": "dimension",
+                "$value": "{spacing.6}",
+                "$description": "Large gap (24px). Section spacing within containers."
+            },
+            "xl": {
+                "$type": "dimension",
+                "$value": "{spacing.8}",
+                "$description": "Extra large gap (32px). Major section separation."
+            }
+        },
+        "stack": {
+            "xs": {
+                "$type": "dimension",
+                "$value": "{spacing.1}",
+                "$description": "Extra small vertical spacing (4px). Tight stacks."
+            },
+            "sm": {
+                "$type": "dimension",
+                "$value": "{spacing.2}",
+                "$description": "Small vertical spacing (8px). Compact lists."
+            },
+            "md": {
+                "$type": "dimension",
+                "$value": "{spacing.4}",
+                "$description": "Medium vertical spacing (16px). Default paragraph spacing."
+            },
+            "lg": {
+                "$type": "dimension",
+                "$value": "{spacing.6}",
+                "$description": "Large vertical spacing (24px). Section spacing."
+            },
+            "xl": {
+                "$type": "dimension",
+                "$value": "{spacing.8}",
+                "$description": "Extra large vertical spacing (32px). Major section gaps."
+            }
+        },
+        "inset": {
+            "xs": {
+                "$type": "dimension",
+                "$value": "{spacing.1}",
+                "$description": "Extra small inset (4px). Tight internal spacing."
+            },
+            "sm": {
+                "$type": "dimension",
+                "$value": "{spacing.2}",
+                "$description": "Small inset (8px). Compact container padding."
+            },
+            "md": {
+                "$type": "dimension",
+                "$value": "{spacing.4}",
+                "$description": "Medium inset (16px). Standard container padding."
+            },
+            "lg": {
+                "$type": "dimension",
+                "$value": "{spacing.6}",
+                "$description": "Large inset (24px). Spacious container padding."
+            },
+            "xl": {
+                "$type": "dimension",
+                "$value": "{spacing.8}",
+                "$description": "Extra large inset (32px). Major container padding."
+            }
+        }
+    },
+    "border": {
+        "radius": {
+            "none": {
+                "$type": "dimension",
+                "$value": "{borderRadius.none}",
+                "$description": "No rounding. Sharp corners for strict geometric designs."
+            },
+            "sm": {
+                "$type": "dimension",
+                "$value": "{borderRadius.sm}",
+                "$description": "Small rounding (2px). Subtle corners."
+            },
+            "md": {
+                "$type": "dimension",
+                "$value": "{borderRadius.md}",
+                "$description": "Medium rounding (4px). Standard for buttons, inputs, chips."
+            },
+            "lg": {
+                "$type": "dimension",
+                "$value": "{borderRadius.lg}",
+                "$description": "Large rounding (8px). Cards, modals, panels."
+            },
+            "xl": {
+                "$type": "dimension",
+                "$value": "{borderRadius.xl}",
+                "$description": "Extra large rounding (12px). Prominent cards."
+            },
+            "full": {
+                "$type": "dimension",
+                "$value": "{borderRadius.full}",
+                "$description": "Fully rounded. Avatars, pills, badges, toggle switches."
+            }
+        },
+        "width": {
+            "none": {
+                "$type": "dimension",
+                "$value": "{borderWidth.none}",
+                "$description": "No border."
+            },
+            "thin": {
+                "$type": "dimension",
+                "$value": "{borderWidth.thin}",
+                "$description": "Thin border (1px). Default for inputs, cards, dividers."
+            },
+            "medium": {
+                "$type": "dimension",
+                "$value": "{borderWidth.medium}",
+                "$description": "Medium border (2px). Emphasis, focus rings."
+            },
+            "thick": {
+                "$type": "dimension",
+                "$value": "{borderWidth.thick}",
+                "$description": "Thick border (4px). Strong emphasis, indicators."
+            }
+        }
+    },
+    "typography": {
+        "heading": {
+            "h1": {
+                "$type": "typography",
+                "$value": {
+                    "fontFamily": "{fontFamily.sans}",
+                    "fontSize": "{fontSize.5xl}",
+                    "fontWeight": "{fontWeight.bold}",
+                    "lineHeight": "{lineHeight.tight}"
+                },
+                "$description": "Main page heading (H1). Use exactly once per page for main title. Large size (48px) creates strong hierarchy. Tight line height (1.25) optimized for single-line display. Examples: 'Dashboard', 'Settings', 'Welcome to Our Platform'."
+            },
+            "h2": {
+                "$type": "typography",
+                "$value": {
+                    "fontFamily": "{fontFamily.sans}",
+                    "fontSize": "{fontSize.4xl}",
+                    "fontWeight": "{fontWeight.bold}",
+                    "lineHeight": "{lineHeight.tight}"
+                },
+                "$description": "Secondary heading (H2). Use for major section headings. Size (36px). Examples: 'Recent Activity', 'Account Details', section dividers."
+            },
+            "h3": {
+                "$type": "typography",
+                "$value": {
+                    "fontFamily": "{fontFamily.sans}",
+                    "fontSize": "{fontSize.3xl}",
+                    "fontWeight": "{fontWeight.semibold}",
+                    "lineHeight": "{lineHeight.tight}"
+                },
+                "$description": "Tertiary heading (H3). Use for subsections within major sections. Size (30px). Examples: 'Personal Information', 'Billing History', subsection titles."
+            },
+            "h4": {
+                "$type": "typography",
+                "$value": {
+                    "fontFamily": "{fontFamily.sans}",
+                    "fontSize": "{fontSize.2xl}",
+                    "fontWeight": "{fontWeight.semibold}",
+                    "lineHeight": "{lineHeight.snug}"
+                },
+                "$description": "Quaternary heading (H4). Use for smaller subsections and card titles. Size (24px). Examples: Card headers, small section titles, group labels."
+            }
+        },
+        "body": {
+            "lg": {
+                "$type": "typography",
+                "$value": {
+                    "fontFamily": "{fontFamily.sans}",
+                    "fontSize": "{fontSize.lg}",
+                    "fontWeight": "{fontWeight.regular}",
+                    "lineHeight": "{lineHeight.normal}"
+                },
+                "$description": "Large body text (18px). Use for emphasized paragraphs, lead text, introductions."
+            },
+            "md": {
+                "$type": "typography",
+                "$value": {
+                    "fontFamily": "{fontFamily.sans}",
+                    "fontSize": "{fontSize.md}",
+                    "fontWeight": "{fontWeight.regular}",
+                    "lineHeight": "{lineHeight.normal}"
+                },
+                "$description": "Standard body text (16px). Default for paragraphs, lists, main content. Optimal readability with 1.5 line height."
+            },
+            "sm": {
+                "$type": "typography",
+                "$value": {
+                    "fontFamily": "{fontFamily.sans}",
+                    "fontSize": "{fontSize.sm}",
+                    "fontWeight": "{fontWeight.regular}",
+                    "lineHeight": "{lineHeight.normal}"
+                },
+                "$description": "Small body text (14px). Use for secondary content, captions, metadata."
+            }
+        },
+        "label": {
+            "lg": {
+                "$type": "typography",
+                "$value": {
+                    "fontFamily": "{fontFamily.sans}",
+                    "fontSize": "{fontSize.md}",
+                    "fontWeight": "{fontWeight.medium}",
+                    "lineHeight": "{lineHeight.normal}"
+                },
+                "$description": "Large label (16px, medium weight). Large form labels, prominent tags."
+            },
+            "md": {
+                "$type": "typography",
+                "$value": {
+                    "fontFamily": "{fontFamily.sans}",
+                    "fontSize": "{fontSize.sm}",
+                    "fontWeight": "{fontWeight.medium}",
+                    "lineHeight": "{lineHeight.normal}"
+                },
+                "$description": "Standard label (14px, medium weight). Form labels, input labels, navigation items."
+            },
+            "sm": {
+                "$type": "typography",
+                "$value": {
+                    "fontFamily": "{fontFamily.sans}",
+                    "fontSize": "{fontSize.xs}",
+                    "fontWeight": "{fontWeight.medium}",
+                    "lineHeight": "{lineHeight.normal}"
+                },
+                "$description": "Small label (12px, medium weight). Compact labels, tags, badges."
+            }
+        },
+        "code": {
+            "inline": {
+                "$type": "typography",
+                "$value": {
+                    "fontFamily": "{fontFamily.mono}",
+                    "fontSize": "{fontSize.sm}",
+                    "fontWeight": "{fontWeight.regular}",
+                    "lineHeight": "{lineHeight.normal}"
+                },
+                "$description": "Inline code text. Use within paragraphs for code snippets, variable names."
+            },
+            "block": {
+                "$type": "typography",
+                "$value": {
+                    "fontFamily": "{fontFamily.mono}",
+                    "fontSize": "{fontSize.sm}",
+                    "fontWeight": "{fontWeight.regular}",
+                    "lineHeight": "{lineHeight.relaxed}"
+                },
+                "$description": "Block code text. Use for code blocks, preformatted text. Relaxed line height for readability."
+            }
+        }
+    },
+    "transition": {
+        "duration": {
+            "instant": {
+                "$type": "duration",
+                "$value": "{duration.instant}",
+                "$description": "No transition (0ms). Immediate state changes."
+            },
+            "fast": {
+                "$type": "duration",
+                "$value": "{duration.fast}",
+                "$description": "Fast transition (100ms). Hover states, tooltips, subtle feedback."
+            },
+            "normal": {
+                "$type": "duration",
+                "$value": "{duration.normal}",
+                "$description": "Normal transition (200ms). Default for most transitions, modals, dropdowns."
+            },
+            "slow": {
+                "$type": "duration",
+                "$value": "{duration.slow}",
+                "$description": "Slow transition (300ms). Complex animations, drawer panels."
+            }
+        }
+    },
+    "overlay": {
+        "modal": {
+            "$type": "color",
+            "$value": {
+                "colorSpace": "hsl",
+                "components": [0, 0, 0],
+                "alpha": 0.6,
+                "hex": "#000000"
+            },
+            "$description": "Modal backdrop overlay (60% black). Use for dialog/modal backgrounds."
+        },
+        "dropdown": {
+            "$type": "color",
+            "$value": {
+                "colorSpace": "hsl",
+                "components": [0, 0, 0],
+                "alpha": 0.1,
+                "hex": "#000000"
+            },
+            "$description": "Dropdown overlay (10% black). Subtle background for dropdowns."
+        },
+        "hover": {
+            "$type": "color",
+            "$value": {
+                "colorSpace": "hsl",
+                "components": [0, 0, 0],
+                "alpha": 0.05,
+                "hex": "#000000"
+            },
+            "$description": "Hover overlay (5% black). Subtle hover state on images/cards."
+        }
+    },
+    "shadow": {
+        "card": {
+            "default": {
+                "$type": "shadow",
+                "$value": "{shadow.sm}",
+                "$description": "Default card shadow. Subtle elevation for cards at rest."
+            },
+            "hover": {
+                "$type": "shadow",
+                "$value": "{shadow.md}",
+                "$description": "Card shadow on hover. Increased elevation for interactive feedback."
+            }
+        },
+        "dropdown": {
+            "$type": "shadow",
+            "$value": "{shadow.lg}",
+            "$description": "Dropdown shadow. Elevated menus and popovers."
+        },
+        "modal": {
+            "$type": "shadow",
+            "$value": "{shadow.xl}",
+            "$description": "Modal shadow. Maximum elevation for dialogs and overlays."
+        },
+        "button": {
+            "default": {
+                "$type": "shadow",
+                "$value": "{shadow.sm}",
+                "$description": "Default button shadow. Subtle depth."
+            },
+            "hover": {
+                "$type": "shadow",
+                "$value": "{shadow.md}",
+                "$description": "Button shadow on hover. Lifted appearance."
+            }
+        },
+        "inset": {
+            "$type": "shadow",
+            "$value": "{shadow.inner}",
+            "$description": "Inset shadow. For pressed/recessed effects on inputs."
+        }
+    }
+}

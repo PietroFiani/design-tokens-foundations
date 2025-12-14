@@ -4,9 +4,9 @@
 
 ## Summary
 
-This ADR defines the complete hierarchical taxonomy for organizing design tokens across both primitive and semantic layers. We selected a **hybrid approach** where the layer identifier (`primitive` or `semantic`) is included in token paths, while platform and theme context is managed via folder structure. This provides optimal legibility, tool compatibility, and developer experience while maintaining W3C DTCG 2025.10 compliance.
+This ADR defines the complete hierarchical taxonomy for organizing design tokens across both primitive and semantic layers. We selected a **file-based approach** where the layer identifier (`primitive` or `semantic`) is **inferred from the filename**, not included in token paths. Platform and theme context is also managed via folder structure. This provides optimal legibility, tool compatibility, and developer experience while maintaining W3C DTCG 2025.10 compliance.
 
-**Key Decision**: Token format is `{layer}.{type/property}.{category/element}.{scale/variant}.{state?}` with maximum 5-level nesting. Platform and theme are managed via file organization, not in token paths.
+**Key Decision**: Token format is `{type/property}.{category/element}.{scale/variant}.{state?}` with maximum 4-level nesting. Layer, platform, and theme are managed via file organization, not in token paths.
 
 ## Context and Problem
 
@@ -369,10 +369,10 @@ color.background.brand.hover                # semantic
 
 ## Decision
 
-**Selected: Hybrid Approach (Option 3)**
+**Selected: File-Based Approach (Modified Option 4)**
 
-We adopt a **hybrid file/path organization** where:
-- **Layer** (`primitive` / `semantic`) is **in the token path**
+We adopt a **pure file-based organization** where:
+- **Layer** (`primitive` / `semantic`) is **inferred from filename** (primitive.json vs semantic.json)
 - **Platform** and **Theme** are **managed via folder structure**
 - **System name** is **optional** and managed at build/tooling level (not in token paths)
 
@@ -380,28 +380,30 @@ We adopt a **hybrid file/path organization** where:
 
 **Token Path Format**:
 ```
-{layer}.{type/property}.{category/element}.{scale/variant}.{state?}
+{type/property}.{category/element}.{scale/variant}.{state?}
 ```
 
 **Taxon Breakdown**:
 
-1. **`layer`** (REQUIRED): Token abstraction level
-   - Values: `primitive`, `semantic`
+1. **`layer`** (INFERRED FROM FILENAME): Token abstraction level
+   - Values: `primitive` (from primitive.json), `semantic` (from semantic.json or theme files)
    - Purpose: Clearly distinguish raw values from semantic mappings
+   - **Important**: Not included in token path, inferred from file location
 
 2. **`type` (primitives) / `property` (semantics)** (REQUIRED): Value type or property category
-   - Primitive examples: `color`, `spacing`, `fontSize`, `fontWeight`
-   - Semantic examples: `color`, `spacing`, `typography`, `shadow`
+   - Primitive examples: `color`, `spacing`, `fontSize`, `fontWeight`, `borderRadius`, `borderWidth`
+   - Semantic examples: `color`, `spacing`, `typography`, `border`, `transition`
    - Purpose: Group tokens by value type
+   - Note: Each primitive type corresponds to its own top-level group
 
 3. **`category` (primitives) / `element` (semantics)** (REQUIRED): Sub-categorization
-   - Primitive examples: `blue`, `gray`, `red` (for colors), `xs`, `sm`, `md` (for spacing)
-   - Semantic examples: `text`, `background`, `border`, `surface` (for colors)
+   - Primitive examples: `primary`, `secondary`, `neutral` (for colors), scale numbers like `1`, `2`, `4` (for spacing)
+   - Semantic examples: `text`, `background`, `border` (for colors), `heading`, `body` (for typography)
    - Purpose: Further organize within type/property
 
 4. **`scale` (primitives) / `variant` (semantics)** (REQUIRED): Specific value identifier
-   - Primitive examples: `50`, `100`, `500`, `900` (for color scales)
-   - Semantic examples: `base`, `muted`, `brand`, `error` (for variants)
+   - Primitive examples: `50`, `100`, `500`, `900` (for color scales), `xs`, `sm`, `md` (for spacing)
+   - Semantic examples: `base`, `muted`, `subtle`, `brand` (for variants), `h1`, `h2` (for headings)
    - Purpose: Final identification of specific token
 
 5. **`state`** (OPTIONAL): Interactive state
@@ -438,26 +440,26 @@ tokens/
 
 ### Token Path Examples
 
-**Primitives** (shared across all platforms/themes):
+**Primitives** (in primitive.json, shared across all platforms/themes):
 ```
-primitive.color.blue.500
-primitive.color.gray.900
-primitive.spacing.md
-primitive.fontSize.xl
-primitive.fontWeight.bold
-primitive.borderRadius.lg
+color.primary.500
+color.neutral.900
+spacing.4
+fontSize.xl
+fontWeight.bold
+borderRadius.lg
 ```
 
-**Semantics** (defined per platform/theme):
+**Semantics** (in semantic.json or theme files):
 ```
-semantic.color.text.base.default
-semantic.color.text.base.hover
-semantic.color.background.brand.default
-semantic.color.background.brand.hover
-semantic.color.border.default
-semantic.spacing.inset.md
-semantic.typography.h1
-semantic.shadow.md
+color.text.base.default
+color.text.base.hover
+color.background.brand.default
+color.background.brand.hover
+color.border.base.default
+spacing.inset.md
+typography.heading.h1
+transition.duration.normal
 ```
 
 ### Token Reference Examples
@@ -465,23 +467,21 @@ semantic.shadow.md
 **Light theme** (`platforms/web/themes/light.json`):
 ```json
 {
-  "semantic": {
-    "color": {
-      "$type": "color",
-      "text": {
-        "base": {
-          "default": {
-            "$value": "{primitive.color.gray.900}",
-            "$description": "Base text color for regular content"
-          }
+  "color": {
+    "$type": "color",
+    "text": {
+      "base": {
+        "default": {
+          "$value": "{color.neutral.900}",
+          "$description": "Base text color for regular content"
         }
-      },
-      "background": {
-        "base": {
-          "default": {
-            "$value": "{primitive.color.white}",
-            "$description": "Base page background"
-          }
+      }
+    },
+    "background": {
+      "base": {
+        "default": {
+          "$value": "{color.neutral.0}",
+          "$description": "Base page background"
         }
       }
     }
@@ -492,23 +492,21 @@ semantic.shadow.md
 **Dark theme** (`platforms/web/themes/dark.json`):
 ```json
 {
-  "semantic": {
-    "color": {
-      "$type": "color",
-      "text": {
-        "base": {
-          "default": {
-            "$value": "{primitive.color.gray.100}",
-            "$description": "Base text color for regular content"
-          }
+  "color": {
+    "$type": "color",
+    "text": {
+      "base": {
+        "default": {
+          "$value": "{color.neutral.100}",
+          "$description": "Base text color for regular content"
         }
-      },
-      "background": {
-        "base": {
-          "default": {
-            "$value": "{primitive.color.gray.900}",
-            "$description": "Base page background"
-          }
+      }
+    },
+    "background": {
+      "base": {
+        "default": {
+          "$value": "{color.neutral.900}",
+          "$description": "Base page background"
         }
       }
     }
@@ -520,8 +518,9 @@ semantic.shadow.md
 
 **Why this approach wins**:
 
-1. **Optimal legibility**: 4-5 segment paths are readable and self-documenting
-   - ✅ `semantic.color.text.base.default` is clear and understandable
+1. **Optimal legibility**: 3-4 segment paths are concise and readable
+   - ✅ `color.text.base.default` is clear and understandable
+   - ✅ Shorter than `semantic.color.text.base.default`
    - ❌ `acme.web.light.semantic.color.text.base.default` is overwhelming
 
 2. **Excellent tool compatibility**:
@@ -531,8 +530,8 @@ semantic.shadow.md
    - Tailwind: Generate clean theme configurations
 
 3. **Superior developer experience**:
-   - Short, memorable paths
-   - Clear layer distinction (primitive vs semantic)
+   - Shortest possible paths while maintaining clarity
+   - Layer distinction via file context (primitive.json vs semantic.json)
    - Easy theme switching (load different file)
    - IntelliSense-friendly
 
@@ -551,14 +550,16 @@ semantic.shadow.md
    - Changes to system name don't affect tokens
    - Platform-specific tokens isolated
    - Theme variations clearly organized
+   - Layer inferred from file structure
 
 ### Maximum Nesting Depth
 
-- **Primitives**: 4 levels (`primitive.color.blue.500`)
-- **Semantics without state**: 4 levels (`semantic.color.text.base`)
-- **Semantics with state**: 5 levels (`semantic.color.text.base.default`)
+- **Primitives**: 2-3 levels (`color.primary.500`, `spacing.4`, `fontSize.xl`)
+- **Semantics without state**: 3 levels (`color.text.base`, `spacing.inset.md`)
+- **Semantics with state**: 4 levels (`color.text.base.default`)
+- **Typography composites**: 3 levels (`typography.heading.h1`)
 
-**Guideline**: Never exceed 5 levels of nesting.
+**Guideline**: Never exceed 4 levels of nesting.
 
 ---
 
@@ -573,21 +574,21 @@ semantic.shadow.md
 **Structure**:
 ```json
 {
-  "primitive": {
-    "color": {
-      "$type": "color",
-      "$description": "Primitive color palette",
-      "blue": { ... },
-      "gray": { ... },
-      "red": { ... }
-    },
-    "spacing": {
-      "$type": "dimension",
-      "$description": "Primitive spacing scale",
-      "xs": { "$value": "0.25rem" },
-      "sm": { "$value": "0.5rem" },
-      "md": { "$value": "1rem" }
-    }
+  "color": {
+    "$type": "color",
+    "$description": "Primitive color palette",
+    "primary": { ... },
+    "neutral": { ... },
+    "error": { ... }
+  },
+  "spacing": {
+    "1": { "$type": "dimension", "$value": "4px" },
+    "2": { "$type": "dimension", "$value": "8px" },
+    "4": { "$type": "dimension", "$value": "16px" }
+  },
+  "fontSize": {
+    "sm": { "$type": "dimension", "$value": "14px" },
+    "md": { "$type": "dimension", "$value": "16px" }
   }
 }
 ```
@@ -601,13 +602,11 @@ semantic.shadow.md
 **Example** (iOS-specific fonts):
 ```json
 {
-  "primitive": {
-    "fontFamily": {
-      "$type": "fontFamily",
-      "sans": {
-        "$value": ["SF Pro", "system-ui", "sans-serif"],
-        "$description": "iOS uses SF Pro as default sans-serif"
-      }
+  "fontFamily": {
+    "$type": "fontFamily",
+    "sans": {
+      "$value": ["SF Pro", "system-ui", "sans-serif"],
+      "$description": "iOS uses SF Pro as default sans-serif"
     }
   }
 }
@@ -615,20 +614,18 @@ semantic.shadow.md
 
 ### 3. Semantic Tokens (Per Platform/Theme)
 
-**File**: `tokens/platforms/{platform}/themes/{theme}.json`
+**File**: `tokens/platforms/{platform}/themes/{theme}.json` or `tokens/semantic.json` (single platform/theme)
 
 **Contains**: Semantic mappings referencing primitives
 
 **Example**:
 ```json
 {
-  "semantic": {
-    "color": {
-      "$type": "color",
-      "text": {
-        "base": {
-          "default": { "$value": "{primitive.color.gray.900}" }
-        }
+  "color": {
+    "$type": "color",
+    "text": {
+      "base": {
+        "default": { "$value": "{color.neutral.900}" }
       }
     }
   }
@@ -671,8 +668,8 @@ module.exports = {
 
 | Taxon | Primitive | Semantic | Notes |
 |-------|-----------|----------|-------|
-| **layer** | ✅ Required | ✅ Required | Always `primitive` or `semantic` |
-| **type/property** | ✅ Required | ✅ Required | `color`, `spacing`, `typography`, etc. |
+| **layer** | ⚠️ Inferred | ⚠️ Inferred | Inferred from filename (primitive.json vs semantic.json), not in token path |
+| **type/property** | ✅ Required | ✅ Required | `color`, `dimension`, `spacing`, `typography`, etc. |
 | **category/element** | ✅ Required | ✅ Required | Category for primitives, element for semantics |
 | **scale/variant** | ✅ Required | ✅ Required | Scale value or variant name |
 | **state** | ❌ Not used | ⚠️ Optional | Only for interactive semantic tokens |
@@ -712,10 +709,10 @@ Otherwise, use shared `primitive.json` for consistency.
 
 ## Validation Rules
 
-1. **Layer must be present**: All tokens MUST start with `primitive` or `semantic`
-2. **Maximum depth**: Never exceed 5 levels (`layer.type.category.scale.state`)
+1. **Layer inferred from file**: Tokens in `primitive.json` are primitives, tokens in `semantic.json` or theme files are semantics
+2. **Maximum depth**: Never exceed 4 levels (`type.category.scale.state`)
 3. **State only on semantics**: Primitive tokens MUST NOT have state suffix
-4. **References must be complete**: Use full path including layer (e.g., `{primitive.color.blue.500}`)
+4. **References without layer prefix**: Use path without layer prefix (e.g., `{color.primary.500}` not `{primitive.color.primary.500}`)
 5. **Themes define same structure**: All theme files MUST define the same semantic token structure
 6. **Primitives are theme-agnostic**: Primitive tokens MUST NOT vary by theme
 7. **File names lowercase**: Use `light.json`, not `Light.json` or `LIGHT.json`
@@ -726,21 +723,24 @@ Otherwise, use shared `primitive.json` for consistency.
 
 ### Positive
 
-- **Clear layer distinction**: `primitive` vs `semantic` always visible in token name
-- **Readable paths**: Short, understandable token identifiers
+- **Shortest possible paths**: 3-4 levels maximum, very concise
+- **Excellent readability**: Token names are clean and self-documenting
+- **Clear layer separation**: Layer inferred from file context (primitive.json vs semantic.json)
 - **DTCG compliant**: File-based theme management as recommended
 - **Tool-friendly**: Works excellently with Style Dictionary, Figma, and other tools
 - **Easy theming**: Just load different theme file
 - **Platform flexibility**: Add platforms without changing token names
-- **Good DX**: Developers quickly learn and remember structure
+- **Superior DX**: Developers write less, paths are memorable
 - **Maintainable**: Changes isolated to appropriate files
 - **Scalable**: Grows well with more themes/platforms
+- **Less redundancy**: No repeated layer prefix in every token
 
 ### Negative
 
 - **File management**: More files to maintain than single-file approach
 - **Build process**: Requires build tool to merge files
-- **Context external**: Theme/platform not visible in token path itself
+- **Context external**: Layer/theme/platform not visible in token path itself
+- **File context required**: Must know which file a token is in to understand if it's primitive or semantic
 
 ### Risks
 
@@ -767,4 +767,8 @@ Otherwise, use shared `primitive.json` for consistency.
 - [Material Design Token System](https://m3.material.io/foundations/design-tokens/overview)
 - [Tailwind CSS Theming](https://tailwindcss.com/docs/theme)
 - ADR 002: Taxon Variants
-- ADR 003: Type Values
+- ADR 003: Token Type Values Overview
+- ADR 005: Dimension Value and Unit Separation
+- ADR 006: Color Type Values
+- ADR 007: Typography Type Values
+- ADR 008: Duration, Number, and Shadow Type Values

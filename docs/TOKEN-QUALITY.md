@@ -14,12 +14,106 @@ This guide defines quality criteria for creating individual design tokens. Follo
 
 ## Table of Contents
 
+- [Before You Start: Key Questions](#before-you-start-key-questions)
 - [Core Quality Principles](#core-quality-principles)
 - [Mandatory Requirements](#mandatory-requirements)
 - [Critical Questions](#critical-questions)
 - [Best Practices by Token Type](#best-practices-by-token-type)
 - [Quality Checklist](#quality-checklist)
 - [Examples](#examples)
+
+---
+
+## Before You Start: Architecture Questions
+
+Before creating any tokens, answer these questions to define your system architecture:
+
+### 1. How many platforms do you need to support?
+
+- [ ] **One platform** (Web only, iOS only, or Android only)
+- [ ] **Multiple platforms** (Web + iOS + Android)
+
+**Impact**:
+- One platform → No `platforms/` folder needed
+- Multiple platforms → Use `platforms/{web,ios,android}/` structure
+
+**See**: [TOKEN-SYSTEM-CREATION.md](TOKEN-SYSTEM-CREATION.md#directory-structure)
+
+---
+
+### 2. How many brand colors do you have?
+
+- [ ] **1 brand color** (Primary only)
+- [ ] **2 brand colors** (Primary + Secondary)
+- [ ] **3+ brand colors** (Primary + Secondary + Tertiary)
+
+**Impact**: Determines primitive color scale complexity
+
+**Examples**:
+- 1 color: `primitive.color.primary.*`
+- 2 colors: `primitive.color.primary.*` + `primitive.color.secondary.*`
+- 3+ colors: `primitive.color.primary.*` + `primitive.color.secondary.*` + `primitive.color.tertiary.*`
+
+**Provide**: Exact HEX values for each brand color (e.g., Primary: #0A1128, Secondary: #00F5AB)
+
+---
+
+### 3. How many themes do you need?
+
+- [ ] **One theme** (Light only OR Dark only)
+- [ ] **Two themes** (Light + Dark)
+- [ ] **Three+ themes** (Light + Dark + High-Contrast, or custom themes)
+
+**Impact**:
+- One theme → No `themes/` folder needed, use `semantic.json` at root or platform level
+- Multiple themes → Use `themes/{light,dark,high-contrast}.json` structure
+
+---
+
+### 4. How many heading levels do you need?
+
+- [ ] **2 levels** (H1, H2 - minimal)
+- [ ] **3 levels** (H1, H2, H3 - standard)
+- [ ] **4 levels** (H1, H2, H3, H4 - common)
+- [ ] **6 levels** (H1-H6 - full HTML semantic hierarchy)
+
+**Impact**: Determines `semantic.typography.heading.*` token structure
+
+---
+
+### 5. Do different platforms need different values?
+
+- [ ] **No** → All platforms share identical token values
+- [ ] **Yes** → Platforms have different fonts, spacing, or colors
+
+**Impact**:
+- No → Share single `primitive.json`
+- Yes → Need `primitive-overrides.json` per platform
+
+**Examples of platform differences**:
+- Fonts: SF Pro (iOS), Roboto (Android), Inter (Web)
+- Spacing: iOS may use 8px base, Android 4dp base
+- Colors: Platform-specific accent colors
+
+---
+
+### 7. What is your baseline spacing unit?
+
+- [ ] **4px** (tight, dense layouts)
+- [ ] **8px** (most common, balanced)
+- [ ] **16px** (spacious, generous whitespace)
+
+**Impact**: Determines spacing scale progression (4, 8, 12, 16... vs 8, 16, 24, 32...)
+
+---
+
+### 8. How many body text sizes do you need?
+
+- [ ] **1 size** (Single body text size - simplest)
+- [ ] **2 sizes** (Default + Small - common)
+- [ ] **3 sizes** (Small, Default, Large - standard)
+
+**Impact**: Determines `semantic.typography.body.{sm,md,lg}` structure
 
 ---
 
@@ -123,12 +217,41 @@ Follow **ADR 003**:
 
 | Token Type | Format | Example |
 |------------|--------|---------|
-| Color | HEX (#RRGGBB) | `"#2563eb"` |
+| Color | Object with colorSpace, components, alpha, hex | `{"colorSpace": "hsl", "components": [217, 91, 60], "alpha": 1, "hex": "#2563eb"}` |
 | Dimension | px with unit | `"16px"` |
 | Font Family | Array of strings | `["Inter", "sans-serif"]` |
 | Font Weight | Numeric (100-900) | `600` |
 | Line Height | Unitless number | `1.5` |
 | Duration | Milliseconds | `"200ms"` |
+
+**Color Value Requirements**:
+- **Primary format**: Object with `colorSpace`, `components`, `alpha`, and `hex` properties in `$value`
+- **Required color spaces**: HSL and OKLCH must be provided
+- **Why**: Enables advanced color manipulation, perceptually uniform adjustments, and accessibility tools
+- **Example**:
+```json
+{
+  "$type": "color",
+  "$value": {
+    "colorSpace": "hsl",
+    "components": [217, 91, 60],
+    "alpha": 1,
+    "hex": "#2563eb"
+  }
+}
+```
+- **Alternative representation**: OKLCH color space
+```json
+{
+  "$type": "color",
+  "$value": {
+    "colorSpace": "oklch",
+    "components": [0.55, 0.22, 264],
+    "alpha": 1,
+    "hex": "#2563eb"
+  }
+}
+```
 
 **Platform Transforms** (ADR 003):
 - Primitives: **Absolute values** (HEX, px)
@@ -242,7 +365,7 @@ Use when WCAG AAA required (7:1 for normal text) - government, healthcare apps.
 
 ### Color Tokens
 
-**Primitives** (ADR 003: HEX format):
+**Primitives** (ADR 003: Color object format):
 ```json
 {
   "primitive": {
@@ -250,7 +373,12 @@ Use when WCAG AAA required (7:1 for normal text) - government, healthcare apps.
       "primary": {
         "600": {
           "$type": "color",
-          "$value": "#2563eb",
+          "$value": {
+            "colorSpace": "hsl",
+            "components": [217, 91, 60],
+            "alpha": 1,
+            "hex": "#2563eb"
+          },
           "$description": "Primary brand color at 600 weight.",
           "$extensions": {
             "contrast": {
@@ -262,9 +390,24 @@ Use when WCAG AAA required (7:1 for normal text) - government, healthcare apps.
         }
       },
       "neutral": {
-        "0": { "$value": "#ffffff", "$description": "Pure white for light backgrounds." },
+        "0": {
+          "$type": "color",
+          "$value": {
+            "colorSpace": "hsl",
+            "components": [0, 0, 100],
+            "alpha": 1,
+            "hex": "#ffffff"
+          },
+          "$description": "Pure white for light backgrounds."
+        },
         "900": {
-          "$value": "#171717",
+          "$type": "color",
+          "$value": {
+            "colorSpace": "hsl",
+            "components": [0, 0, 9],
+            "alpha": 1,
+            "hex": "#171717"
+          },
           "$description": "Near-black for text.",
           "$extensions": {
             "contrast": {
@@ -281,10 +424,11 @@ Use when WCAG AAA required (7:1 for normal text) - government, healthcare apps.
 ```
 
 **Best Practices**:
-- ✅ Use HEX format
+- ✅ Use object format with `colorSpace`, `components`, `alpha`, and `hex`
+- ✅ Provide both HSL and OKLCH color spaces (choose one as primary)
 - ✅ Provide full scale (50-950) per ADR 002
 - ✅ Include neutral.0 and neutral.1000 anchors
-- ✅ Document contrast ratios in $extensions.contrast property
+- ✅ Document contrast ratios in `$extensions.contrast` property
 
 **Semantics** (usage-based variants):
 ```json
@@ -353,20 +497,36 @@ Use when WCAG AAA required (7:1 for normal text) - government, healthcare apps.
 
 ### Dimension Tokens
 
-**Primitives** (ADR 003: px format):
+**Primitives** (ADR 003 units, ADR 005 structure):
 ```json
 {
-  "primitive": {
-    "dimension": {
-      "spacing": {
-        "0": { "$value": "0px", "$description": "Zero spacing." },
-        "4": { "$value": "16px", "$description": "Base unit (16px). Foundation of spacing scale." },
-        "8": { "$value": "32px", "$description": "Large spacing (32px). Section separation." }
-      },
-      "borderRadius": {
-        "2": { "$value": "4px", "$description": "Small radius for buttons, inputs." },
-        "full": { "$value": "9999px", "$description": "Fully rounded for pills, badges." }
-      }
+  "spacing": {
+    "0": {
+      "$type": "dimension",
+      "$value": { "value": 0, "unit": "px" },
+      "$description": "Zero spacing."
+    },
+    "4": {
+      "$type": "dimension",
+      "$value": { "value": 16, "unit": "px" },
+      "$description": "Base unit (16px). Foundation of spacing scale."
+    },
+    "8": {
+      "$type": "dimension",
+      "$value": { "value": 32, "unit": "px" },
+      "$description": "Large spacing (32px). Section separation."
+    }
+  },
+  "borderRadius": {
+    "md": {
+      "$type": "dimension",
+      "$value": { "value": 4, "unit": "px" },
+      "$description": "Small radius for buttons, inputs."
+    },
+    "full": {
+      "$type": "dimension",
+      "$value": { "value": 9999, "unit": "px" },
+      "$description": "Fully rounded for pills, badges."
     }
   }
 }
@@ -375,16 +535,26 @@ Use when WCAG AAA required (7:1 for normal text) - government, healthcare apps.
 **Semantics** (t-shirt sizes):
 ```json
 {
-  "semantic": {
-    "spacing": {
-      "padding": {
-        "sm": { "$value": "{primitive.dimension.spacing.2}", "$description": "Small padding (8px). Compact buttons." },
-        "md": { "$value": "{primitive.dimension.spacing.4}", "$description": "Medium padding (16px). Default buttons, cards." }
+  "spacing": {
+    "padding": {
+      "sm": {
+        "$type": "dimension",
+        "$value": "{spacing.2}",
+        "$description": "Small padding (8px). Compact buttons."
+      },
+      "md": {
+        "$type": "dimension",
+        "$value": "{spacing.4}",
+        "$description": "Medium padding (16px). Default buttons, cards."
       }
-    },
-    "border": {
-      "radius": {
-        "sm": { "$value": "{primitive.dimension.borderRadius.2}", "$description": "Small rounding for buttons, inputs." }
+    }
+  },
+  "border": {
+    "radius": {
+      "md": {
+        "$type": "dimension",
+        "$value": "{borderRadius.md}",
+        "$description": "Small rounding for buttons, inputs."
       }
     }
   }
@@ -392,7 +562,8 @@ Use when WCAG AAA required (7:1 for normal text) - government, healthcare apps.
 ```
 
 **Best Practices**:
-- ✅ Use px in primitives
+- ✅ Use separated value and unit structure for dimension tokens (ADR 005)
+- ✅ Use px as the unit in all primitive dimension tokens (ADR 003)
 - ✅ Use t-shirt sizes (xs, sm, md, lg, xl) in semantics
 - ✅ Specify component types in descriptions
 
@@ -400,24 +571,50 @@ Use when WCAG AAA required (7:1 for normal text) - government, healthcare apps.
 
 ### Typography Tokens
 
-**Primitives** (ADR 003 formats):
+**Primitives** (ADR 003 units, ADR 005 structure):
 ```json
 {
-  "primitive": {
-    "fontFamily": {
-      "sans": { "$value": ["Inter", "system-ui", "sans-serif"], "$description": "Primary UI font stack." }
+  "fontFamily": {
+    "sans": {
+      "$type": "fontFamily",
+      "$value": ["Inter", "system-ui", "sans-serif"],
+      "$description": "Primary UI font stack."
+    }
+  },
+  "fontSize": {
+    "md": {
+      "$type": "dimension",
+      "$value": { "value": 16, "unit": "px" },
+      "$description": "Base size (16px). Default body text."
     },
-    "fontSize": {
-      "md": { "$value": "16px", "$description": "Base size (16px). Default body text." },
-      "5xl": { "$value": "48px", "$description": "XL size (48px). Hero headings." }
+    "5xl": {
+      "$type": "dimension",
+      "$value": { "value": 48, "unit": "px" },
+      "$description": "XL size (48px). Hero headings."
+    }
+  },
+  "fontWeight": {
+    "regular": {
+      "$type": "number",
+      "$value": 400,
+      "$description": "Regular weight for body text."
     },
-    "fontWeight": {
-      "regular": { "$value": 400, "$description": "Regular weight for body text." },
-      "bold": { "$value": 700, "$description": "Bold weight for headings." }
+    "bold": {
+      "$type": "number",
+      "$value": 700,
+      "$description": "Bold weight for headings."
+    }
+  },
+  "lineHeight": {
+    "tight": {
+      "$type": "number",
+      "$value": 1.25,
+      "$description": "Tight (1.25) for headings."
     },
-    "lineHeight": {
-      "tight": { "$value": 1.25, "$description": "Tight (1.25) for headings." },
-      "normal": { "$value": 1.5, "$description": "Normal (1.5) for body text." }
+    "normal": {
+      "$type": "number",
+      "$value": 1.5,
+      "$description": "Normal (1.5) for body text."
     }
   }
 }
@@ -426,31 +623,29 @@ Use when WCAG AAA required (7:1 for normal text) - government, healthcare apps.
 **Semantics** (composite):
 ```json
 {
-  "semantic": {
-    "typography": {
-      "heading": {
-        "h1": {
-          "$type": "typography",
-          "$value": {
-            "fontFamily": "{primitive.fontFamily.sans}",
-            "fontSize": "{primitive.fontSize.5xl}",
-            "fontWeight": "{primitive.fontWeight.bold}",
-            "lineHeight": "{primitive.lineHeight.tight}"
-          },
-          "$description": "Main page heading (H1). Use once per page. Examples: 'Dashboard', 'Settings'."
-        }
-      },
-      "body": {
-        "md": {
-          "$type": "typography",
-          "$value": {
-            "fontFamily": "{primitive.fontFamily.sans}",
-            "fontSize": "{primitive.fontSize.md}",
-            "fontWeight": "{primitive.fontWeight.regular}",
-            "lineHeight": "{primitive.lineHeight.normal}"
-          },
-          "$description": "Standard body text. Default for paragraphs, lists."
-        }
+  "typography": {
+    "heading": {
+      "h1": {
+        "$type": "typography",
+        "$value": {
+          "fontFamily": "{fontFamily.sans}",
+          "fontSize": "{fontSize.5xl}",
+          "fontWeight": "{fontWeight.bold}",
+          "lineHeight": "{lineHeight.tight}"
+        },
+        "$description": "Main page heading (H1). Use once per page. Examples: 'Dashboard', 'Settings'."
+      }
+    },
+    "body": {
+      "md": {
+        "$type": "typography",
+        "$value": {
+          "fontFamily": "{fontFamily.sans}",
+          "fontSize": "{fontSize.md}",
+          "fontWeight": "{fontWeight.regular}",
+          "lineHeight": "{lineHeight.normal}"
+        },
+        "$description": "Standard body text. Default for paragraphs, lists."
       }
     }
   }
@@ -505,9 +700,10 @@ Before committing tokens:
 - [ ] No component-specific tokens
 
 ### Values (ADR 003)
-- [ ] Primitives use absolute values (HEX, px, numeric)
+- [ ] Primitives use absolute values (color objects, px, numeric)
 - [ ] Semantics reference primitives via `{primitive.*}`
-- [ ] Colors use HEX format
+- [ ] Primitive color tokens use object format with `colorSpace`, `components`, `alpha`, and `hex`
+- [ ] Primitive color tokens provide both HSL and OKLCH color spaces
 - [ ] Dimensions use px
 - [ ] Font weights are numeric
 - [ ] Line heights are unitless
@@ -626,7 +822,11 @@ Before committing tokens:
 
 - **[ADR 001: Token Taxonomy](adr/001-token-taxonomy.md)** - Naming and structure
 - **[ADR 002: Taxon Variants](adr/002-taxon-variants.md)** - Allowed values
-- **[ADR 003: Type Values](adr/003-type-values.md)** - Formats and units
+- **[ADR 003: Token Type Values Overview](adr/003-type-values.md)** - Overview of all token type formats
+- **[ADR 005: Dimension Value and Unit Separation](adr/005-dimension-value-unit-separation.md)** - DTCG-compliant dimension structure
+- **[ADR 006: Color Type Values](adr/006-color-type-values.md)** - HSL color format specification
+- **[ADR 007: Typography Type Values](adr/007-typography-type-values.md)** - Font, weight, line height formats
+- **[ADR 008: Duration, Number, and Shadow Type Values](adr/008-other-type-values.md)** - Utility token formats
 - [TOKEN-SYSTEM-CREATION.md](TOKEN-SYSTEM-CREATION.md) - System architecture
 - [W3C DTCG Specification](https://tr.designtokens.org/format/)
 - [WCAG 2.1 Guidelines](https://www.w3.org/WAI/WCAG21/quickref/)
