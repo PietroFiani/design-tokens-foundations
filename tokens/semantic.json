@@ -579,17 +579,17 @@
     "overlay": {
         "modal": {
             "$type": "color",
-            "$value": "{color.overlay.modal}",
+            "$value": "{color.black.60}",
             "$description": "Modal backdrop overlay (60% black). Use for dialog/modal backgrounds."
         },
         "dropdown": {
             "$type": "color",
-            "$value": "{color.overlay.dropdown}",
+            "$value": "{color.black.10}",
             "$description": "Dropdown overlay (10% black). Subtle background for dropdowns."
         },
         "hover": {
             "$type": "color",
-            "$value": "{color.overlay.hover}",
+            "$value": "{color.black.5}",
             "$description": "Hover overlay (5% black). Subtle hover state on images/cards."
         }
     },

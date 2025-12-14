@@ -1078,8 +1078,8 @@
                 "$description": "Error color at 900 weight. Darkest shade."
             }
         },
-        "overlay": {
-            "modal": {
+        "black": {
+            "60": {
                 "$type": "color",
                 "$value": {
                     "colorSpace": "hsl",
@@ -1087,9 +1087,9 @@
                     "alpha": 0.6,
                     "hex": "#000000"
                 },
-                "$description": "Modal backdrop overlay (60% black). Semi-transparent black for dialog backgrounds."
+                "$description": "Black at 60% opacity. Semi-transparent black."
             },
-            "dropdown": {
+            "10": {
                 "$type": "color",
                 "$value": {
                     "colorSpace": "hsl",
@@ -1097,9 +1097,9 @@
                     "alpha": 0.1,
                     "hex": "#000000"
                 },
-                "$description": "Dropdown overlay (10% black). Subtle overlay for dropdown backgrounds."
+                "$description": "Black at 10% opacity. Very subtle black."
             },
-            "hover": {
+            "5": {
                 "$type": "color",
                 "$value": {
                     "colorSpace": "hsl",
@@ -1107,7 +1107,7 @@
                     "alpha": 0.05,
                     "hex": "#000000"
                 },
-                "$description": "Hover overlay (5% black). Very subtle overlay for hover states on images/cards."
+                "$description": "Black at 5% opacity. Extremely subtle black."
             }
         }
     },
