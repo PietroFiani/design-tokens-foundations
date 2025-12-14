@@ -1078,26 +1078,16 @@
                 "$description": "Error color at 900 weight. Darkest shade."
             }
         },
-        "black": {
-            "60": {
+        "transparency": {
+            "0": {
                 "$type": "color",
                 "$value": {
                     "colorSpace": "hsl",
                     "components": [0, 0, 0],
-                    "alpha": 0.6,
+                    "alpha": 0,
                     "hex": "#000000"
                 },
-                "$description": "Black at 60% opacity. Semi-transparent black."
-            },
-            "10": {
-                "$type": "color",
-                "$value": {
-                    "colorSpace": "hsl",
-                    "components": [0, 0, 0],
-                    "alpha": 0.1,
-                    "hex": "#000000"
-                },
-                "$description": "Black at 10% opacity. Very subtle black."
+                "$description": "Fully transparent black. Invisible."
             },
             "5": {
                 "$type": "color",
@@ -1107,7 +1097,67 @@
                     "alpha": 0.05,
                     "hex": "#000000"
                 },
-                "$description": "Black at 5% opacity. Extremely subtle black."
+                "$description": "Black at 5% opacity. Extremely subtle overlay."
+            },
+            "10": {
+                "$type": "color",
+                "$value": {
+                    "colorSpace": "hsl",
+                    "components": [0, 0, 0],
+                    "alpha": 0.1,
+                    "hex": "#000000"
+                },
+                "$description": "Black at 10% opacity. Very subtle overlay."
+            },
+            "20": {
+                "$type": "color",
+                "$value": {
+                    "colorSpace": "hsl",
+                    "components": [0, 0, 0],
+                    "alpha": 0.2,
+                    "hex": "#000000"
+                },
+                "$description": "Black at 20% opacity. Subtle overlay."
+            },
+            "40": {
+                "$type": "color",
+                "$value": {
+                    "colorSpace": "hsl",
+                    "components": [0, 0, 0],
+                    "alpha": 0.4,
+                    "hex": "#000000"
+                },
+                "$description": "Black at 40% opacity. Medium transparency."
+            },
+            "60": {
+                "$type": "color",
+                "$value": {
+                    "colorSpace": "hsl",
+                    "components": [0, 0, 0],
+                    "alpha": 0.6,
+                    "hex": "#000000"
+                },
+                "$description": "Black at 60% opacity. Semi-transparent."
+            },
+            "80": {
+                "$type": "color",
+                "$value": {
+                    "colorSpace": "hsl",
+                    "components": [0, 0, 0],
+                    "alpha": 0.8,
+                    "hex": "#000000"
+                },
+                "$description": "Black at 80% opacity. Mostly opaque."
+            },
+            "100": {
+                "$type": "color",
+                "$value": {
+                    "colorSpace": "hsl",
+                    "components": [0, 0, 0],
+                    "alpha": 1,
+                    "hex": "#000000"
+                },
+                "$description": "Black at 100% opacity. Fully opaque black."
             }
         }
     },
@@ -1487,48 +1537,6 @@
                 "unit": "px"
             },
             "$description": "Thick border (4px). Strong emphasis."
-        }
-    },
-    "opacity": {
-        "0": {
-            "$type": "number",
-            "$value": 0,
-            "$description": "Fully transparent. Hidden elements."
-        },
-        "5": {
-            "$type": "number",
-            "$value": 0.05,
-            "$description": "Nearly transparent (5%). Very subtle overlays."
-        },
-        "10": {
-            "$type": "number",
-            "$value": 0.1,
-            "$description": "Very subtle (10%). Light overlays, shadows."
-        },
-        "20": {
-            "$type": "number",
-            "$value": 0.2,
-            "$description": "Subtle (20%). Hover overlays."
-        },
-        "40": {
-            "$type": "number",
-            "$value": 0.4,
-            "$description": "Medium (40%). Disabled elements."
-        },
-        "60": {
-            "$type": "number",
-            "$value": 0.6,
-            "$description": "Semi-transparent (60%). Modal backdrops."
-        },
-        "80": {
-            "$type": "number",
-            "$value": 0.8,
-            "$description": "Mostly opaque (80%). Semi-transparent backgrounds."
-        },
-        "100": {
-            "$type": "number",
-            "$value": 1,
-            "$description": "Fully opaque. Default state."
         }
     },
     "shadow": {
