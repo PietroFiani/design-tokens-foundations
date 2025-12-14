@@ -1,115 +1,242 @@
 {
     "color": {
         "background": {
-            "base": {
-                "default": {
-                    "$type": "color",
-                    "$value": "{color.neutral.0}",
-                    "$description": "Default page background. Pure white for clean, bright layouts.",
-                    "$extensions": {
-                        "contrast": {
-                            "ratio": "21:1",
-                            "level": "AAA",
-                            "foreground": "{color.text.base.default}"
+            "neutral": {
+                "base": {
+                    "default": {
+                        "$type": "color",
+                        "$value": "{color.neutral.0}",
+                        "$description": "Default page background. Pure white for clean, bright layouts.",
+                        "$extensions": {
+                            "contrast": {
+                                "ratio": "21:1",
+                                "level": "AAA",
+                                "foreground": "{color.text.base.default}"
+                            }
                         }
+                    },
+                    "hover": {
+                        "$type": "color",
+                        "$value": "{color.neutral.50}",
+                        "$description": "Base background on hover."
+                    },
+                    "pressed": {
+                        "$type": "color",
+                        "$value": "{color.neutral.100}",
+                        "$description": "Base background on pressed/active state."
                     }
-                }
-            },
-            "muted": {
-                "default": {
-                    "$type": "color",
-                    "$value": "{color.neutral.50}",
-                    "$description": "Subtle background for secondary areas. Use for cards, panels, sidebars.",
-                    "$extensions": {
-                        "contrast": {
-                            "ratio": "19.5:1",
-                            "level": "AAA",
-                            "foreground": "{color.text.base.default}"
+                },
+                "muted": {
+                    "default": {
+                        "$type": "color",
+                        "$value": "{color.neutral.50}",
+                        "$description": "Subtle background for secondary areas. Use for cards, panels, sidebars.",
+                        "$extensions": {
+                            "contrast": {
+                                "ratio": "19.5:1",
+                                "level": "AAA",
+                                "foreground": "{color.text.base.default}"
+                            }
                         }
+                    },
+                    "hover": {
+                        "$type": "color",
+                        "$value": "{color.neutral.100}",
+                        "$description": "Muted background on hover."
+                    },
+                    "pressed": {
+                        "$type": "color",
+                        "$value": "{color.neutral.200}",
+                        "$description": "Muted background on pressed/active state."
                     }
-                }
-            },
-            "subtle": {
-                "default": {
-                    "$type": "color",
-                    "$value": "{color.neutral.100}",
-                    "$description": "Very subtle background. Use for hover states on light backgrounds."
+                },
+                "subtle": {
+                    "default": {
+                        "$type": "color",
+                        "$value": "{color.neutral.100}",
+                        "$description": "Very subtle background. Use for hover states on light backgrounds."
+                    },
+                    "hover": {
+                        "$type": "color",
+                        "$value": "{color.neutral.200}",
+                        "$description": "Subtle background on hover."
+                    },
+                    "pressed": {
+                        "$type": "color",
+                        "$value": "{color.neutral.300}",
+                        "$description": "Subtle background on pressed/active state."
+                    }
                 }
             },
             "brand": {
-                "default": {
-                    "$type": "color",
-                    "$value": "{color.primary.600}",
-                    "$description": "Primary brand background. Use for CTAs and key interactive elements. Use sparingly (1-3 per screen) to maintain hierarchy. Examples: 'Sign Up' button, 'Submit' CTA.",
-                    "$extensions": {
-                        "contrast": {
-                            "ratio": "4.5:1",
-                            "level": "AA",
-                            "foreground": "{color.text.inverse.default}"
+                "primary": {
+                    "default": {
+                        "$type": "color",
+                        "$value": "{color.primary.600}",
+                        "$description": "Primary brand background. Use for CTAs and key interactive elements. Use sparingly (1-3 per screen) to maintain hierarchy. Examples: 'Sign Up' button, 'Submit' CTA.",
+                        "$extensions": {
+                            "contrast": {
+                                "ratio": "4.5:1",
+                                "level": "AA",
+                                "foreground": "{color.text.inverse.default}"
+                            }
+                        }
+                    },
+                    "hover": {
+                        "$type": "color",
+                        "$value": "{color.primary.700}",
+                        "$description": "Primary brand background on hover. Provides clear interactive feedback.",
+                        "$extensions": {
+                            "contrast": {
+                                "ratio": "5.8:1",
+                                "level": "AA",
+                                "foreground": "{color.text.inverse.default}"
+                            }
+                        }
+                    },
+                    "pressed": {
+                        "$type": "color",
+                        "$value": "{color.primary.800}",
+                        "$description": "Primary brand background on pressed/active state."
+                    }
+                },
+                "secondary": {
+                    "default": {
+                        "$type": "color",
+                        "$value": "{color.secondary.600}",
+                        "$description": "Secondary brand background. Use for secondary CTAs and supporting actions. Examples: 'Learn More', 'Cancel' with accent."
+                    },
+                    "hover": {
+                        "$type": "color",
+                        "$value": "{color.secondary.700}",
+                        "$description": "Secondary brand background on hover."
+                    },
+                    "pressed": {
+                        "$type": "color",
+                        "$value": "{color.secondary.800}",
+                        "$description": "Secondary brand background on pressed/active state."
+                    }
+                },
+                "tertiary": {
+                    "default": {
+                        "$type": "color",
+                        "$value": "{color.tertiary.600}",
+                        "$description": "Tertiary brand background. Use for tertiary actions and decorative elements."
+                    },
+                    "hover": {
+                        "$type": "color",
+                        "$value": "{color.tertiary.700}",
+                        "$description": "Tertiary brand background on hover."
+                    },
+                    "pressed": {
+                        "$type": "color",
+                        "$value": "{color.tertiary.800}",
+                        "$description": "Tertiary brand background on pressed/active state."
+                    }
+                }
+            },
+            "intent": {
+                "success": {
+                    "default": {
+                        "$type": "color",
+                        "$value": "{color.success.500}",
+                        "$description": "Success background for positive feedback. Examples: Success alerts, confirmation banners."
+                    },
+                    "hover": {
+                        "$type": "color",
+                        "$value": "{color.success.600}",
+                        "$description": "Success background on hover."
+                    },
+                    "pressed": {
+                        "$type": "color",
+                        "$value": "{color.success.700}",
+                        "$description": "Success background on pressed/active state."
+                    },
+                    "muted": {
+                        "default": {
+                            "$type": "color",
+                            "$value": "{color.success.100}",
+                            "$description": "Muted success background. Subtle positive feedback for backgrounds."
+                        },
+                        "hover": {
+                            "$type": "color",
+                            "$value": "{color.success.200}",
+                            "$description": "Muted success background on hover."
+                        },
+                        "pressed": {
+                            "$type": "color",
+                            "$value": "{color.success.300}",
+                            "$description": "Muted success background on pressed/active state."
                         }
                     }
                 },
-                "hover": {
-                    "$type": "color",
-                    "$value": "{color.primary.700}",
-                    "$description": "Primary brand background on hover. Provides clear interactive feedback.",
-                    "$extensions": {
-                        "contrast": {
-                            "ratio": "5.8:1",
-                            "level": "AA",
-                            "foreground": "{color.text.inverse.default}"
+                "warning": {
+                    "default": {
+                        "$type": "color",
+                        "$value": "{color.warning.500}",
+                        "$description": "Warning background for cautionary feedback. Examples: Warning alerts, caution banners."
+                    },
+                    "hover": {
+                        "$type": "color",
+                        "$value": "{color.warning.600}",
+                        "$description": "Warning background on hover."
+                    },
+                    "pressed": {
+                        "$type": "color",
+                        "$value": "{color.warning.700}",
+                        "$description": "Warning background on pressed/active state."
+                    },
+                    "muted": {
+                        "default": {
+                            "$type": "color",
+                            "$value": "{color.warning.100}",
+                            "$description": "Muted warning background. Subtle cautionary feedback for backgrounds."
+                        },
+                        "hover": {
+                            "$type": "color",
+                            "$value": "{color.warning.200}",
+                            "$description": "Muted warning background on hover."
+                        },
+                        "pressed": {
+                            "$type": "color",
+                            "$value": "{color.warning.300}",
+                            "$description": "Muted warning background on pressed/active state."
                         }
                     }
                 },
-                "active": {
-                    "$type": "color",
-                    "$value": "{color.primary.800}",
-                    "$description": "Primary brand background on active/pressed state."
-                }
-            },
-            "brandSecondary": {
-                "default": {
-                    "$type": "color",
-                    "$value": "{color.secondary.600}",
-                    "$description": "Secondary brand background. Use for secondary CTAs and supporting actions. Examples: 'Learn More', 'Cancel' with accent."
-                },
-                "hover": {
-                    "$type": "color",
-                    "$value": "{color.secondary.700}",
-                    "$description": "Secondary brand background on hover."
-                }
-            },
-            "brandTertiary": {
-                "default": {
-                    "$type": "color",
-                    "$value": "{color.tertiary.600}",
-                    "$description": "Tertiary brand background. Use for tertiary actions and decorative elements."
-                },
-                "hover": {
-                    "$type": "color",
-                    "$value": "{color.tertiary.700}",
-                    "$description": "Tertiary brand background on hover."
-                }
-            },
-            "success": {
-                "default": {
-                    "$type": "color",
-                    "$value": "{color.success.500}",
-                    "$description": "Success background for positive feedback. Examples: Success alerts, confirmation banners."
-                }
-            },
-            "warning": {
-                "default": {
-                    "$type": "color",
-                    "$value": "{color.warning.500}",
-                    "$description": "Warning background for cautionary feedback. Examples: Warning alerts, caution banners."
-                }
-            },
-            "error": {
-                "default": {
-                    "$type": "color",
-                    "$value": "{color.error.500}",
-                    "$description": "Error background for negative feedback. Examples: Error alerts, validation errors."
+                "error": {
+                    "default": {
+                        "$type": "color",
+                        "$value": "{color.error.500}",
+                        "$description": "Error background for negative feedback. Examples: Error alerts, validation errors."
+                    },
+                    "hover": {
+                        "$type": "color",
+                        "$value": "{color.error.600}",
+                        "$description": "Error background on hover."
+                    },
+                    "pressed": {
+                        "$type": "color",
+                        "$value": "{color.error.700}",
+                        "$description": "Error background on pressed/active state."
+                    },
+                    "muted": {
+                        "default": {
+                            "$type": "color",
+                            "$value": "{color.error.100}",
+                            "$description": "Muted error background. Subtle negative feedback for backgrounds."
+                        },
+                        "hover": {
+                            "$type": "color",
+                            "$value": "{color.error.200}",
+                            "$description": "Muted error background on hover."
+                        },
+                        "pressed": {
+                            "$type": "color",
+                            "$value": "{color.error.300}",
+                            "$description": "Muted error background on pressed/active state."
+                        }
+                    }
                 }
             }
         },
@@ -563,29 +690,7 @@
                 "$description": "Slow transition (300ms). Complex animations, drawer panels."
             }
         }
-    },
-    "overlay": {
-        "5": {
-            "$type": "color",
-            "$value": "{color.transparency.5}",
-            "$description": "Overlay at 5% opacity. Extremely subtle overlay for hover states."
-        },
-        "10": {
-            "$type": "color",
-            "$value": "{color.transparency.10}",
-            "$description": "Overlay at 10% opacity. Very subtle overlay for dropdowns and secondary surfaces."
-        },
-        "20": {
-            "$type": "color",
-            "$value": "{color.transparency.20}",
-            "$description": "Overlay at 20% opacity. Subtle overlay for tooltips and popovers."
-        },
-        "60": {
-            "$type": "color",
-            "$value": "{color.transparency.60}",
-            "$description": "Overlay at 60% opacity. Semi-transparent overlay for modals and backdrops."
-        }
-    },
+    }, 
     "shadow": {
         "5": {
             "$type": "shadow",
