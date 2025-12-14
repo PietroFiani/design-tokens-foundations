@@ -653,7 +653,91 @@
             }
         },
         "success": {
+            "50": {
+                "$type": "color",
+                "$value": {
+                    "colorSpace": "hsl",
+                    "components": [
+                        142,
+                        76,
+                        97
+                    ],
+                    "alpha": 1,
+                    "hex": "#f0fdf4"
+                },
+                "$description": "Success color at 50 weight. Lightest shade for subtle backgrounds."
+            },
+            "100": {
+                "$type": "color",
+                "$value": {
+                    "colorSpace": "hsl",
+                    "components": [
+                        142,
+                        76,
+                        92
+                    ],
+                    "alpha": 1,
+                    "hex": "#dcfce7"
+                },
+                "$description": "Success color at 100 weight. Very light shade."
+            },
+            "200": {
+                "$type": "color",
+                "$value": {
+                    "colorSpace": "hsl",
+                    "components": [
+                        142,
+                        76,
+                        85
+                    ],
+                    "alpha": 1,
+                    "hex": "#bbf7d0"
+                },
+                "$description": "Success color at 200 weight. Light shade."
+            },
+            "300": {
+                "$type": "color",
+                "$value": {
+                    "colorSpace": "hsl",
+                    "components": [
+                        142,
+                        76,
+                        73
+                    ],
+                    "alpha": 1,
+                    "hex": "#86efac"
+                },
+                "$description": "Success color at 300 weight. Medium-light shade."
+            },
+            "400": {
+                "$type": "color",
+                "$value": {
+                    "colorSpace": "hsl",
+                    "components": [
+                        142,
+                        76,
+                        57
+                    ],
+                    "alpha": 1,
+                    "hex": "#4ade80"
+                },
+                "$description": "Success color at 400 weight. Medium shade."
+            },
             "500": {
+                "$type": "color",
+                "$value": {
+                    "colorSpace": "hsl",
+                    "components": [
+                        142,
+                        76,
+                        45
+                    ],
+                    "alpha": 1,
+                    "hex": "#22c55e"
+                },
+                "$description": "Success color at 500 weight. Core success shade."
+            },
+            "600": {
                 "$type": "color",
                 "$value": {
                     "colorSpace": "hsl",
@@ -665,9 +749,9 @@
                     "alpha": 1,
                     "hex": "#16a34a"
                 },
-                "$description": "Success color for positive feedback."
+                "$description": "Success color at 600 weight. Main success identity."
             },
-            "600": {
+            "700": {
                 "$type": "color",
                 "$value": {
                     "colorSpace": "hsl",
@@ -679,10 +763,108 @@
                     "alpha": 1,
                     "hex": "#15803d"
                 },
-                "$description": "Darker success color for emphasis."
+                "$description": "Success color at 700 weight. Dark shade."
+            },
+            "800": {
+                "$type": "color",
+                "$value": {
+                    "colorSpace": "hsl",
+                    "components": [
+                        142,
+                        64,
+                        24
+                    ],
+                    "alpha": 1,
+                    "hex": "#166534"
+                },
+                "$description": "Success color at 800 weight. Darker shade."
+            },
+            "900": {
+                "$type": "color",
+                "$value": {
+                    "colorSpace": "hsl",
+                    "components": [
+                        142,
+                        61,
+                        20
+                    ],
+                    "alpha": 1,
+                    "hex": "#14532d"
+                },
+                "$description": "Success color at 900 weight. Very dark shade."
             }
         },
         "warning": {
+            "50": {
+                "$type": "color",
+                "$value": {
+                    "colorSpace": "hsl",
+                    "components": [
+                        38,
+                        92,
+                        97
+                    ],
+                    "alpha": 1,
+                    "hex": "#fffbeb"
+                },
+                "$description": "Warning color at 50 weight. Lightest shade for subtle backgrounds."
+            },
+            "100": {
+                "$type": "color",
+                "$value": {
+                    "colorSpace": "hsl",
+                    "components": [
+                        38,
+                        92,
+                        92
+                    ],
+                    "alpha": 1,
+                    "hex": "#fef3c7"
+                },
+                "$description": "Warning color at 100 weight."
+            },
+            "200": {
+                "$type": "color",
+                "$value": {
+                    "colorSpace": "hsl",
+                    "components": [
+                        38,
+                        92,
+                        85
+                    ],
+                    "alpha": 1,
+                    "hex": "#fde68a"
+                },
+                "$description": "Warning color at 200 weight."
+            },
+            "300": {
+                "$type": "color",
+                "$value": {
+                    "colorSpace": "hsl",
+                    "components": [
+                        38,
+                        92,
+                        73
+                    ],
+                    "alpha": 1,
+                    "hex": "#fcd34d"
+                },
+                "$description": "Warning color at 300 weight."
+            },
+            "400": {
+                "$type": "color",
+                "$value": {
+                    "colorSpace": "hsl",
+                    "components": [
+                        38,
+                        92,
+                        57
+                    ],
+                    "alpha": 1,
+                    "hex": "#fbbf24"
+                },
+                "$description": "Warning color at 400 weight."
+            },
             "500": {
                 "$type": "color",
                 "$value": {
@@ -695,7 +877,7 @@
                     "alpha": 1,
                     "hex": "#f59e0b"
                 },
-                "$description": "Warning color for cautionary feedback."
+                "$description": "Warning color at 500 weight. Core warning shade."
             },
             "600": {
                 "$type": "color",
@@ -709,10 +891,122 @@
                     "alpha": 1,
                     "hex": "#d97706"
                 },
-                "$description": "Darker warning color for emphasis."
+                "$description": "Warning color at 600 weight. Main warning identity."
+            },
+            "700": {
+                "$type": "color",
+                "$value": {
+                    "colorSpace": "hsl",
+                    "components": [
+                        32,
+                        88,
+                        36
+                    ],
+                    "alpha": 1,
+                    "hex": "#b45309"
+                },
+                "$description": "Warning color at 700 weight. Darker shade."
+            },
+            "800": {
+                "$type": "color",
+                "$value": {
+                    "colorSpace": "hsl",
+                    "components": [
+                        32,
+                        81,
+                        29
+                    ],
+                    "alpha": 1,
+                    "hex": "#92400e"
+                },
+                "$description": "Warning color at 800 weight. Very dark shade."
+            },
+            "900": {
+                "$type": "color",
+                "$value": {
+                    "colorSpace": "hsl",
+                    "components": [
+                        32,
+                        75,
+                        24
+                    ],
+                    "alpha": 1,
+                    "hex": "#78350f"
+                },
+                "$description": "Warning color at 900 weight. Darkest shade."
             }
         },
         "error": {
+            "50": {
+                "$type": "color",
+                "$value": {
+                    "colorSpace": "hsl",
+                    "components": [
+                        0,
+                        86,
+                        97
+                    ],
+                    "alpha": 1,
+                    "hex": "#fef2f2"
+                },
+                "$description": "Error color at 50 weight. Lightest shade for subtle backgrounds."
+            },
+            "100": {
+                "$type": "color",
+                "$value": {
+                    "colorSpace": "hsl",
+                    "components": [
+                        0,
+                        86,
+                        93
+                    ],
+                    "alpha": 1,
+                    "hex": "#fee2e2"
+                },
+                "$description": "Error color at 100 weight."
+            },
+            "200": {
+                "$type": "color",
+                "$value": {
+                    "colorSpace": "hsl",
+                    "components": [
+                        0,
+                        86,
+                        87
+                    ],
+                    "alpha": 1,
+                    "hex": "#fecaca"
+                },
+                "$description": "Error color at 200 weight."
+            },
+            "300": {
+                "$type": "color",
+                "$value": {
+                    "colorSpace": "hsl",
+                    "components": [
+                        0,
+                        86,
+                        76
+                    ],
+                    "alpha": 1,
+                    "hex": "#fca5a5"
+                },
+                "$description": "Error color at 300 weight."
+            },
+            "400": {
+                "$type": "color",
+                "$value": {
+                    "colorSpace": "hsl",
+                    "components": [
+                        0,
+                        84,
+                        65
+                    ],
+                    "alpha": 1,
+                    "hex": "#f87171"
+                },
+                "$description": "Error color at 400 weight."
+            },
             "500": {
                 "$type": "color",
                 "$value": {
@@ -725,7 +1019,7 @@
                     "alpha": 1,
                     "hex": "#ef4444"
                 },
-                "$description": "Error color for negative feedback."
+                "$description": "Error color at 500 weight. Core error shade."
             },
             "600": {
                 "$type": "color",
@@ -739,7 +1033,49 @@
                     "alpha": 1,
                     "hex": "#dc2626"
                 },
-                "$description": "Darker error color for emphasis."
+                "$description": "Error color at 600 weight. Main error identity."
+            },
+            "700": {
+                "$type": "color",
+                "$value": {
+                    "colorSpace": "hsl",
+                    "components": [
+                        0,
+                        74,
+                        42
+                    ],
+                    "alpha": 1,
+                    "hex": "#b91c1c"
+                },
+                "$description": "Error color at 700 weight. Darker shade."
+            },
+            "800": {
+                "$type": "color",
+                "$value": {
+                    "colorSpace": "hsl",
+                    "components": [
+                        0,
+                        70,
+                        35
+                    ],
+                    "alpha": 1,
+                    "hex": "#991b1b"
+                },
+                "$description": "Error color at 800 weight. Very dark shade."
+            },
+            "900": {
+                "$type": "color",
+                "$value": {
+                    "colorSpace": "hsl",
+                    "components": [
+                        0,
+                        63,
+                        31
+                    ],
+                    "alpha": 1,
+                    "hex": "#7f1d1d"
+                },
+                "$description": "Error color at 900 weight. Darkest shade."
             }
         }
     },
