@@ -1079,16 +1079,6 @@
             }
         },
         "transparency": {
-            "0": {
-                "$type": "color",
-                "$value": {
-                    "colorSpace": "hsl",
-                    "components": [0, 0, 0],
-                    "alpha": 0,
-                    "hex": "#000000"
-                },
-                "$description": "Fully transparent black. Invisible."
-            },
             "5": {
                 "$type": "color",
                 "$value": {
@@ -1119,16 +1109,6 @@
                 },
                 "$description": "Black at 20% opacity. Subtle overlay."
             },
-            "40": {
-                "$type": "color",
-                "$value": {
-                    "colorSpace": "hsl",
-                    "components": [0, 0, 0],
-                    "alpha": 0.4,
-                    "hex": "#000000"
-                },
-                "$description": "Black at 40% opacity. Medium transparency."
-            },
             "60": {
                 "$type": "color",
                 "$value": {
@@ -1138,26 +1118,6 @@
                     "hex": "#000000"
                 },
                 "$description": "Black at 60% opacity. Semi-transparent."
-            },
-            "80": {
-                "$type": "color",
-                "$value": {
-                    "colorSpace": "hsl",
-                    "components": [0, 0, 0],
-                    "alpha": 0.8,
-                    "hex": "#000000"
-                },
-                "$description": "Black at 80% opacity. Mostly opaque."
-            },
-            "100": {
-                "$type": "color",
-                "$value": {
-                    "colorSpace": "hsl",
-                    "components": [0, 0, 0],
-                    "alpha": 1,
-                    "hex": "#000000"
-                },
-                "$description": "Black at 100% opacity. Fully opaque black."
             }
         }
     },
@@ -1539,8 +1499,8 @@
             "$description": "Thick border (4px). Strong emphasis."
         }
     },
-    "shadow": {
-        "sm": {
+    "elevation": {
+        "5": {
             "$type": "shadow",
             "$value": {
                 "offsetX": "0px",
@@ -1548,11 +1508,11 @@
                 "blur": "3px",
                 "spread": "0px",
                 "color": "{color.neutral.900}",
-                "alpha": 0.1
+                "alpha": 0.05
             },
-            "$description": "Small shadow (1px offset, 3px blur). Subtle depth for cards, buttons."
+            "$description": "Elevation 5 (1px offset, 3px blur, 5% opacity). Minimal depth."
         },
-        "md": {
+        "10": {
             "$type": "shadow",
             "$value": {
                 "offsetX": "0px",
@@ -1562,9 +1522,9 @@
                 "color": "{color.neutral.900}",
                 "alpha": 0.1
             },
-            "$description": "Medium shadow (4px offset, 6px blur). Standard cards, dropdowns."
+            "$description": "Elevation 10 (4px offset, 6px blur, 10% opacity). Subtle depth."
         },
-        "lg": {
+        "20": {
             "$type": "shadow",
             "$value": {
                 "offsetX": "0px",
@@ -1572,11 +1532,11 @@
                 "blur": "15px",
                 "spread": "-3px",
                 "color": "{color.neutral.900}",
-                "alpha": 0.1
+                "alpha": 0.2
             },
-            "$description": "Large shadow (10px offset, 15px blur). Elevated elements, popovers."
+            "$description": "Elevation 20 (10px offset, 15px blur, 20% opacity). Moderate depth."
         },
-        "xl": {
+        "60": {
             "$type": "shadow",
             "$value": {
                 "offsetX": "0px",
@@ -1584,22 +1544,9 @@
                 "blur": "25px",
                 "spread": "-5px",
                 "color": "{color.neutral.900}",
-                "alpha": 0.15
+                "alpha": 0.6
             },
-            "$description": "Extra large shadow (20px offset, 25px blur). Modals, dialogs."
-        },
-        "inner": {
-            "$type": "shadow",
-            "$value": {
-                "offsetX": "0px",
-                "offsetY": "2px",
-                "blur": "4px",
-                "spread": "0px",
-                "color": "{color.neutral.900}",
-                "alpha": 0.06,
-                "inset": true
-            },
-            "$description": "Inner shadow for inset/pressed effects."
+            "$description": "Elevation 60 (20px offset, 25px blur, 60% opacity). Maximum depth."
         }
     }
 }

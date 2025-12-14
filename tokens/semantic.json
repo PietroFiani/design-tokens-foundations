@@ -597,41 +597,36 @@
         "card": {
             "default": {
                 "$type": "shadow",
-                "$value": "{shadow.sm}",
+                "$value": "{elevation.5}",
                 "$description": "Default card shadow. Subtle elevation for cards at rest."
             },
             "hover": {
                 "$type": "shadow",
-                "$value": "{shadow.md}",
+                "$value": "{elevation.10}",
                 "$description": "Card shadow on hover. Increased elevation for interactive feedback."
             }
         },
         "dropdown": {
             "$type": "shadow",
-            "$value": "{shadow.lg}",
+            "$value": "{elevation.20}",
             "$description": "Dropdown shadow. Elevated menus and popovers."
         },
         "modal": {
             "$type": "shadow",
-            "$value": "{shadow.xl}",
+            "$value": "{elevation.60}",
             "$description": "Modal shadow. Maximum elevation for dialogs and overlays."
         },
         "button": {
             "default": {
                 "$type": "shadow",
-                "$value": "{shadow.sm}",
+                "$value": "{elevation.5}",
                 "$description": "Default button shadow. Subtle depth."
             },
             "hover": {
                 "$type": "shadow",
-                "$value": "{shadow.md}",
+                "$value": "{elevation.10}",
                 "$description": "Button shadow on hover. Lifted appearance."
             }
-        },
-        "inset": {
-            "$type": "shadow",
-            "$value": "{shadow.inner}",
-            "$description": "Inset shadow. For pressed/recessed effects on inputs."
         }
     }
 }
