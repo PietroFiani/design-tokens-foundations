@@ -1077,6 +1077,38 @@
                 },
                 "$description": "Error color at 900 weight. Darkest shade."
             }
+        },
+        "overlay": {
+            "modal": {
+                "$type": "color",
+                "$value": {
+                    "colorSpace": "hsl",
+                    "components": [0, 0, 0],
+                    "alpha": 0.6,
+                    "hex": "#000000"
+                },
+                "$description": "Modal backdrop overlay (60% black). Semi-transparent black for dialog backgrounds."
+            },
+            "dropdown": {
+                "$type": "color",
+                "$value": {
+                    "colorSpace": "hsl",
+                    "components": [0, 0, 0],
+                    "alpha": 0.1,
+                    "hex": "#000000"
+                },
+                "$description": "Dropdown overlay (10% black). Subtle overlay for dropdown backgrounds."
+            },
+            "hover": {
+                "$type": "color",
+                "$value": {
+                    "colorSpace": "hsl",
+                    "components": [0, 0, 0],
+                    "alpha": 0.05,
+                    "hex": "#000000"
+                },
+                "$description": "Hover overlay (5% black). Very subtle overlay for hover states on images/cards."
+            }
         }
     },
     "fontFamily": {
