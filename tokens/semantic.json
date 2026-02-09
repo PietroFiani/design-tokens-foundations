@@ -998,26 +998,58 @@
         "duration": {
             "instant": {
                 "$type": "duration",
-                "$value": "{duration.instant}",
+                "$value": "0ms",
                 "$description": "No transition (0ms). Immediate state changes."
             },
             "fast": {
                 "$type": "duration",
-                "$value": "{duration.fast}",
+                "$value": "100ms",
                 "$description": "Fast transition (100ms). Hover states, tooltips, subtle feedback."
             },
             "normal": {
                 "$type": "duration",
-                "$value": "{duration.normal}",
+                "$value": "200ms",
                 "$description": "Normal transition (200ms). Default for most transitions, modals, dropdowns."
             },
             "slow": {
                 "$type": "duration",
-                "$value": "{duration.slow}",
+                "$value": "300ms",
                 "$description": "Slow transition (300ms). Complex animations, drawer panels."
+            },
+            "slower": {
+                "$type": "duration",
+                "$value": "500ms",
+                "$description": "Slower transition (500ms). Page transitions, complex slide animations."
             }
         }
-    }, 
+    },
+    "zIndex": {
+        "base": {
+            "$type": "number",
+            "$value": 0,
+            "$description": "Base layer (0). Default stacking context."
+        },
+        "low": {
+            "$type": "number",
+            "$value": 1000,
+            "$description": "Low elevation (1000). First level above base."
+        },
+        "medium": {
+            "$type": "number",
+            "$value": 1100,
+            "$description": "Medium elevation (2000). Second level above base."
+        },
+        "high": {
+            "$type": "number",
+            "$value": 1200,
+            "$description": "High elevation (3000). Third level above base."
+        },
+        "highest": {
+            "$type": "number",
+            "$value": 1300,
+            "$description": "Highest elevation (4000). Top layer in the stacking hierarchy."
+        }
+    },
     "shadow": {
         "5": {
             "$type": "shadow",
