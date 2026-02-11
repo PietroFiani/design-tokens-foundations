@@ -5,65 +5,65 @@
                 "base": {
                     "default": {
                         "$type": "color",
-                        "$value": "{color.neutral.0}",
-                        "$description": "Default page background. Pure white for clean, bright layouts.",
+                        "$value": "{color.neutral.300}",
+                        "$description": "Default page background. Near-white for clean, bright layouts.",
                         "$extensions": {
                             "contrast": {
                                 "ratio": "21:1",
                                 "level": "AAA",
-                                "foreground": "{color.text.base.default}"
+                                "foreground": "{color.text.neutral.base.default}"
                             }
                         }
                     },
                     "hover": {
                         "$type": "color",
-                        "$value": "{color.neutral.50}",
+                        "$value": "{color.neutral.400}",
                         "$description": "Base background on hover."
                     },
                     "pressed": {
                         "$type": "color",
-                        "$value": "{color.neutral.100}",
+                        "$value": "{color.neutral.300}",
                         "$description": "Base background on pressed/active state."
                     }
                 },
                 "muted": {
                     "default": {
                         "$type": "color",
-                        "$value": "{color.neutral.50}",
+                        "$value": "{color.neutral.400}",
                         "$description": "Subtle background for secondary areas. Use for cards, panels, sidebars.",
                         "$extensions": {
                             "contrast": {
                                 "ratio": "19.5:1",
                                 "level": "AAA",
-                                "foreground": "{color.text.base.default}"
+                                "foreground": "{color.text.neutral.base.default}"
                             }
                         }
                     },
                     "hover": {
                         "$type": "color",
-                        "$value": "{color.neutral.100}",
+                        "$value": "{color.neutral.300}",
                         "$description": "Muted background on hover."
                     },
                     "pressed": {
                         "$type": "color",
-                        "$value": "{color.neutral.200}",
+                        "$value": "{color.neutral.400}",
                         "$description": "Muted background on pressed/active state."
                     }
                 },
                 "subtle": {
                     "default": {
                         "$type": "color",
-                        "$value": "{color.neutral.100}",
+                        "$value": "{color.neutral.300}",
                         "$description": "Very subtle background. Use for hover states on light backgrounds."
                     },
                     "hover": {
                         "$type": "color",
-                        "$value": "{color.neutral.200}",
+                        "$value": "{color.neutral.400}",
                         "$description": "Subtle background on hover."
                     },
                     "pressed": {
                         "$type": "color",
-                        "$value": "{color.neutral.300}",
+                        "$value": "{color.neutral.500}",
                         "$description": "Subtle background on pressed/active state."
                     }
                 }
@@ -72,65 +72,65 @@
                 "primary": {
                     "default": {
                         "$type": "color",
-                        "$value": "{color.primary.600}",
+                        "$value": "{color.primary.700}",
                         "$description": "Primary brand background. Use for CTAs and key interactive elements. Use sparingly (1-3 per screen) to maintain hierarchy. Examples: 'Sign Up' button, 'Submit' CTA.",
                         "$extensions": {
                             "contrast": {
                                 "ratio": "4.5:1",
                                 "level": "AA",
-                                "foreground": "{color.text.inverse.default}"
+                                "foreground": "{color.text.neutral.inverse.default}"
                             }
                         }
                     },
                     "hover": {
                         "$type": "color",
-                        "$value": "{color.primary.700}",
+                        "$value": "{color.primary.800}",
                         "$description": "Primary brand background on hover. Provides clear interactive feedback.",
                         "$extensions": {
                             "contrast": {
                                 "ratio": "5.8:1",
                                 "level": "AA",
-                                "foreground": "{color.text.inverse.default}"
+                                "foreground": "{color.text.neutral.inverse.default}"
                             }
                         }
                     },
                     "pressed": {
                         "$type": "color",
-                        "$value": "{color.primary.800}",
+                        "$value": "{color.primary.900}",
                         "$description": "Primary brand background on pressed/active state."
                     }
                 },
                 "secondary": {
                     "default": {
                         "$type": "color",
-                        "$value": "{color.secondary.600}",
+                        "$value": "{color.secondary.700}",
                         "$description": "Secondary brand background. Use for secondary CTAs and supporting actions. Examples: 'Learn More', 'Cancel' with accent."
                     },
                     "hover": {
                         "$type": "color",
-                        "$value": "{color.secondary.700}",
+                        "$value": "{color.secondary.800}",
                         "$description": "Secondary brand background on hover."
                     },
                     "pressed": {
                         "$type": "color",
-                        "$value": "{color.secondary.800}",
+                        "$value": "{color.secondary.900}",
                         "$description": "Secondary brand background on pressed/active state."
                     }
                 },
                 "tertiary": {
                     "default": {
                         "$type": "color",
-                        "$value": "{color.tertiary.600}",
+                        "$value": "{color.tertiary.700}",
                         "$description": "Tertiary brand background. Use for tertiary actions and decorative elements."
                     },
                     "hover": {
                         "$type": "color",
-                        "$value": "{color.tertiary.700}",
+                        "$value": "{color.tertiary.800}",
                         "$description": "Tertiary brand background on hover."
                     },
                     "pressed": {
                         "$type": "color",
-                        "$value": "{color.tertiary.800}",
+                        "$value": "{color.tertiary.900}",
                         "$description": "Tertiary brand background on pressed/active state."
                     }
                 }
@@ -139,33 +139,33 @@
                 "success": {
                     "default": {
                         "$type": "color",
-                        "$value": "{color.success.500}",
+                        "$value": "{color.success.600}",
                         "$description": "Success background for positive feedback. Examples: Success alerts, confirmation banners."
                     },
                     "hover": {
                         "$type": "color",
-                        "$value": "{color.success.600}",
+                        "$value": "{color.success.700}",
                         "$description": "Success background on hover."
                     },
                     "pressed": {
                         "$type": "color",
-                        "$value": "{color.success.700}",
+                        "$value": "{color.success.800}",
                         "$description": "Success background on pressed/active state."
                     },
                     "muted": {
                         "default": {
                             "$type": "color",
-                            "$value": "{color.success.100}",
+                            "$value": "{color.success.200}",
                             "$description": "Muted success background. Subtle positive feedback for backgrounds."
                         },
                         "hover": {
                             "$type": "color",
-                            "$value": "{color.success.200}",
+                            "$value": "{color.success.300}",
                             "$description": "Muted success background on hover."
                         },
                         "pressed": {
                             "$type": "color",
-                            "$value": "{color.success.300}",
+                            "$value": "{color.success.400}",
                             "$description": "Muted success background on pressed/active state."
                         }
                     }
@@ -173,33 +173,33 @@
                 "warning": {
                     "default": {
                         "$type": "color",
-                        "$value": "{color.warning.500}",
+                        "$value": "{color.warning.600}",
                         "$description": "Warning background for cautionary feedback. Examples: Warning alerts, caution banners."
                     },
                     "hover": {
                         "$type": "color",
-                        "$value": "{color.warning.600}",
+                        "$value": "{color.warning.700}",
                         "$description": "Warning background on hover."
                     },
                     "pressed": {
                         "$type": "color",
-                        "$value": "{color.warning.700}",
+                        "$value": "{color.warning.800}",
                         "$description": "Warning background on pressed/active state."
                     },
                     "muted": {
                         "default": {
                             "$type": "color",
-                            "$value": "{color.warning.100}",
+                            "$value": "{color.warning.200}",
                             "$description": "Muted warning background. Subtle cautionary feedback for backgrounds."
                         },
                         "hover": {
                             "$type": "color",
-                            "$value": "{color.warning.200}",
+                            "$value": "{color.warning.300}",
                             "$description": "Muted warning background on hover."
                         },
                         "pressed": {
                             "$type": "color",
-                            "$value": "{color.warning.300}",
+                            "$value": "{color.warning.400}",
                             "$description": "Muted warning background on pressed/active state."
                         }
                     }
@@ -207,33 +207,33 @@
                 "error": {
                     "default": {
                         "$type": "color",
-                        "$value": "{color.error.500}",
+                        "$value": "{color.error.600}",
                         "$description": "Error background for negative feedback. Examples: Error alerts, validation errors."
                     },
                     "hover": {
                         "$type": "color",
-                        "$value": "{color.error.600}",
+                        "$value": "{color.error.700}",
                         "$description": "Error background on hover."
                     },
                     "pressed": {
                         "$type": "color",
-                        "$value": "{color.error.700}",
+                        "$value": "{color.error.800}",
                         "$description": "Error background on pressed/active state."
                     },
                     "muted": {
                         "default": {
                             "$type": "color",
-                            "$value": "{color.error.100}",
+                            "$value": "{color.error.200}",
                             "$description": "Muted error background. Subtle negative feedback for backgrounds."
                         },
                         "hover": {
                             "$type": "color",
-                            "$value": "{color.error.200}",
+                            "$value": "{color.error.300}",
                             "$description": "Muted error background on hover."
                         },
                         "pressed": {
                             "$type": "color",
-                            "$value": "{color.error.300}",
+                            "$value": "{color.error.400}",
                             "$description": "Muted error background on pressed/active state."
                         }
                     }
@@ -245,7 +245,7 @@
                 "base": {
                     "default": {
                         "$type": "color",
-                        "$value": "{color.neutral.900}",
+                        "$value": "{color.neutral.1100}",
                         "$description": "Primary text color. Near-black provides excellent readability. Use for body text, headings, primary content.",
                         "$extensions": {
                             "contrast": {
@@ -257,19 +257,19 @@
                     },
                     "hover": {
                         "$type": "color",
-                        "$value": "{color.neutral.800}",
+                        "$value": "{color.neutral.1000}",
                         "$description": "Base text on hover."
                     },
                     "pressed": {
                         "$type": "color",
-                        "$value": "{color.neutral.700}",
+                        "$value": "{color.neutral.900}",
                         "$description": "Base text on pressed/active state."
                     }
                 },
                 "muted": {
                     "default": {
                         "$type": "color",
-                        "$value": "{color.neutral.600}",
+                        "$value": "{color.neutral.800}",
                         "$description": "Secondary text color. Use for labels, helper text, timestamps, less important content.",
                         "$extensions": {
                             "contrast": {
@@ -281,19 +281,19 @@
                     },
                     "hover": {
                         "$type": "color",
-                        "$value": "{color.neutral.700}",
+                        "$value": "{color.neutral.900}",
                         "$description": "Muted text on hover."
                     },
                     "pressed": {
                         "$type": "color",
-                        "$value": "{color.neutral.800}",
+                        "$value": "{color.neutral.1000}",
                         "$description": "Muted text on pressed/active state."
                     }
                 },
                 "subtle": {
                     "default": {
                         "$type": "color",
-                        "$value": "{color.neutral.500}",
+                        "$value": "{color.neutral.700}",
                         "$description": "Tertiary text color. Use for placeholder text, disabled states. Meets WCAG AA for large text only.",
                         "$extensions": {
                             "contrast": {
@@ -305,19 +305,19 @@
                     },
                     "hover": {
                         "$type": "color",
-                        "$value": "{color.neutral.600}",
+                        "$value": "{color.neutral.800}",
                         "$description": "Subtle text on hover."
                     },
                     "pressed": {
                         "$type": "color",
-                        "$value": "{color.neutral.700}",
+                        "$value": "{color.neutral.900}",
                         "$description": "Subtle text on pressed/active state."
                     }
                 },
                 "inverse": {
                     "default": {
                         "$type": "color",
-                        "$value": "{color.neutral.0}",
+                        "$value": "{color.neutral.300}",
                         "$description": "Inverse text for dark backgrounds. Use on brand backgrounds, dark surfaces. Examples: Text on primary buttons.",
                         "$extensions": {
                             "contrast": {
@@ -329,12 +329,12 @@
                     },
                     "hover": {
                         "$type": "color",
-                        "$value": "{color.neutral.50}",
+                        "$value": "{color.neutral.400}",
                         "$description": "Inverse text on hover."
                     },
                     "pressed": {
                         "$type": "color",
-                        "$value": "{color.neutral.100}",
+                        "$value": "{color.neutral.300}",
                         "$description": "Inverse text on pressed/active state."
                     }
                 }
@@ -343,51 +343,51 @@
                 "primary": {
                     "default": {
                         "$type": "color",
-                        "$value": "{color.primary.600}",
+                        "$value": "{color.primary.700}",
                         "$description": "Primary brand text. Use for links, brand-colored text. Examples: Hyperlinks, brand labels."
                     },
                     "hover": {
                         "$type": "color",
-                        "$value": "{color.primary.700}",
+                        "$value": "{color.primary.800}",
                         "$description": "Primary brand text on hover. Use for link hover states."
                     },
                     "pressed": {
                         "$type": "color",
-                        "$value": "{color.primary.800}",
+                        "$value": "{color.primary.900}",
                         "$description": "Primary brand text on pressed/active state."
                     }
                 },
                 "secondary": {
                     "default": {
                         "$type": "color",
-                        "$value": "{color.secondary.600}",
+                        "$value": "{color.secondary.700}",
                         "$description": "Secondary brand text. Use for secondary links and accents."
                     },
                     "hover": {
                         "$type": "color",
-                        "$value": "{color.secondary.700}",
+                        "$value": "{color.secondary.800}",
                         "$description": "Secondary brand text on hover."
                     },
                     "pressed": {
                         "$type": "color",
-                        "$value": "{color.secondary.800}",
+                        "$value": "{color.secondary.900}",
                         "$description": "Secondary brand text on pressed/active state."
                     }
                 },
                 "tertiary": {
                     "default": {
                         "$type": "color",
-                        "$value": "{color.tertiary.600}",
+                        "$value": "{color.tertiary.700}",
                         "$description": "Tertiary brand text. Use for tertiary links and decorative text."
                     },
                     "hover": {
                         "$type": "color",
-                        "$value": "{color.tertiary.700}",
+                        "$value": "{color.tertiary.800}",
                         "$description": "Tertiary brand text on hover."
                     },
                     "pressed": {
                         "$type": "color",
-                        "$value": "{color.tertiary.800}",
+                        "$value": "{color.tertiary.900}",
                         "$description": "Tertiary brand text on pressed/active state."
                     }
                 }
@@ -396,33 +396,33 @@
                 "success": {
                     "default": {
                         "$type": "color",
-                        "$value": "{color.success.600}",
+                        "$value": "{color.success.700}",
                         "$description": "Success text for positive feedback. Examples: Success messages, confirmation text."
                     },
                     "hover": {
                         "$type": "color",
-                        "$value": "{color.success.700}",
+                        "$value": "{color.success.800}",
                         "$description": "Success text on hover."
                     },
                     "pressed": {
                         "$type": "color",
-                        "$value": "{color.success.800}",
+                        "$value": "{color.success.900}",
                         "$description": "Success text on pressed/active state."
                     },
                     "muted": {
                         "default": {
                             "$type": "color",
-                            "$value": "{color.success.400}",
+                            "$value": "{color.success.500}",
                             "$description": "Muted success text. Subtle positive feedback."
                         },
                         "hover": {
                             "$type": "color",
-                            "$value": "{color.success.500}",
+                            "$value": "{color.success.600}",
                             "$description": "Muted success text on hover."
                         },
                         "pressed": {
                             "$type": "color",
-                            "$value": "{color.success.600}",
+                            "$value": "{color.success.700}",
                             "$description": "Muted success text on pressed/active state."
                         }
                     }
@@ -430,33 +430,33 @@
                 "warning": {
                     "default": {
                         "$type": "color",
-                        "$value": "{color.warning.600}",
+                        "$value": "{color.warning.700}",
                         "$description": "Warning text for cautionary feedback. Examples: Warning messages, caution text."
                     },
                     "hover": {
                         "$type": "color",
-                        "$value": "{color.warning.700}",
+                        "$value": "{color.warning.800}",
                         "$description": "Warning text on hover."
                     },
                     "pressed": {
                         "$type": "color",
-                        "$value": "{color.warning.800}",
+                        "$value": "{color.warning.900}",
                         "$description": "Warning text on pressed/active state."
                     },
                     "muted": {
                         "default": {
                             "$type": "color",
-                            "$value": "{color.warning.500}",
+                            "$value": "{color.warning.600}",
                             "$description": "Muted warning text. Subtle cautionary feedback."
                         },
                         "hover": {
                             "$type": "color",
-                            "$value": "{color.warning.600}",
+                            "$value": "{color.warning.700}",
                             "$description": "Muted warning text on hover."
                         },
                         "pressed": {
                             "$type": "color",
-                            "$value": "{color.warning.700}",
+                            "$value": "{color.warning.800}",
                             "$description": "Muted warning text on pressed/active state."
                         }
                     }
@@ -464,33 +464,33 @@
                 "error": {
                     "default": {
                         "$type": "color",
-                        "$value": "{color.error.600}",
+                        "$value": "{color.error.700}",
                         "$description": "Error text for negative feedback. Examples: Error messages, validation text."
                     },
                     "hover": {
                         "$type": "color",
-                        "$value": "{color.error.700}",
+                        "$value": "{color.error.800}",
                         "$description": "Error text on hover."
                     },
                     "pressed": {
                         "$type": "color",
-                        "$value": "{color.error.800}",
+                        "$value": "{color.error.900}",
                         "$description": "Error text on pressed/active state."
                     },
                     "muted": {
                         "default": {
                             "$type": "color",
-                            "$value": "{color.error.400}",
+                            "$value": "{color.error.500}",
                             "$description": "Muted error text. Subtle negative feedback."
                         },
                         "hover": {
                             "$type": "color",
-                            "$value": "{color.error.500}",
+                            "$value": "{color.error.600}",
                             "$description": "Muted error text on hover."
                         },
                         "pressed": {
                             "$type": "color",
-                            "$value": "{color.error.600}",
+                            "$value": "{color.error.700}",
                             "$description": "Muted error text on pressed/active state."
                         }
                     }
@@ -502,51 +502,51 @@
                 "base": {
                     "default": {
                         "$type": "color",
-                        "$value": "{color.neutral.200}",
+                        "$value": "{color.neutral.400}",
                         "$description": "Default border color. Use for dividers, input borders, card outlines."
                     },
                     "hover": {
                         "$type": "color",
-                        "$value": "{color.neutral.300}",
+                        "$value": "{color.neutral.500}",
                         "$description": "Base border on hover."
                     },
                     "pressed": {
                         "$type": "color",
-                        "$value": "{color.neutral.400}",
+                        "$value": "{color.neutral.600}",
                         "$description": "Base border on pressed/active state."
                     }
                 },
                 "muted": {
                     "default": {
                         "$type": "color",
-                        "$value": "{color.neutral.100}",
+                        "$value": "{color.neutral.300}",
                         "$description": "Subtle border color. Use for very subtle dividers."
                     },
                     "hover": {
                         "$type": "color",
-                        "$value": "{color.neutral.200}",
+                        "$value": "{color.neutral.400}",
                         "$description": "Muted border on hover."
                     },
                     "pressed": {
                         "$type": "color",
-                        "$value": "{color.neutral.300}",
+                        "$value": "{color.neutral.500}",
                         "$description": "Muted border on pressed/active state."
                     }
                 },
                 "emphasis": {
                     "default": {
                         "$type": "color",
-                        "$value": "{color.neutral.300}",
+                        "$value": "{color.neutral.500}",
                         "$description": "Emphasized border. Use for focused states, stronger dividers."
                     },
                     "hover": {
                         "$type": "color",
-                        "$value": "{color.neutral.400}",
+                        "$value": "{color.neutral.600}",
                         "$description": "Emphasis border on hover."
                     },
                     "pressed": {
                         "$type": "color",
-                        "$value": "{color.neutral.500}",
+                        "$value": "{color.neutral.700}",
                         "$description": "Emphasis border on pressed/active state."
                     }
                 }
@@ -555,51 +555,51 @@
                 "primary": {
                     "default": {
                         "$type": "color",
-                        "$value": "{color.primary.600}",
+                        "$value": "{color.primary.700}",
                         "$description": "Primary brand border. Use for focus rings, brand-accented containers."
                     },
                     "hover": {
                         "$type": "color",
-                        "$value": "{color.primary.700}",
+                        "$value": "{color.primary.800}",
                         "$description": "Primary brand border on hover."
                     },
                     "pressed": {
                         "$type": "color",
-                        "$value": "{color.primary.800}",
+                        "$value": "{color.primary.900}",
                         "$description": "Primary brand border on pressed/active state."
                     }
                 },
                 "secondary": {
                     "default": {
                         "$type": "color",
-                        "$value": "{color.secondary.600}",
+                        "$value": "{color.secondary.700}",
                         "$description": "Secondary brand border. Use for secondary accented containers."
                     },
                     "hover": {
                         "$type": "color",
-                        "$value": "{color.secondary.700}",
+                        "$value": "{color.secondary.800}",
                         "$description": "Secondary brand border on hover."
                     },
                     "pressed": {
                         "$type": "color",
-                        "$value": "{color.secondary.800}",
+                        "$value": "{color.secondary.900}",
                         "$description": "Secondary brand border on pressed/active state."
                     }
                 },
                 "tertiary": {
                     "default": {
                         "$type": "color",
-                        "$value": "{color.tertiary.600}",
+                        "$value": "{color.tertiary.700}",
                         "$description": "Tertiary brand border. Use for tertiary accented containers."
                     },
                     "hover": {
                         "$type": "color",
-                        "$value": "{color.tertiary.700}",
+                        "$value": "{color.tertiary.800}",
                         "$description": "Tertiary brand border on hover."
                     },
                     "pressed": {
                         "$type": "color",
-                        "$value": "{color.tertiary.800}",
+                        "$value": "{color.tertiary.900}",
                         "$description": "Tertiary brand border on pressed/active state."
                     }
                 }
@@ -608,33 +608,33 @@
                 "success": {
                     "default": {
                         "$type": "color",
-                        "$value": "{color.success.500}",
+                        "$value": "{color.success.600}",
                         "$description": "Success border for positive feedback. Examples: Valid input borders."
                     },
                     "hover": {
                         "$type": "color",
-                        "$value": "{color.success.600}",
+                        "$value": "{color.success.700}",
                         "$description": "Success border on hover."
                     },
                     "pressed": {
                         "$type": "color",
-                        "$value": "{color.success.700}",
+                        "$value": "{color.success.800}",
                         "$description": "Success border on pressed/active state."
                     },
                     "muted": {
                         "default": {
                             "$type": "color",
-                            "$value": "{color.success.300}",
+                            "$value": "{color.success.400}",
                             "$description": "Muted success border. Subtle positive feedback."
                         },
                         "hover": {
                             "$type": "color",
-                            "$value": "{color.success.400}",
+                            "$value": "{color.success.500}",
                             "$description": "Muted success border on hover."
                         },
                         "pressed": {
                             "$type": "color",
-                            "$value": "{color.success.500}",
+                            "$value": "{color.success.600}",
                             "$description": "Muted success border on pressed/active state."
                         }
                     }
@@ -642,33 +642,33 @@
                 "warning": {
                     "default": {
                         "$type": "color",
-                        "$value": "{color.warning.500}",
+                        "$value": "{color.warning.600}",
                         "$description": "Warning border for cautionary feedback. Examples: Warning input borders."
                     },
                     "hover": {
                         "$type": "color",
-                        "$value": "{color.warning.600}",
+                        "$value": "{color.warning.700}",
                         "$description": "Warning border on hover."
                     },
                     "pressed": {
                         "$type": "color",
-                        "$value": "{color.warning.700}",
+                        "$value": "{color.warning.800}",
                         "$description": "Warning border on pressed/active state."
                     },
                     "muted": {
                         "default": {
                             "$type": "color",
-                            "$value": "{color.warning.300}",
+                            "$value": "{color.warning.400}",
                             "$description": "Muted warning border. Subtle cautionary feedback."
                         },
                         "hover": {
                             "$type": "color",
-                            "$value": "{color.warning.400}",
+                            "$value": "{color.warning.500}",
                             "$description": "Muted warning border on hover."
                         },
                         "pressed": {
                             "$type": "color",
-                            "$value": "{color.warning.500}",
+                            "$value": "{color.warning.600}",
                             "$description": "Muted warning border on pressed/active state."
                         }
                     }
@@ -676,33 +676,33 @@
                 "error": {
                     "default": {
                         "$type": "color",
-                        "$value": "{color.error.500}",
+                        "$value": "{color.error.600}",
                         "$description": "Error border for validation states. Examples: Invalid input borders."
                     },
                     "hover": {
                         "$type": "color",
-                        "$value": "{color.error.600}",
+                        "$value": "{color.error.700}",
                         "$description": "Error border on hover."
                     },
                     "pressed": {
                         "$type": "color",
-                        "$value": "{color.error.700}",
+                        "$value": "{color.error.800}",
                         "$description": "Error border on pressed/active state."
                     },
                     "muted": {
                         "default": {
                             "$type": "color",
-                            "$value": "{color.error.300}",
+                            "$value": "{color.error.400}",
                             "$description": "Muted error border. Subtle negative feedback."
                         },
                         "hover": {
                             "$type": "color",
-                            "$value": "{color.error.400}",
+                            "$value": "{color.error.500}",
                             "$description": "Muted error border on hover."
                         },
                         "pressed": {
                             "$type": "color",
-                            "$value": "{color.error.500}",
+                            "$value": "{color.error.600}",
                             "$description": "Muted error border on pressed/active state."
                         }
                     }
@@ -715,108 +715,54 @@
             "xs": {
                 "$type": "dimension",
                 "$value": "{spacing.1}",
-                "$description": "Extra small padding (4px). Very compact buttons, tight spacing."
+                "$description": "Extra small padding (4px). Use for tight internal spacing in compact components."
             },
             "sm": {
                 "$type": "dimension",
                 "$value": "{spacing.2}",
-                "$description": "Small padding (8px). Compact buttons, small chips."
+                "$description": "Small padding (8px). Use for compact components like small buttons and chips."
             },
             "md": {
                 "$type": "dimension",
                 "$value": "{spacing.4}",
-                "$description": "Medium padding (16px). Default buttons, input fields, cards."
+                "$description": "Medium padding (16px). Default for buttons, input fields, cards, and standard components."
             },
             "lg": {
                 "$type": "dimension",
                 "$value": "{spacing.6}",
-                "$description": "Large padding (24px). Spacious buttons, large cards."
+                "$description": "Large padding (24px). Use for spacious components and large containers."
             },
             "xl": {
                 "$type": "dimension",
                 "$value": "{spacing.8}",
-                "$description": "Extra large padding (32px). Hero sections, major containers."
+                "$description": "Extra large padding (32px). Use for hero sections and major layout containers."
             }
         },
         "gap": {
             "xs": {
                 "$type": "dimension",
                 "$value": "{spacing.1}",
-                "$description": "Extra small gap (4px). Tight element spacing."
+                "$description": "Extra small gap (4px). Use for tight spacing between related elements."
             },
             "sm": {
                 "$type": "dimension",
                 "$value": "{spacing.2}",
-                "$description": "Small gap (8px). Compact layouts, button groups."
+                "$description": "Small gap (8px). Use for compact layouts, button groups, and closely related content."
             },
             "md": {
                 "$type": "dimension",
                 "$value": "{spacing.4}",
-                "$description": "Medium gap (16px). Standard element spacing."
+                "$description": "Medium gap (16px). Default spacing between elements and content sections."
             },
             "lg": {
                 "$type": "dimension",
                 "$value": "{spacing.6}",
-                "$description": "Large gap (24px). Section spacing within containers."
+                "$description": "Large gap (24px). Use for spacing between major content groups and sections."
             },
             "xl": {
                 "$type": "dimension",
                 "$value": "{spacing.8}",
-                "$description": "Extra large gap (32px). Major section separation."
-            }
-        },
-        "stack": {
-            "xs": {
-                "$type": "dimension",
-                "$value": "{spacing.1}",
-                "$description": "Extra small vertical spacing (4px). Tight stacks."
-            },
-            "sm": {
-                "$type": "dimension",
-                "$value": "{spacing.2}",
-                "$description": "Small vertical spacing (8px). Compact lists."
-            },
-            "md": {
-                "$type": "dimension",
-                "$value": "{spacing.4}",
-                "$description": "Medium vertical spacing (16px). Default paragraph spacing."
-            },
-            "lg": {
-                "$type": "dimension",
-                "$value": "{spacing.6}",
-                "$description": "Large vertical spacing (24px). Section spacing."
-            },
-            "xl": {
-                "$type": "dimension",
-                "$value": "{spacing.8}",
-                "$description": "Extra large vertical spacing (32px). Major section gaps."
-            }
-        },
-        "inset": {
-            "xs": {
-                "$type": "dimension",
-                "$value": "{spacing.1}",
-                "$description": "Extra small inset (4px). Tight internal spacing."
-            },
-            "sm": {
-                "$type": "dimension",
-                "$value": "{spacing.2}",
-                "$description": "Small inset (8px). Compact container padding."
-            },
-            "md": {
-                "$type": "dimension",
-                "$value": "{spacing.4}",
-                "$description": "Medium inset (16px). Standard container padding."
-            },
-            "lg": {
-                "$type": "dimension",
-                "$value": "{spacing.6}",
-                "$description": "Large inset (24px). Spacious container padding."
-            },
-            "xl": {
-                "$type": "dimension",
-                "$value": "{spacing.8}",
-                "$description": "Extra large inset (32px). Major container padding."
+                "$description": "Extra large gap (32px). Use for separation between distinct page sections and major layout areas."
             }
         }
     },
@@ -888,7 +834,7 @@
             "$description": "Display text (60px). Largest text for hero sections, marketing pages, landing page headlines. Use sparingly for maximum impact."
         },
         "heading": {
-            "h1": {
+            "xl": {
                 "$type": "typography",
                 "$value": {
                     "fontFamily": "{fontFamily.sans}",
@@ -896,9 +842,9 @@
                     "fontWeight": "{fontWeight.bold}",
                     "lineHeight": "{lineHeight.tight}"
                 },
-                "$description": "Main page heading (H1). Use exactly once per page for main title. Large size (48px) creates strong hierarchy. Tight line height (1.25) optimized for single-line display. Examples: 'Dashboard', 'Settings', 'Welcome to Our Platform'."
+                "$description": "Largest heading scale (48px). Use for page titles and primary headlines. Creates strong visual hierarchy with bold weight and tight line height (1.25). Examples: Dashboard title, landing page hero, main section headers."
             },
-            "h2": {
+            "lg": {
                 "$type": "typography",
                 "$value": {
                     "fontFamily": "{fontFamily.sans}",
@@ -906,9 +852,9 @@
                     "fontWeight": "{fontWeight.bold}",
                     "lineHeight": "{lineHeight.tight}"
                 },
-                "$description": "Secondary heading (H2). Use for major section headings. Size (36px). Examples: 'Recent Activity', 'Account Details', section dividers."
+                "$description": "Large heading scale (36px). Use for major section headings and important content divisions. Bold weight with tight line height for strong presence. Examples: Recent Activity, Account Details, primary section dividers."
             },
-            "h3": {
+            "md": {
                 "$type": "typography",
                 "$value": {
                     "fontFamily": "{fontFamily.sans}",
@@ -916,9 +862,9 @@
                     "fontWeight": "{fontWeight.semibold}",
                     "lineHeight": "{lineHeight.tight}"
                 },
-                "$description": "Tertiary heading (H3). Use for subsections within major sections. Size (30px). Examples: 'Personal Information', 'Billing History', subsection titles."
+                "$description": "Medium heading scale (30px). Use for subsections within major sections and secondary content divisions. Semibold weight balances hierarchy and readability. Examples: Personal Information, Billing History, subsection titles."
             },
-            "h4": {
+            "sm": {
                 "$type": "typography",
                 "$value": {
                     "fontFamily": "{fontFamily.sans}",
@@ -926,7 +872,7 @@
                     "fontWeight": "{fontWeight.semibold}",
                     "lineHeight": "{lineHeight.snug}"
                 },
-                "$description": "Quaternary heading (H4). Use for smaller subsections and card titles. Size (24px). Examples: Card headers, small section titles, group labels."
+                "$description": "Small heading scale (24px). Use for smaller subsections, card titles, and compact content divisions. Semibold weight with snug line height for comfortable reading. Examples: Card headers, small section titles, group labels."
             }
         },
         "body": {
@@ -1058,7 +1004,7 @@
                 "offsetY": "1px",
                 "blur": "3px",
                 "spread": "0px",
-                "color": "{color.neutral.900}",
+                "color": "{color.neutral.1100}",
                 "alpha": 0.05
             },
             "$description": "Shadow at 5% opacity (1px offset, 3px blur). Minimal depth for subtle elevation."
@@ -1070,7 +1016,7 @@
                 "offsetY": "4px",
                 "blur": "6px",
                 "spread": "-1px",
-                "color": "{color.neutral.900}",
+                "color": "{color.neutral.1100}",
                 "alpha": 0.1
             },
             "$description": "Shadow at 10% opacity (4px offset, 6px blur). Subtle depth for standard elevation."
@@ -1082,7 +1028,7 @@
                 "offsetY": "10px",
                 "blur": "15px",
                 "spread": "-3px",
-                "color": "{color.neutral.900}",
+                "color": "{color.neutral.1100}",
                 "alpha": 0.2
             },
             "$description": "Shadow at 20% opacity (10px offset, 15px blur). Moderate depth for elevated elements."
@@ -1094,10 +1040,37 @@
                 "offsetY": "20px",
                 "blur": "25px",
                 "spread": "-5px",
-                "color": "{color.neutral.900}",
+                "color": "{color.neutral.1100}",
                 "alpha": 0.6
             },
             "$description": "Shadow at 60% opacity (20px offset, 25px blur). Maximum depth for highest elevation."
+        }
+    },
+    "iconSize": {
+        "xs": {
+            "$type": "dimension",
+            "$value": "{spacing.4}",
+            "$description": "Extra small icon (16px). Use for inline icons within text and compact UI elements."
+        },
+        "sm": {
+            "$type": "dimension",
+            "$value": "{spacing.5}",
+            "$description": "Small icon (20px). Use for navigation items and small buttons."
+        },
+        "md": {
+            "$type": "dimension",
+            "$value": "{spacing.6}",
+            "$description": "Medium icon (24px). Default icon size for standard buttons and UI elements."
+        },
+        "lg": {
+            "$type": "dimension",
+            "$value": "{spacing.8}",
+            "$description": "Large icon (32px). Use for prominent actions and feature highlights."
+        },
+        "xl": {
+            "$type": "dimension",
+            "$value": "{spacing.10}",
+            "$description": "Extra large icon (40px). Use for hero sections and marketing elements."
         }
     }
 }
