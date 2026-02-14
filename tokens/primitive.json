@@ -1020,95 +1020,70 @@
                 "$description": "Error color at 1200 weight. Darkest shade."
             }
         },
-        "transparency": {
-            "5": {
-                "$type": "color",
-                "$value": {
-                    "colorSpace": "hsl",
-                    "components": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "alpha": 0.05,
-                    "hex": "#000000"
-                },
-                "$description": "Black at 5% opacity. Extremely subtle overlay.",
-                "$extensions": {
-                    "elevation": {
-                        "offsetX": "0px",
-                        "offsetY": "1px",
-                        "blur": "3px",
-                        "spread": "0px"
-                    }
-                }
+        "white": {
+            "$type": "color",
+            "$value": {
+                "colorSpace": "hsl",
+                "components": [
+                    0,
+                    0,
+                    100
+                ],
+                "alpha": 1,
+                "hex": "#ffffff"
             },
-            "10": {
-                "$type": "color",
-                "$value": {
-                    "colorSpace": "hsl",
-                    "components": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "alpha": 0.1,
-                    "hex": "#000000"
-                },
-                "$description": "Black at 10% opacity. Very subtle overlay.",
-                "$extensions": {
-                    "elevation": {
-                        "offsetX": "0px",
-                        "offsetY": "4px",
-                        "blur": "6px",
-                        "spread": "-1px"
-                    }
-                }
+            "$description": "Pure white. Base white color for light backgrounds and text on dark surfaces."
+        },
+        "black": {
+            "$type": "color",
+            "$value": {
+                "colorSpace": "hsl",
+                "components": [
+                    0,
+                    0,
+                    0
+                ],
+                "alpha": 1,
+                "hex": "#000000"
             },
-            "20": {
-                "$type": "color",
-                "$value": {
-                    "colorSpace": "hsl",
-                    "components": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "alpha": 0.2,
-                    "hex": "#000000"
-                },
-                "$description": "Black at 20% opacity. Subtle overlay.",
-                "$extensions": {
-                    "elevation": {
-                        "offsetX": "0px",
-                        "offsetY": "10px",
-                        "blur": "15px",
-                        "spread": "-3px"
-                    }
-                }
-            },
-            "60": {
-                "$type": "color",
-                "$value": {
-                    "colorSpace": "hsl",
-                    "components": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "alpha": 0.6,
-                    "hex": "#000000"
-                },
-                "$description": "Black at 60% opacity. Semi-transparent.",
-                "$extensions": {
-                    "elevation": {
-                        "offsetX": "0px",
-                        "offsetY": "20px",
-                        "blur": "25px",
-                        "spread": "-5px"
-                    }
-                }
-            }
+            "$description": "Pure black. Base black color for dark backgrounds and overlays."
+        }
+    },
+    "opacity": {
+        "5": {
+            "$type": "number",
+            "$value": 0.05,
+            "$description": "5% opacity. Extremely subtle overlay for hover states and subtle layers."
+        },
+        "10": {
+            "$type": "number",
+            "$value": 0.1,
+            "$description": "10% opacity. Very subtle overlay for dropdown shadows and light overlays."
+        },
+        "20": {
+            "$type": "number",
+            "$value": 0.2,
+            "$description": "20% opacity. Subtle overlay for card shadows and medium overlays."
+        },
+        "40": {
+            "$type": "number",
+            "$value": 0.4,
+            "$description": "40% opacity. Medium overlay for disabled states and backgrounds."
+        },
+        "60": {
+            "$type": "number",
+            "$value": 0.6,
+            "$description": "60% opacity. Semi-transparent overlay for modal backdrops."
+        },
+        "80": {
+            "$type": "number",
+            "$value": 0.8,
+            "$description": "80% opacity. Strong overlay for high emphasis modals and overlays."
+        },
+        "100": {
+            "$type": "number",
+            "$value": 1,
+            "$description": "100% opacity. Fully opaque, no transparency."
         }
     },
     "fontFamily": {

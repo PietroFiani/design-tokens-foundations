@@ -58,42 +58,8 @@
                 "primary": {
                     "default": {
                         "$type": "color",
-                        "$value": "{color.primary.700}",
-                        "$description": "Primary brand background. Use for CTAs, primary buttons, active toggles."
-                    },
-                    "hover": {
-                        "$type": "color",
-                        "$value": "{color.primary.800}",
-                        "$description": "Primary brand background on hover."
-                    },
-                    "pressed": {
-                        "$type": "color",
-                        "$value": "{color.primary.900}",
-                        "$description": "Primary brand background on pressed/active state."
-                    }
-                },
-                "secondary": {
-                    "default": {
-                        "$type": "color",
-                        "$value": "{color.secondary.700}",
-                        "$description": "Secondary brand background. Use for secondary buttons, accent elements."
-                    },
-                    "hover": {
-                        "$type": "color",
-                        "$value": "{color.secondary.800}",
-                        "$description": "Secondary brand background on hover."
-                    },
-                    "pressed": {
-                        "$type": "color",
-                        "$value": "{color.secondary.900}",
-                        "$description": "Secondary brand background on pressed/active state."
-                    }
-                },
-                "primaryInverse": {
-                    "default": {
-                        "$type": "color",
                         "$value": "{color.primary.100}",
-                        "$description": "Soft primary brand background. Use for tinted sections, outlined button fills, light brand containers."
+                        "$description": "Soft primary brand background. Use for tinted sections, subtle brand containers, light accents."
                     },
                     "hover": {
                         "$type": "color",
@@ -106,11 +72,11 @@
                         "$description": "Soft primary brand background on pressed/active state."
                     }
                 },
-                "secondaryInverse": {
+                "secondary": {
                     "default": {
                         "$type": "color",
                         "$value": "{color.secondary.100}",
-                        "$description": "Soft secondary brand background. Use for tinted sections, light accent containers."
+                        "$description": "Soft secondary brand background. Use for tinted sections, subtle accent containers."
                     },
                     "hover": {
                         "$type": "color",
@@ -122,27 +88,44 @@
                         "$value": "{color.secondary.300}",
                         "$description": "Soft secondary brand background on pressed/active state."
                     }
+                },
+                "primaryInverse": {
+                    "default": {
+                        "$type": "color",
+                        "$value": "{color.primary.700}",
+                        "$description": "Strong primary brand background. Use for CTAs, primary buttons, active toggles, hero sections."
+                    },
+                    "hover": {
+                        "$type": "color",
+                        "$value": "{color.primary.800}",
+                        "$description": "Strong primary brand background on hover."
+                    },
+                    "pressed": {
+                        "$type": "color",
+                        "$value": "{color.primary.900}",
+                        "$description": "Strong primary brand background on pressed/active state."
+                    }
+                },
+                "secondaryInverse": {
+                    "default": {
+                        "$type": "color",
+                        "$value": "{color.secondary.700}",
+                        "$description": "Strong secondary brand background. Use for secondary CTAs, accent buttons, secondary actions."
+                    },
+                    "hover": {
+                        "$type": "color",
+                        "$value": "{color.secondary.800}",
+                        "$description": "Strong secondary brand background on hover."
+                    },
+                    "pressed": {
+                        "$type": "color",
+                        "$value": "{color.secondary.900}",
+                        "$description": "Strong secondary brand background on pressed/active state."
+                    }
                 }
             },
             "intent": {
                 "error": {
-                    "default": {
-                        "$type": "color",
-                        "$value": "{color.error.600}",
-                        "$description": "Error background. Use for error alerts, destructive buttons, validation error banners."
-                    },
-                    "hover": {
-                        "$type": "color",
-                        "$value": "{color.error.700}",
-                        "$description": "Error background on hover."
-                    },
-                    "pressed": {
-                        "$type": "color",
-                        "$value": "{color.error.800}",
-                        "$description": "Error background on pressed/active state."
-                    }
-                },
-                "errorInverse": {
                     "default": {
                         "$type": "color",
                         "$value": "{color.error.100}",
@@ -159,28 +142,28 @@
                         "$description": "Soft error background on pressed/active state."
                     }
                 },
-                "warning": {
+                "errorInverse": {
                     "default": {
                         "$type": "color",
-                        "$value": "{color.warning.600}",
-                        "$description": "Warning background. Use for warning alerts, caution buttons, warning banners."
+                        "$value": "{color.error.600}",
+                        "$description": "Strong error background. Use for destructive buttons, critical error alerts, danger CTAs."
                     },
                     "hover": {
                         "$type": "color",
-                        "$value": "{color.warning.700}",
-                        "$description": "Warning background on hover."
+                        "$value": "{color.error.700}",
+                        "$description": "Strong error background on hover."
                     },
                     "pressed": {
                         "$type": "color",
-                        "$value": "{color.warning.800}",
-                        "$description": "Warning background on pressed/active state."
+                        "$value": "{color.error.800}",
+                        "$description": "Strong error background on pressed/active state."
                     }
                 },
-                "warningInverse": {
+                "warning": {
                     "default": {
                         "$type": "color",
                         "$value": "{color.warning.100}",
-                        "$description": "Soft warning background. Use for inline warning alerts, caution banners."
+                        "$description": "Soft warning background. Use for inline warning alerts, caution banners, warning containers."
                     },
                     "hover": {
                         "$type": "color",
@@ -193,28 +176,28 @@
                         "$description": "Soft warning background on pressed/active state."
                     }
                 },
-                "success": {
+                "warningInverse": {
                     "default": {
                         "$type": "color",
-                        "$value": "{color.success.600}",
-                        "$description": "Success background. Use for success alerts, confirmation buttons, positive banners."
+                        "$value": "{color.warning.600}",
+                        "$description": "Strong warning background. Use for warning buttons, caution CTAs, high-alert warnings."
                     },
                     "hover": {
                         "$type": "color",
-                        "$value": "{color.success.700}",
-                        "$description": "Success background on hover."
+                        "$value": "{color.warning.700}",
+                        "$description": "Strong warning background on hover."
                     },
                     "pressed": {
                         "$type": "color",
-                        "$value": "{color.success.800}",
-                        "$description": "Success background on pressed/active state."
+                        "$value": "{color.warning.800}",
+                        "$description": "Strong warning background on pressed/active state."
                     }
                 },
-                "successInverse": {
+                "success": {
                     "default": {
                         "$type": "color",
                         "$value": "{color.success.100}",
-                        "$description": "Soft success background. Use for inline success alerts, confirmation banners."
+                        "$description": "Soft success background. Use for inline success alerts, confirmation banners, success containers."
                     },
                     "hover": {
                         "$type": "color",
@@ -225,6 +208,41 @@
                         "$type": "color",
                         "$value": "{color.success.300}",
                         "$description": "Soft success background on pressed/active state."
+                    }
+                },
+                "successInverse": {
+                    "default": {
+                        "$type": "color",
+                        "$value": "{color.success.600}",
+                        "$description": "Strong success background. Use for confirmation buttons, positive CTAs, success actions."
+                    },
+                    "hover": {
+                        "$type": "color",
+                        "$value": "{color.success.700}",
+                        "$description": "Strong success background on hover."
+                    },
+                    "pressed": {
+                        "$type": "color",
+                        "$value": "{color.success.800}",
+                        "$description": "Strong success background on pressed/active state."
+                    }
+                }
+            },
+            "overlay": {
+                "modal": {
+                    "$type": "color",
+                    "$value": "{color.black}",
+                    "$description": "Modal backdrop overlay. Semi-transparent dark overlay for modal dialogs, drawers, and popovers.",
+                    "$extensions": {
+                        "opacity": "{opacity.60}"
+                    }
+                },
+                "image": {
+                    "$type": "color",
+                    "$value": "{color.black}",
+                    "$description": "Image overlay. Dark overlay for text readability on images and media.",
+                    "$extensions": {
+                        "opacity": "{opacity.40}"
                     }
                 }
             }
@@ -1058,7 +1076,7 @@
                 "blur": "3px",
                 "spread": "0px",
                 "color": "{color.neutral.1100}",
-                "alpha": 0.05
+                "alpha": "{opacity.5}"
             },
             "$description": "Minimal depth for subtle elevation."
         },
@@ -1070,7 +1088,7 @@
                 "blur": "6px",
                 "spread": "-1px",
                 "color": "{color.neutral.1100}",
-                "alpha": 0.1
+                "alpha": "{opacity.10}"
             },
             "$description": "Subtle depth for standard elevation."
         },
@@ -1082,7 +1100,7 @@
                 "blur": "15px",
                 "spread": "-3px",
                 "color": "{color.neutral.1100}",
-                "alpha": 0.2
+                "alpha": "{opacity.20}"
             },
             "$description": "Moderate depth for elevated elements."
         },
@@ -1094,7 +1112,7 @@
                 "blur": "25px",
                 "spread": "-5px",
                 "color": "{color.neutral.1100}",
-                "alpha": 0.6
+                "alpha": "{opacity.60}"
             },
             "$description": "Maximum depth for highest elevation."
         }
