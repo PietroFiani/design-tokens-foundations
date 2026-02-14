@@ -6,7 +6,7 @@
 
 This ADR defines the complete hierarchical taxonomy for organizing design tokens across both primitive and semantic layers. We selected a **file-based approach** where the layer identifier (`primitive` or `semantic`) is **inferred from the filename**, not included in token paths. Platform and theme context is also managed via folder structure. This provides optimal legibility, tool compatibility, and developer experience while maintaining W3C DTCG 2025.10 compliance.
 
-**Key Decision**: Token format is `{type/property}.{category/element}.{scale/variant}.{state?}` with maximum 4-level nesting. Layer, platform, and theme are managed via file organization, not in token paths.
+**Key Decision**: Token format follows `{type/property}.{category/element}.{scale/variant}.{state?}` pattern with maximum 3-level nesting for primitives and up to 5-level nesting for complex semantic tokens. Layer, platform, and theme are managed via file organization, not in token paths.
 
 ## Context and Problem
 
@@ -554,12 +554,44 @@ transition.duration.normal
 
 ### Maximum Nesting Depth
 
-- **Primitives**: 2-3 levels (`color.primary.500`, `spacing.4`, `fontSize.xl`)
-- **Semantics without state**: 3 levels (`color.text.base`, `spacing.inset.md`)
-- **Semantics with state**: 4 levels (`color.text.base.default`)
-- **Typography composites**: 3 levels (`typography.heading.h1`)
+**Primitive Tokens** (2-3 levels):
+- `color.primary.500` - 3 levels: type.category.scale
+- `spacing.4` - 2 levels: type.scale
+- `fontSize.xl` - 2 levels: type.scale
 
-**Guideline**: Never exceed 4 levels of nesting.
+**Semantic Tokens** (3-5 levels):
+- `typography.heading.h1` - 3 levels: property.element.variant
+- `spacing.inset.md` - 3 levels: property.category.variant
+- `color.text.base.default` - 4 levels: property.element.variant.state
+- `color.background.neutral.base.default` - 5 levels: property.element.category.variant.state
+
+**Guidelines**:
+- **Primitives**: Maximum 3 levels
+- **Semantics**: Maximum 5 levels (when additional categorization provides semantic value)
+- **General rule**: Use the minimum nesting necessary for clarity
+
+**Rationale for 5-level semantic structure**:
+
+For complex semantic properties like `background` and `border`, the 5-level structure provides essential semantic organization:
+
+```
+color.background.neutral.base.default
+  │       │        │      │     │
+  │       │        │      │     └─ state (interactive state)
+  │       │        │      └─────── variant (semantic purpose)
+  │       │        └────────────── category (color family)
+  │       └─────────────────────── element (UI element)
+  └─────────────────────────────── property (CSS property)
+```
+
+This extra level of categorization:
+- ✅ Clearly separates `neutral`, `brand`, and `intent` background families
+- ✅ Enables logical grouping: `background.neutral.*`, `background.brand.*`, `background.intent.*`
+- ✅ Maintains consistency with text and border token structures
+- ✅ Improves discoverability and navigation in design tools
+- ✅ Provides flexibility for future expansion without restructuring
+
+While this exceeds the traditional 4-level guideline, the semantic clarity gained justifies the additional depth for color-related semantic tokens.
 
 ---
 
@@ -710,7 +742,9 @@ Otherwise, use shared `primitive.json` for consistency.
 ## Validation Rules
 
 1. **Layer inferred from file**: Tokens in `primitive.json` are primitives, tokens in `semantic.json` or theme files are semantics
-2. **Maximum depth**: Never exceed 4 levels (`type.category.scale.state`)
+2. **Maximum depth**:
+   - Primitive tokens: Never exceed 3 levels (`type.category.scale`)
+   - Semantic tokens: Never exceed 5 levels (`property.element.category.variant.state`)
 3. **State only on semantics**: Primitive tokens MUST NOT have state suffix
 4. **References without layer prefix**: Use path without layer prefix (e.g., `{color.primary.500}` not `{primitive.color.primary.500}`)
 5. **Themes define same structure**: All theme files MUST define the same semantic token structure
