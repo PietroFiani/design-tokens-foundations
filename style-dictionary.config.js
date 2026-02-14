@@ -10,8 +10,17 @@ const sd = new StyleDictionary({
       transforms: ['name/kebab', 'dtcg/color/hex', 'dtcg/dimension/pixelToRem'],
       files: [
         {
-          destination: 'tokens.css',
+          destination: 'primitive.css',
           format: 'css/variables',
+          filter: (token) => token.filePath.includes('primitive.json'),
+          options: {
+            outputReferences: false
+          }
+        },
+        {
+          destination: 'semantic.css',
+          format: 'css/variables',
+          filter: (token) => token.filePath.includes('semantic.json'),
           options: {
             outputReferences: true
           }

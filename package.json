@@ -4,8 +4,7 @@
   "type": "module",
   "description": "Design tokens system with Style Dictionary build tooling",
   "scripts": {
-    "tokens:build": "style-dictionary build --config style-dictionary.config.js",
-    "tokens:watch": "style-dictionary build --config style-dictionary.config.js --watch"
+    "tokens:build": "node build-tokens.js"
   },
   "devDependencies": {
     "style-dictionary": "^4.0.1"

@@ -6,168 +6,168 @@
                 "$value": {
                     "colorSpace": "hsl",
                     "components": [
-                        217,
-                        91,
-                        95
+                        195,
+                        100,
+                        98
                     ],
                     "alpha": 1,
-                    "hex": "#eff6ff"
+                    "hex": "#f7fdff"
                 },
-                "$description": "Primary brand color at 100 weight. Lightest shade for subtle backgrounds."
+                "$description": "Primary color at 100 weight. Lightest shade for subtle backgrounds."
             },
             "200": {
                 "$type": "color",
                 "$value": {
                     "colorSpace": "hsl",
                     "components": [
-                        217,
-                        91,
-                        88
+                        205,
+                        50,
+                        90
                     ],
                     "alpha": 1,
-                    "hex": "#dbeafe"
+                    "hex": "#d8e7f2"
                 },
-                "$description": "Primary brand color at 200 weight. Very light shade for hover states."
+                "$description": "Primary color at 200 weight. Very light shade for hover states."
             },
             "300": {
                 "$type": "color",
                 "$value": {
                     "colorSpace": "hsl",
                     "components": [
-                        217,
-                        91,
-                        76
+                        205,
+                        37,
+                        80
                     ],
                     "alpha": 1,
-                    "hex": "#bfdbfe"
+                    "hex": "#b8cede"
                 },
-                "$description": "Primary brand color at 300 weight. Light shade for backgrounds."
+                "$description": "Primary color at 300 weight. Light shade for backgrounds."
             },
             "400": {
                 "$type": "color",
                 "$value": {
                     "colorSpace": "hsl",
                     "components": [
-                        217,
-                        91,
-                        65
+                        205,
+                        28,
+                        69
                     ],
                     "alpha": 1,
-                    "hex": "#93c5fd"
+                    "hex": "#9bb5c7"
                 },
-                "$description": "Primary brand color at 400 weight. Medium-light shade."
+                "$description": "Primary color at 400 weight. Medium-light shade."
             },
             "500": {
                 "$type": "color",
                 "$value": {
                     "colorSpace": "hsl",
                     "components": [
-                        217,
-                        91,
-                        52
+                        205,
+                        22,
+                        60
                     ],
                     "alpha": 1,
-                    "hex": "#60a5fa"
+                    "hex": "#829caf"
                 },
-                "$description": "Primary brand color at 500 weight. Medium shade."
+                "$description": "Primary color at 500 weight. Medium shade."
             },
             "600": {
                 "$type": "color",
                 "$value": {
                     "colorSpace": "hsl",
                     "components": [
-                        217,
-                        91,
-                        47
+                        205,
+                        17,
+                        50
                     ],
                     "alpha": 1,
-                    "hex": "#3b82f6"
+                    "hex": "#6b8496"
                 },
-                "$description": "Primary brand color at 600 weight. Core brand shade."
+                "$description": "Primary color at 600 weight. Core brand shade."
             },
             "700": {
                 "$type": "color",
                 "$value": {
                     "colorSpace": "hsl",
                     "components": [
-                        217,
-                        91,
-                        60
+                        204,
+                        20,
+                        41
                     ],
                     "alpha": 1,
-                    "hex": "#2563eb"
+                    "hex": "#546d7e"
                 },
-                "$description": "Primary brand color at 700 weight. Main brand identity from graphic charter."
+                "$description": "Primary color at 700 weight. Main identity shade."
             },
             "800": {
                 "$type": "color",
                 "$value": {
                     "colorSpace": "hsl",
                     "components": [
-                        217,
-                        91,
-                        34
+                        204,
+                        24,
+                        32
                     ],
                     "alpha": 1,
-                    "hex": "#1d4ed8"
+                    "hex": "#3e5666"
                 },
-                "$description": "Primary brand color at 800 weight. Dark shade for hover states."
+                "$description": "Primary color at 800 weight. Dark shade for hover states."
             },
             "900": {
                 "$type": "color",
                 "$value": {
                     "colorSpace": "hsl",
                     "components": [
-                        217,
-                        91,
-                        27
+                        204,
+                        29,
+                        24
                     ],
                     "alpha": 1,
-                    "hex": "#1e40af"
+                    "hex": "#2b404e"
                 },
-                "$description": "Primary brand color at 900 weight. Darker shade."
+                "$description": "Primary color at 900 weight. Darker shade."
             },
             "1000": {
                 "$type": "color",
                 "$value": {
                     "colorSpace": "hsl",
                     "components": [
-                        217,
-                        91,
-                        21
+                        204,
+                        44,
+                        15
                     ],
                     "alpha": 1,
-                    "hex": "#1e3a8a"
+                    "hex": "#162b39"
                 },
-                "$description": "Primary brand color at 1000 weight. Very dark shade."
+                "$description": "Primary color at 1000 weight. Very dark shade."
             },
             "1100": {
                 "$type": "color",
                 "$value": {
                     "colorSpace": "hsl",
                     "components": [
-                        217,
-                        91,
-                        11
+                        203,
+                        86,
+                        8
                     ],
                     "alpha": 1,
-                    "hex": "#172554"
+                    "hex": "#031927"
                 },
-                "$description": "Primary brand color at 1100 weight. Near-darkest shade."
+                "$description": "Primary color at 1100 weight. Near-darkest shade."
             },
             "1200": {
                 "$type": "color",
                 "$value": {
                     "colorSpace": "hsl",
                     "components": [
-                        217,
-                        91,
-                        6
+                        207,
+                        100,
+                        5
                     ],
                     "alpha": 1,
-                    "hex": "#0a1128"
+                    "hex": "#000f1b"
                 },
-                "$description": "Primary brand color at 1200 weight. Darkest shade."
+                "$description": "Primary color at 1200 weight. Darkest shade."
             }
         },
         "secondary": {
@@ -176,338 +176,168 @@
                 "$value": {
                     "colorSpace": "hsl",
                     "components": [
-                        160,
-                        84,
-                        95
+                        207,
+                        100,
+                        98
                     ],
                     "alpha": 1,
-                    "hex": "#f0fdfa"
+                    "hex": "#f4faff"
                 },
-                "$description": "Secondary brand color at 100 weight. Lightest shade for subtle backgrounds."
+                "$description": "Secondary color at 100 weight. Lightest shade for subtle backgrounds."
             },
             "200": {
                 "$type": "color",
                 "$value": {
                     "colorSpace": "hsl",
                     "components": [
-                        160,
-                        84,
-                        88
+                        224,
+                        100,
+                        92
                     ],
                     "alpha": 1,
-                    "hex": "#ccfbf1"
+                    "hex": "#d6e1ff"
                 },
-                "$description": "Secondary brand color at 200 weight. Very light shade."
+                "$description": "Secondary color at 200 weight. Very light shade for hover states."
             },
             "300": {
                 "$type": "color",
                 "$value": {
                     "colorSpace": "hsl",
                     "components": [
-                        160,
-                        84,
-                        76
+                        227,
+                        100,
+                        85
                     ],
                     "alpha": 1,
-                    "hex": "#99f6e4"
+                    "hex": "#b4c4ff"
                 },
-                "$description": "Secondary brand color at 300 weight. Light shade."
+                "$description": "Secondary color at 300 weight. Light shade for backgrounds."
             },
             "400": {
                 "$type": "color",
                 "$value": {
                     "colorSpace": "hsl",
                     "components": [
-                        160,
-                        84,
-                        65
+                        231,
+                        100,
+                        79
                     ],
                     "alpha": 1,
-                    "hex": "#5eead4"
+                    "hex": "#95a5ff"
                 },
-                "$description": "Secondary brand color at 400 weight. Medium-light shade."
+                "$description": "Secondary color at 400 weight. Medium-light shade."
             },
             "500": {
                 "$type": "color",
                 "$value": {
                     "colorSpace": "hsl",
                     "components": [
-                        160,
-                        84,
-                        52
+                        233,
+                        100,
+                        74
                     ],
                     "alpha": 1,
-                    "hex": "#2dd4bf"
+                    "hex": "#7c8bff"
                 },
-                "$description": "Secondary brand color at 500 weight. Medium shade."
+                "$description": "Secondary color at 500 weight. Medium shade."
             },
             "600": {
                 "$type": "color",
                 "$value": {
                     "colorSpace": "hsl",
                     "components": [
-                        160,
-                        84,
-                        39
+                        234,
+                        74,
+                        66
                     ],
                     "alpha": 1,
-                    "hex": "#14b8a6"
+                    "hex": "#6874e8"
                 },
-                "$description": "Secondary brand color at 600 weight. Core brand shade."
+                "$description": "Secondary color at 600 weight. Core brand shade."
             },
             "700": {
                 "$type": "color",
                 "$value": {
                     "colorSpace": "hsl",
                     "components": [
-                        160,
-                        84,
-                        32
+                        236,
+                        53,
+                        55
                     ],
                     "alpha": 1,
-                    "hex": "#0d9488"
+                    "hex": "#5159ca"
                 },
-                "$description": "Secondary brand color at 700 weight. Main secondary identity."
+                "$description": "Secondary color at 700 weight. Main identity shade."
             },
             "800": {
                 "$type": "color",
                 "$value": {
                     "colorSpace": "hsl",
                     "components": [
-                        160,
-                        84,
-                        25
+                        238,
+                        48,
+                        46
                     ],
                     "alpha": 1,
-                    "hex": "#0f766e"
+                    "hex": "#3d40af"
                 },
-                "$description": "Secondary brand color at 800 weight. Dark shade."
+                "$description": "Secondary color at 800 weight. Dark shade for hover states."
             },
             "900": {
                 "$type": "color",
                 "$value": {
                     "colorSpace": "hsl",
                     "components": [
-                        160,
-                        84,
-                        20
-                    ],
-                    "alpha": 1,
-                    "hex": "#115e59"
-                },
-                "$description": "Secondary brand color at 900 weight. Darker shade."
-            },
-            "1000": {
-                "$type": "color",
-                "$value": {
-                    "colorSpace": "hsl",
-                    "components": [
-                        160,
-                        84,
-                        16
-                    ],
-                    "alpha": 1,
-                    "hex": "#134e4a"
-                },
-                "$description": "Secondary brand color at 1000 weight. Very dark shade."
-            },
-            "1100": {
-                "$type": "color",
-                "$value": {
-                    "colorSpace": "hsl",
-                    "components": [
-                        160,
-                        84,
-                        9
-                    ],
-                    "alpha": 1,
-                    "hex": "#042f2e"
-                },
-                "$description": "Secondary brand color at 1100 weight. Near-darkest shade."
-            },
-            "1200": {
-                "$type": "color",
-                "$value": {
-                    "colorSpace": "hsl",
-                    "components": [
-                        160,
-                        84,
-                        5
-                    ],
-                    "alpha": 1,
-                    "hex": "#021716"
-                },
-                "$description": "Secondary brand color at 1200 weight. Darkest shade."
-            }
-        },
-        "tertiary": {
-            "100": {
-                "$type": "color",
-                "$value": {
-                    "colorSpace": "hsl",
-                    "components": [
-                        280,
-                        91,
-                        95
-                    ],
-                    "alpha": 1,
-                    "hex": "#faf5ff"
-                },
-                "$description": "Tertiary brand color at 100 weight. Lightest shade for subtle backgrounds."
-            },
-            "200": {
-                "$type": "color",
-                "$value": {
-                    "colorSpace": "hsl",
-                    "components": [
-                        280,
-                        91,
-                        90
-                    ],
-                    "alpha": 1,
-                    "hex": "#f3e8ff"
-                },
-                "$description": "Tertiary brand color at 200 weight. Very light shade."
-            },
-            "300": {
-                "$type": "color",
-                "$value": {
-                    "colorSpace": "hsl",
-                    "components": [
-                        280,
-                        91,
-                        80
-                    ],
-                    "alpha": 1,
-                    "hex": "#e9d5ff"
-                },
-                "$description": "Tertiary brand color at 300 weight. Light shade."
-            },
-            "400": {
-                "$type": "color",
-                "$value": {
-                    "colorSpace": "hsl",
-                    "components": [
-                        280,
-                        91,
-                        70
-                    ],
-                    "alpha": 1,
-                    "hex": "#d8b4fe"
-                },
-                "$description": "Tertiary brand color at 400 weight. Medium-light shade."
-            },
-            "500": {
-                "$type": "color",
-                "$value": {
-                    "colorSpace": "hsl",
-                    "components": [
-                        280,
-                        91,
-                        58
-                    ],
-                    "alpha": 1,
-                    "hex": "#c084fc"
-                },
-                "$description": "Tertiary brand color at 500 weight. Medium shade."
-            },
-            "600": {
-                "$type": "color",
-                "$value": {
-                    "colorSpace": "hsl",
-                    "components": [
-                        280,
-                        91,
-                        50
-                    ],
-                    "alpha": 1,
-                    "hex": "#a855f7"
-                },
-                "$description": "Tertiary brand color at 600 weight. Core brand shade."
-            },
-            "700": {
-                "$type": "color",
-                "$value": {
-                    "colorSpace": "hsl",
-                    "components": [
-                        280,
-                        91,
-                        43
-                    ],
-                    "alpha": 1,
-                    "hex": "#9333ea"
-                },
-                "$description": "Tertiary brand color at 700 weight. Main tertiary identity."
-            },
-            "800": {
-                "$type": "color",
-                "$value": {
-                    "colorSpace": "hsl",
-                    "components": [
-                        280,
-                        91,
+                        241,
+                        53,
                         36
                     ],
                     "alpha": 1,
-                    "hex": "#7e22ce"
+                    "hex": "#2c2b8c"
                 },
-                "$description": "Tertiary brand color at 800 weight. Dark shade."
-            },
-            "900": {
-                "$type": "color",
-                "$value": {
-                    "colorSpace": "hsl",
-                    "components": [
-                        280,
-                        91,
-                        30
-                    ],
-                    "alpha": 1,
-                    "hex": "#6b21a8"
-                },
-                "$description": "Tertiary brand color at 900 weight. Darker shade."
+                "$description": "Secondary color at 900 weight. Darker shade."
             },
             "1000": {
                 "$type": "color",
                 "$value": {
                     "colorSpace": "hsl",
                     "components": [
-                        280,
-                        91,
-                        24
+                        247,
+                        75,
+                        25
                     ],
                     "alpha": 1,
-                    "hex": "#581c87"
+                    "hex": "#1c1071"
                 },
-                "$description": "Tertiary brand color at 1000 weight. Very dark shade."
+                "$description": "Secondary color at 1000 weight. Very dark shade."
             },
             "1100": {
                 "$type": "color",
                 "$value": {
                     "colorSpace": "hsl",
                     "components": [
-                        280,
-                        91,
-                        14
+                        248,
+                        84,
+                        17
                     ],
                     "alpha": 1,
-                    "hex": "#3b0764"
+                    "hex": "#110751"
                 },
-                "$description": "Tertiary brand color at 1100 weight. Near-darkest shade."
+                "$description": "Secondary color at 1100 weight. Near-darkest shade."
             },
             "1200": {
                 "$type": "color",
                 "$value": {
                     "colorSpace": "hsl",
                     "components": [
-                        280,
-                        91,
-                        8
+                        246,
+                        93,
+                        11
                     ],
                     "alpha": 1,
-                    "hex": "#1f0338"
+                    "hex": "#070234"
                 },
-                "$description": "Tertiary brand color at 1200 weight. Darkest shade."
+                "$description": "Secondary color at 1200 weight. Darkest shade."
             }
         },
         "neutral": {
@@ -1195,7 +1025,11 @@
                 "$type": "color",
                 "$value": {
                     "colorSpace": "hsl",
-                    "components": [0, 0, 0],
+                    "components": [
+                        0,
+                        0,
+                        0
+                    ],
                     "alpha": 0.05,
                     "hex": "#000000"
                 },
@@ -1213,7 +1047,11 @@
                 "$type": "color",
                 "$value": {
                     "colorSpace": "hsl",
-                    "components": [0, 0, 0],
+                    "components": [
+                        0,
+                        0,
+                        0
+                    ],
                     "alpha": 0.1,
                     "hex": "#000000"
                 },
@@ -1231,7 +1069,11 @@
                 "$type": "color",
                 "$value": {
                     "colorSpace": "hsl",
-                    "components": [0, 0, 0],
+                    "components": [
+                        0,
+                        0,
+                        0
+                    ],
                     "alpha": 0.2,
                     "hex": "#000000"
                 },
@@ -1249,7 +1091,11 @@
                 "$type": "color",
                 "$value": {
                     "colorSpace": "hsl",
-                    "components": [0, 0, 0],
+                    "components": [
+                        0,
+                        0,
+                        0
+                    ],
                     "alpha": 0.6,
                     "hex": "#000000"
                 },
@@ -1276,18 +1122,7 @@
                 "Roboto",
                 "sans-serif"
             ],
-            "$description": "Primary sans-serif font stack for UI and body text."
-        },
-        "secondary": {
-            "$type": "fontFamily",
-            "$value": [
-                "Georgia",
-                "Cambria",
-                "Times New Roman",
-                "Times",
-                "serif"
-            ],
-            "$description": "Serif font stack for editorial content."
+            "$description": "Primary font stack for UI and body text."
         }
     },
     "fontSize": {
@@ -1397,7 +1232,7 @@
     "lineHeight": {
         "tight": {
             "$type": "number",
-            "$value": 1.10,
+            "$value": 1.1,
             "$description": "Tight (1.10). For headings and compact single-line text."
         },
         "snug": {
@@ -1435,40 +1270,6 @@
                 "unit": "em"
             },
             "$description": "Wide letter spacing (0.05em). Use for uppercase text and labels."
-        }
-    },
-    "breakpoint": {
-        "mobile": {
-            "$type": "dimension",
-            "$value": {
-                "value": 320,
-                "unit": "px"
-            },
-            "$description": "Mobile breakpoint (320px). Minimum supported device width."
-        },
-        "tablet": {
-            "$type": "dimension",
-            "$value": {
-                "value": 768,
-                "unit": "px"
-            },
-            "$description": "Tablet breakpoint (768px). iPad and tablet devices."
-        },
-        "desktop": {
-            "$type": "dimension",
-            "$value": {
-                "value": 1024,
-                "unit": "px"
-            },
-            "$description": "Desktop breakpoint (1024px). Standard laptop and desktop screens."
-        },
-        "wide": {
-            "$type": "dimension",
-            "$value": {
-                "value": 1280,
-                "unit": "px"
-            },
-            "$description": "Wide desktop breakpoint (1280px). Large monitors and high-resolution displays."
         }
     },
     "spacing": {
@@ -1608,7 +1409,7 @@
                 "value": 4,
                 "unit": "px"
             },
-            "$description": "Small radius (2px). Subtle rounding."
+            "$description": "Small radius (4px). Subtle rounding."
         },
         "md": {
             "$type": "dimension",
@@ -1616,7 +1417,7 @@
                 "value": 8,
                 "unit": "px"
             },
-            "$description": "Medium radius (4px). Standard for buttons, inputs."
+            "$description": "Medium radius (8px). Standard for buttons, inputs."
         },
         "lg": {
             "$type": "dimension",
@@ -1624,7 +1425,7 @@
                 "value": 12,
                 "unit": "px"
             },
-            "$description": "Large radius (8px). Cards and containers."
+            "$description": "Large radius (12px). Cards and containers."
         },
         "xl": {
             "$type": "dimension",
@@ -1632,7 +1433,7 @@
                 "value": 16,
                 "unit": "px"
             },
-            "$description": "Extra large radius (12px). Prominent cards."
+            "$description": "Extra large radius (16px). Prominent cards."
         },
         "2xl": {
             "$type": "dimension",
@@ -1640,7 +1441,7 @@
                 "value": 24,
                 "unit": "px"
             },
-            "$description": "2XL radius (16px). Large cards."
+            "$description": "2XL radius (24px). Large cards."
         },
         "full": {
             "$type": "dimension",
@@ -1683,6 +1484,40 @@
                 "unit": "px"
             },
             "$description": "Thick border (4px). Strong emphasis."
+        }
+    },
+    "breakpoint": {
+        "mobile": {
+            "$type": "dimension",
+            "$value": {
+                "value": 320,
+                "unit": "px"
+            },
+            "$description": "Mobile breakpoint (320px). Minimum supported device width."
+        },
+        "tablet": {
+            "$type": "dimension",
+            "$value": {
+                "value": 768,
+                "unit": "px"
+            },
+            "$description": "Tablet breakpoint (768px). iPad and tablet devices."
+        },
+        "desktop": {
+            "$type": "dimension",
+            "$value": {
+                "value": 1280,
+                "unit": "px"
+            },
+            "$description": "Desktop breakpoint (1280px). Standard laptop and desktop screens."
+        },
+        "wide": {
+            "$type": "dimension",
+            "$value": {
+                "value": 1720,
+                "unit": "px"
+            },
+            "$description": "Wide breakpoint (1720px). Large monitors and high-resolution displays."
         }
     }
 }

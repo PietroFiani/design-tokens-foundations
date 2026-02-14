@@ -1,0 +1,133 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+
+:root {
+  --color-primary-100: #f7fdff; /** Primary color at 100 weight. Lightest shade for subtle backgrounds. */
+  --color-primary-200: #d8e7f2; /** Primary color at 200 weight. Very light shade for hover states. */
+  --color-primary-300: #b8cede; /** Primary color at 300 weight. Light shade for backgrounds. */
+  --color-primary-400: #9bb5c7; /** Primary color at 400 weight. Medium-light shade. */
+  --color-primary-500: #829caf; /** Primary color at 500 weight. Medium shade. */
+  --color-primary-600: #6b8496; /** Primary color at 600 weight. Core brand shade. */
+  --color-primary-700: #546d7e; /** Primary color at 700 weight. Main identity shade. */
+  --color-primary-800: #3e5666; /** Primary color at 800 weight. Dark shade for hover states. */
+  --color-primary-900: #2b404e; /** Primary color at 900 weight. Darker shade. */
+  --color-primary-1000: #162b39; /** Primary color at 1000 weight. Very dark shade. */
+  --color-primary-1100: #031927; /** Primary color at 1100 weight. Near-darkest shade. */
+  --color-primary-1200: #000f1b; /** Primary color at 1200 weight. Darkest shade. */
+  --color-secondary-100: #f4faff; /** Secondary color at 100 weight. Lightest shade for subtle backgrounds. */
+  --color-secondary-200: #d6e1ff; /** Secondary color at 200 weight. Very light shade for hover states. */
+  --color-secondary-300: #b4c4ff; /** Secondary color at 300 weight. Light shade for backgrounds. */
+  --color-secondary-400: #95a5ff; /** Secondary color at 400 weight. Medium-light shade. */
+  --color-secondary-500: #7c8bff; /** Secondary color at 500 weight. Medium shade. */
+  --color-secondary-600: #6874e8; /** Secondary color at 600 weight. Core brand shade. */
+  --color-secondary-700: #5159ca; /** Secondary color at 700 weight. Main identity shade. */
+  --color-secondary-800: #3d40af; /** Secondary color at 800 weight. Dark shade for hover states. */
+  --color-secondary-900: #2c2b8c; /** Secondary color at 900 weight. Darker shade. */
+  --color-secondary-1000: #1c1071; /** Secondary color at 1000 weight. Very dark shade. */
+  --color-secondary-1100: #110751; /** Secondary color at 1100 weight. Near-darkest shade. */
+  --color-secondary-1200: #070234; /** Secondary color at 1200 weight. Darkest shade. */
+  --color-neutral-100: #fafafa; /** Neutral at 100 weight. Near-white for subtle backgrounds. */
+  --color-neutral-200: #f5f5f5; /** Neutral at 200 weight. Very light gray for backgrounds. */
+  --color-neutral-300: #e5e5e5; /** Neutral at 300 weight. Light gray for borders and dividers. */
+  --color-neutral-400: #d4d4d4; /** Neutral at 400 weight. Medium-light gray for borders. */
+  --color-neutral-500: #a3a3a3; /** Neutral at 500 weight. Medium gray for disabled states. */
+  --color-neutral-600: #737373; /** Neutral at 600 weight. True gray for icons and secondary text. */
+  --color-neutral-700: #525252; /** Neutral at 700 weight. Dark gray for secondary text. */
+  --color-neutral-800: #404040; /** Neutral at 800 weight. Darker gray for text. */
+  --color-neutral-900: #262626; /** Neutral at 900 weight. Very dark gray for headings. */
+  --color-neutral-1000: #171717; /** Neutral at 1000 weight. Near-black for primary text. */
+  --color-neutral-1100: #0a0a0a; /** Neutral at 1100 weight. Almost black for high contrast. */
+  --color-neutral-1200: #050505; /** Neutral at 1200 weight. Near-pure black for maximum contrast. */
+  --color-success-100: #f0fdf4; /** Success color at 100 weight. Lightest shade for subtle backgrounds. */
+  --color-success-200: #dcfce7; /** Success color at 200 weight. Very light shade. */
+  --color-success-300: #bbf7d0; /** Success color at 300 weight. Light shade. */
+  --color-success-400: #86efac; /** Success color at 400 weight. Medium-light shade. */
+  --color-success-500: #4ade80; /** Success color at 500 weight. Medium shade. */
+  --color-success-600: #22c55e; /** Success color at 600 weight. Core success shade. */
+  --color-success-700: #16a34a; /** Success color at 700 weight. Main success identity. */
+  --color-success-800: #15803d; /** Success color at 800 weight. Dark shade. */
+  --color-success-900: #166534; /** Success color at 900 weight. Darker shade. */
+  --color-success-1000: #14532d; /** Success color at 1000 weight. Very dark shade. */
+  --color-success-1100: #0f3a1f; /** Success color at 1100 weight. Near-darkest shade. */
+  --color-success-1200: #092413; /** Success color at 1200 weight. Darkest shade. */
+  --color-warning-100: #fffbeb; /** Warning color at 100 weight. Lightest shade for subtle backgrounds. */
+  --color-warning-200: #fef3c7; /** Warning color at 200 weight. Very light shade. */
+  --color-warning-300: #fde68a; /** Warning color at 300 weight. Light shade. */
+  --color-warning-400: #fcd34d; /** Warning color at 400 weight. Medium-light shade. */
+  --color-warning-500: #fbbf24; /** Warning color at 500 weight. Medium shade. */
+  --color-warning-600: #f59e0b; /** Warning color at 600 weight. Core warning shade. */
+  --color-warning-700: #d97706; /** Warning color at 700 weight. Main warning identity. */
+  --color-warning-800: #b45309; /** Warning color at 800 weight. Dark shade. */
+  --color-warning-900: #92400e; /** Warning color at 900 weight. Darker shade. */
+  --color-warning-1000: #78350f; /** Warning color at 1000 weight. Very dark shade. */
+  --color-warning-1100: #55220a; /** Warning color at 1100 weight. Near-darkest shade. */
+  --color-warning-1200: #361605; /** Warning color at 1200 weight. Darkest shade. */
+  --color-error-100: #fef2f2; /** Error color at 100 weight. Lightest shade for subtle backgrounds. */
+  --color-error-200: #fee2e2; /** Error color at 200 weight. Very light shade. */
+  --color-error-300: #fecaca; /** Error color at 300 weight. Light shade. */
+  --color-error-400: #fca5a5; /** Error color at 400 weight. Medium-light shade. */
+  --color-error-500: #f87171; /** Error color at 500 weight. Medium shade. */
+  --color-error-600: #ef4444; /** Error color at 600 weight. Core error shade. */
+  --color-error-700: #dc2626; /** Error color at 700 weight. Main error identity. */
+  --color-error-800: #b91c1c; /** Error color at 800 weight. Dark shade. */
+  --color-error-900: #991b1b; /** Error color at 900 weight. Darker shade. */
+  --color-error-1000: #7f1d1d; /** Error color at 1000 weight. Very dark shade. */
+  --color-error-1100: #5c1010; /** Error color at 1100 weight. Near-darkest shade. */
+  --color-error-1200: #3d0909; /** Error color at 1200 weight. Darkest shade. */
+  --color-transparency-5: #000000; /** Black at 5% opacity. Extremely subtle overlay. */
+  --color-transparency-10: #000000; /** Black at 10% opacity. Very subtle overlay. */
+  --color-transparency-20: #000000; /** Black at 20% opacity. Subtle overlay. */
+  --color-transparency-60: #000000; /** Black at 60% opacity. Semi-transparent. */
+  --font-family-primary: Inter,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif; /** Primary font stack for UI and body text. */
+  --font-size-xs: 12px; /** Extra small (12px). Fine print, captions. */
+  --font-size-sm: 14px; /** Small (14px). Small text, labels. */
+  --font-size-md: 16px; /** Medium (16px). Base size for body text. */
+  --font-size-lg: 18px; /** Large (18px). Emphasized body text. */
+  --font-size-xl: 20px; /** Extra large (20px). Small headings. */
+  --font-size-2xl: 24px; /** 2XL (24px). H4 headings. */
+  --font-size-3xl: 30px; /** 3XL (30px). H3 headings. */
+  --font-size-4xl: 36px; /** 4XL (36px). H2 headings. */
+  --font-size-5xl: 48px; /** 5XL (48px). H1 headings. */
+  --font-size-6xl: 60px; /** 6XL (60px). Hero headings. */
+  --font-weight-regular: 400; /** Regular weight (400). Default for body text and most UI elements. */
+  --font-weight-medium: 500; /** Medium weight (500). For emphasis, labels, and navigation items. */
+  --font-weight-semibold: 600; /** Semibold weight (600). For subheadings and strong labels. */
+  --font-weight-bold: 700; /** Bold weight (700). For headings, strong emphasis, and CTAs. */
+  --line-height-tight: 1.1; /** Tight (1.10). For headings and compact single-line text. */
+  --line-height-snug: 1.25; /** Snug (1.25). For subheadings and compact text blocks. */
+  --line-height-normal: 1.5; /** Normal (1.5). Default for body text and most UI elements. Optimal readability. */
+  --letter-spacing-tight: -0.02em; /** Tight letter spacing (-0.02em). Use for large headings to create compact typography. */
+  --letter-spacing-normal: 0em; /** Normal letter spacing (0em). Default for most text. */
+  --letter-spacing-wide: 0.05em; /** Wide letter spacing (0.05em). Use for uppercase text and labels. */
+  --spacing-0: 0px; /** Zero spacing. Used for removing gaps. */
+  --spacing-1: 4px; /** Smallest spacing unit (4px). Tight spacing for compact layouts. */
+  --spacing-2: 8px; /** Base spacing unit (8px). Foundation of spacing scale. */
+  --spacing-3: 12px; /** Small spacing (12px). For compact padding. */
+  --spacing-4: 16px; /** Medium spacing (16px). Default for most layouts. */
+  --spacing-5: 20px; /** Medium-large spacing (20px). */
+  --spacing-6: 24px; /** Large spacing (24px). For comfortable padding. */
+  --spacing-8: 32px; /** Extra large spacing (32px). Section separation. */
+  --spacing-10: 40px; /** 2XL spacing (40px). Major section separation. */
+  --spacing-12: 48px; /** 3XL spacing (48px). Large section gaps. */
+  --spacing-16: 64px; /** 4XL spacing (64px). Hero section spacing. */
+  --spacing-20: 80px; /** 5XL spacing (80px). Large section spacing. */
+  --spacing-24: 96px; /** 6XL spacing (96px). Extra large section spacing. */
+  --spacing-32: 128px; /** 7XL spacing (128px). Hero section spacing. */
+  --spacing-40: 160px; /** 8XL spacing (160px). Maximum spacing for large layouts. */
+  --border-radius-none: 0px; /** No rounding. Sharp corners. */
+  --border-radius-sm: 4px; /** Small radius (4px). Subtle rounding. */
+  --border-radius-md: 8px; /** Medium radius (8px). Standard for buttons, inputs. */
+  --border-radius-lg: 12px; /** Large radius (12px). Cards and containers. */
+  --border-radius-xl: 16px; /** Extra large radius (16px). Prominent cards. */
+  --border-radius-2xl: 24px; /** 2XL radius (24px). Large cards. */
+  --border-radius-full: 9999px; /** Fully rounded. Pills and badges. */
+  --border-width-none: 0px; /** No border. */
+  --border-width-thin: 1px; /** Thin border (1px). Default for most borders. */
+  --border-width-medium: 2px; /** Medium border (2px). Emphasis. */
+  --border-width-thick: 4px; /** Thick border (4px). Strong emphasis. */
+  --breakpoint-mobile: 320px; /** Mobile breakpoint (320px). Minimum supported device width. */
+  --breakpoint-tablet: 768px; /** Tablet breakpoint (768px). iPad and tablet devices. */
+  --breakpoint-desktop: 1280px; /** Desktop breakpoint (1280px). Standard laptop and desktop screens. */
+  --breakpoint-wide: 1720px; /** Wide breakpoint (1720px). Large monitors and high-resolution displays. */
+}

@@ -1,0 +1,173 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+
+:root {
+  --transition-duration-instant: 0ms; /** Immediate state changes. */
+  --transition-duration-fast: 100ms; /** Hover states, tooltips, subtle feedback. */
+  --transition-duration-normal: 200ms; /** Default for most transitions, modals, dropdowns. */
+  --transition-duration-slow: 300ms; /** Complex animations, drawer panels. */
+  --transition-duration-slower: 500ms; /** Page transitions, complex slide animations. */
+  --z-index-base: 0; /** Default stacking context. */
+  --z-index-low: 1000; /** First level above base. */
+  --z-index-medium: 1100; /** Second level above base. */
+  --z-index-high: 1200; /** Third level above base. */
+  --z-index-highest: 1300; /** Top layer in the stacking hierarchy. */
+  --color-background-neutral-base-default: var(--color-neutral-100); /** Default page and section background. Use for main content areas, app shell. */
+  --color-background-neutral-base-hover: var(--color-neutral-200); /** Base background on hover. */
+  --color-background-neutral-base-pressed: var(--color-neutral-300); /** Base background on pressed/active state. */
+  --color-background-neutral-muted-default: var(--color-neutral-200); /** Muted background for secondary surfaces. Use for cards, panels, sidebars, containers. */
+  --color-background-neutral-muted-hover: var(--color-neutral-300); /** Muted background on hover. */
+  --color-background-neutral-muted-pressed: var(--color-neutral-400); /** Muted background on pressed/active state. */
+  --color-background-neutral-inverse-default: var(--color-neutral-1100); /** Inverse dark background. Use for dark sections, hero banners, footers, dark navigation. */
+  --color-background-neutral-inverse-hover: var(--color-neutral-1000); /** Inverse background on hover. */
+  --color-background-neutral-inverse-pressed: var(--color-neutral-900); /** Inverse background on pressed/active state. */
+  --color-background-brand-primary-default: var(--color-primary-700); /** Primary brand background. Use for CTAs, primary buttons, active toggles. */
+  --color-background-brand-primary-hover: var(--color-primary-800); /** Primary brand background on hover. */
+  --color-background-brand-primary-pressed: var(--color-primary-900); /** Primary brand background on pressed/active state. */
+  --color-background-brand-secondary-default: var(--color-secondary-700); /** Secondary brand background. Use for secondary buttons, accent elements. */
+  --color-background-brand-secondary-hover: var(--color-secondary-800); /** Secondary brand background on hover. */
+  --color-background-brand-secondary-pressed: var(--color-secondary-900); /** Secondary brand background on pressed/active state. */
+  --color-background-brand-primary-inverse-default: var(--color-primary-100); /** Soft primary brand background. Use for tinted sections, outlined button fills, light brand containers. */
+  --color-background-brand-primary-inverse-hover: var(--color-primary-200); /** Soft primary brand background on hover. */
+  --color-background-brand-primary-inverse-pressed: var(--color-primary-300); /** Soft primary brand background on pressed/active state. */
+  --color-background-brand-secondary-inverse-default: var(--color-secondary-100); /** Soft secondary brand background. Use for tinted sections, light accent containers. */
+  --color-background-brand-secondary-inverse-hover: var(--color-secondary-200); /** Soft secondary brand background on hover. */
+  --color-background-brand-secondary-inverse-pressed: var(--color-secondary-300); /** Soft secondary brand background on pressed/active state. */
+  --color-background-intent-error-default: var(--color-error-600); /** Error background. Use for error alerts, destructive buttons, validation error banners. */
+  --color-background-intent-error-hover: var(--color-error-700); /** Error background on hover. */
+  --color-background-intent-error-pressed: var(--color-error-800); /** Error background on pressed/active state. */
+  --color-background-intent-error-inverse-default: var(--color-error-100); /** Soft error background. Use for inline error alerts, error banners, validation containers. */
+  --color-background-intent-error-inverse-hover: var(--color-error-200); /** Soft error background on hover. */
+  --color-background-intent-error-inverse-pressed: var(--color-error-300); /** Soft error background on pressed/active state. */
+  --color-background-intent-warning-default: var(--color-warning-600); /** Warning background. Use for warning alerts, caution buttons, warning banners. */
+  --color-background-intent-warning-hover: var(--color-warning-700); /** Warning background on hover. */
+  --color-background-intent-warning-pressed: var(--color-warning-800); /** Warning background on pressed/active state. */
+  --color-background-intent-warning-inverse-default: var(--color-warning-100); /** Soft warning background. Use for inline warning alerts, caution banners. */
+  --color-background-intent-warning-inverse-hover: var(--color-warning-200); /** Soft warning background on hover. */
+  --color-background-intent-warning-inverse-pressed: var(--color-warning-300); /** Soft warning background on pressed/active state. */
+  --color-background-intent-success-default: var(--color-success-600); /** Success background. Use for success alerts, confirmation buttons, positive banners. */
+  --color-background-intent-success-hover: var(--color-success-700); /** Success background on hover. */
+  --color-background-intent-success-pressed: var(--color-success-800); /** Success background on pressed/active state. */
+  --color-background-intent-success-inverse-default: var(--color-success-100); /** Soft success background. Use for inline success alerts, confirmation banners. */
+  --color-background-intent-success-inverse-hover: var(--color-success-200); /** Soft success background on hover. */
+  --color-background-intent-success-inverse-pressed: var(--color-success-300); /** Soft success background on pressed/active state. */
+  --color-text-neutral-base-default: var(--color-neutral-1100); /** Primary text color. Near-black provides excellent readability. Use for body text, headings, primary content. */
+  --color-text-neutral-base-hover: var(--color-neutral-1000); /** Base text on hover. */
+  --color-text-neutral-base-pressed: var(--color-neutral-900); /** Base text on pressed/active state. */
+  --color-text-neutral-muted-default: var(--color-neutral-800); /** Secondary text color. Use for labels, helper text, timestamps, less important content. */
+  --color-text-neutral-muted-hover: var(--color-neutral-900); /** Muted text on hover. */
+  --color-text-neutral-muted-pressed: var(--color-neutral-1000); /** Muted text on pressed/active state. */
+  --color-text-neutral-subtle-default: var(--color-neutral-600); /** Tertiary text color. Use for placeholder text, disabled states. Meets WCAG AA for large text only. */
+  --color-text-neutral-subtle-hover: var(--color-neutral-700); /** Subtle text on hover. */
+  --color-text-neutral-subtle-pressed: var(--color-neutral-800); /** Subtle text on pressed/active state. */
+  --color-text-neutral-inverse-default: var(--color-neutral-100); /** Inverse text for dark backgrounds. Use on brand backgrounds, dark surfaces. Examples: Text on primary buttons. */
+  --color-text-neutral-inverse-hover: var(--color-neutral-200); /** Inverse text on hover. */
+  --color-text-neutral-inverse-pressed: var(--color-neutral-300); /** Inverse text on pressed/active state. */
+  --color-text-brand-primary-default: var(--color-primary-700); /** Primary brand text. Use for links, brand-colored text. Examples: Hyperlinks, brand labels. */
+  --color-text-brand-primary-hover: var(--color-primary-800); /** Primary brand text on hover. Use for link hover states. */
+  --color-text-brand-primary-pressed: var(--color-primary-900); /** Primary brand text on pressed/active state. */
+  --color-text-brand-secondary-default: var(--color-secondary-700); /** Secondary brand text. Use for secondary links and accents. */
+  --color-text-brand-secondary-hover: var(--color-secondary-800); /** Secondary brand text on hover. */
+  --color-text-brand-secondary-pressed: var(--color-secondary-900); /** Secondary brand text on pressed/active state. */
+  --color-text-intent-success-default: var(--color-success-700); /** Success text for positive feedback. Examples: Success messages, confirmation text. */
+  --color-text-intent-success-hover: var(--color-success-800); /** Success text on hover. */
+  --color-text-intent-success-pressed: var(--color-success-900); /** Success text on pressed/active state. */
+  --color-text-intent-success-muted-default: var(--color-success-500); /** Muted success text. Subtle positive feedback. */
+  --color-text-intent-success-muted-hover: var(--color-success-600); /** Muted success text on hover. */
+  --color-text-intent-success-muted-pressed: var(--color-success-700); /** Muted success text on pressed/active state. */
+  --color-text-intent-warning-default: var(--color-warning-700); /** Warning text for cautionary feedback. Examples: Warning messages, caution text. */
+  --color-text-intent-warning-hover: var(--color-warning-800); /** Warning text on hover. */
+  --color-text-intent-warning-pressed: var(--color-warning-900); /** Warning text on pressed/active state. */
+  --color-text-intent-warning-muted-default: var(--color-warning-600); /** Muted warning text. Subtle cautionary feedback. */
+  --color-text-intent-warning-muted-hover: var(--color-warning-700); /** Muted warning text on hover. */
+  --color-text-intent-warning-muted-pressed: var(--color-warning-800); /** Muted warning text on pressed/active state. */
+  --color-text-intent-error-default: var(--color-error-700); /** Error text for negative feedback. Examples: Error messages, validation text. */
+  --color-text-intent-error-hover: var(--color-error-800); /** Error text on hover. */
+  --color-text-intent-error-pressed: var(--color-error-900); /** Error text on pressed/active state. */
+  --color-text-intent-error-muted-default: var(--color-error-500); /** Muted error text. Subtle negative feedback. */
+  --color-text-intent-error-muted-hover: var(--color-error-600); /** Muted error text on hover. */
+  --color-text-intent-error-muted-pressed: var(--color-error-700); /** Muted error text on pressed/active state. */
+  --color-border-neutral-base-default: var(--color-neutral-400); /** Default border color. Use for dividers, input borders, card outlines. */
+  --color-border-neutral-base-hover: var(--color-neutral-500); /** Base border on hover. */
+  --color-border-neutral-base-pressed: var(--color-neutral-600); /** Base border on pressed/active state. */
+  --color-border-neutral-muted-default: var(--color-neutral-300); /** Subtle border color. Use for very subtle dividers. */
+  --color-border-neutral-muted-hover: var(--color-neutral-400); /** Muted border on hover. */
+  --color-border-neutral-muted-pressed: var(--color-neutral-500); /** Muted border on pressed/active state. */
+  --color-border-neutral-emphasis-default: var(--color-neutral-500); /** Emphasized border. Use for focused states, stronger dividers. */
+  --color-border-neutral-emphasis-hover: var(--color-neutral-600); /** Emphasis border on hover. */
+  --color-border-neutral-emphasis-pressed: var(--color-neutral-700); /** Emphasis border on pressed/active state. */
+  --color-border-brand-primary-default: var(--color-primary-700); /** Primary brand border. Use for focus rings, brand-accented containers. */
+  --color-border-brand-primary-hover: var(--color-primary-800); /** Primary brand border on hover. */
+  --color-border-brand-primary-pressed: var(--color-primary-900); /** Primary brand border on pressed/active state. */
+  --color-border-brand-secondary-default: var(--color-secondary-700); /** Secondary brand border. Use for secondary accented containers. */
+  --color-border-brand-secondary-hover: var(--color-secondary-800); /** Secondary brand border on hover. */
+  --color-border-brand-secondary-pressed: var(--color-secondary-900); /** Secondary brand border on pressed/active state. */
+  --color-border-intent-success-default: var(--color-success-600); /** Success border for positive feedback. Examples: Valid input borders. */
+  --color-border-intent-success-hover: var(--color-success-700); /** Success border on hover. */
+  --color-border-intent-success-pressed: var(--color-success-800); /** Success border on pressed/active state. */
+  --color-border-intent-success-muted-default: var(--color-success-400); /** Muted success border. Subtle positive feedback. */
+  --color-border-intent-success-muted-hover: var(--color-success-500); /** Muted success border on hover. */
+  --color-border-intent-success-muted-pressed: var(--color-success-600); /** Muted success border on pressed/active state. */
+  --color-border-intent-warning-default: var(--color-warning-600); /** Warning border for cautionary feedback. Examples: Warning input borders. */
+  --color-border-intent-warning-hover: var(--color-warning-700); /** Warning border on hover. */
+  --color-border-intent-warning-pressed: var(--color-warning-800); /** Warning border on pressed/active state. */
+  --color-border-intent-warning-muted-default: var(--color-warning-400); /** Muted warning border. Subtle cautionary feedback. */
+  --color-border-intent-warning-muted-hover: var(--color-warning-500); /** Muted warning border on hover. */
+  --color-border-intent-warning-muted-pressed: var(--color-warning-600); /** Muted warning border on pressed/active state. */
+  --color-border-intent-error-default: var(--color-error-600); /** Error border for validation states. Examples: Invalid input borders. */
+  --color-border-intent-error-hover: var(--color-error-700); /** Error border on hover. */
+  --color-border-intent-error-pressed: var(--color-error-800); /** Error border on pressed/active state. */
+  --color-border-intent-error-muted-default: var(--color-error-400); /** Muted error border. Subtle negative feedback. */
+  --color-border-intent-error-muted-hover: var(--color-error-500); /** Muted error border on hover. */
+  --color-border-intent-error-muted-pressed: var(--color-error-600); /** Muted error border on pressed/active state. */
+  --spacing-padding-xs: var(--spacing-1); /** Use for tight internal spacing in compact components. */
+  --spacing-padding-sm: var(--spacing-2); /** Use for compact components like small buttons and chips. */
+  --spacing-padding-md: var(--spacing-4); /** Default for buttons, input fields, cards, and standard components. */
+  --spacing-padding-lg: var(--spacing-6); /** Use for spacious components and large containers. */
+  --spacing-padding-xl: var(--spacing-8); /** Use for hero sections and major layout containers. */
+  --spacing-gap-xs: var(--spacing-1); /** Use for tight spacing between related elements. */
+  --spacing-gap-sm: var(--spacing-2); /** Use for compact layouts, button groups, and closely related content. */
+  --spacing-gap-md: var(--spacing-4); /** Default spacing between elements and content sections. */
+  --spacing-gap-lg: var(--spacing-6); /** Use for spacing between major content groups and sections. */
+  --spacing-gap-xl: var(--spacing-8); /** Use for separation between distinct page sections and major layout areas. */
+  --border-radius-none: var(--border-radius-none); /** No rounding. Sharp corners for strict geometric designs. */
+  --border-radius-sm: var(--border-radius-sm); /** Subtle corners. */
+  --border-radius-md: var(--border-radius-md); /** Standard for buttons, inputs, chips. */
+  --border-radius-lg: var(--border-radius-lg); /** Cards, modals, panels. */
+  --border-radius-xl: var(--border-radius-xl); /** Prominent cards. */
+  --border-radius-full: var(--border-radius-full); /** Fully rounded. Avatars, pills, badges, toggle switches. */
+  --border-width-none: var(--border-width-none); /** No border. */
+  --border-width-thin: var(--border-width-thin); /** Default for inputs, cards, dividers. */
+  --border-width-medium: var(--border-width-medium); /** Emphasis, focus rings. */
+  --border-width-thick: var(--border-width-thick); /** Strong emphasis, indicators. */
+  --typography-display: var(--font-weight-bold) var(--font-size-6xl)/var(--line-height-tight) Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif; /** Largest text for hero sections, marketing pages, landing page headlines. Use sparingly for maximum impact. */
+  --typography-heading-xl: var(--font-weight-bold) var(--font-size-5xl)/var(--line-height-tight) Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif; /** Use for page titles and primary headlines. Creates strong visual hierarchy. Examples: Dashboard title, landing page hero, main section headers. */
+  --typography-heading-lg: var(--font-weight-bold) var(--font-size-4xl)/var(--line-height-tight) Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif; /** Use for major section headings and important content divisions. Examples: Recent Activity, Account Details, primary section dividers. */
+  --typography-heading-md: var(--font-weight-semibold) var(--font-size-3xl)/var(--line-height-tight) Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif; /** Use for subsections within major sections and secondary content divisions. Examples: Personal Information, Billing History, subsection titles. */
+  --typography-heading-sm: var(--font-weight-semibold) var(--font-size-2xl)/var(--line-height-snug) Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif; /** Use for smaller subsections, card titles, and compact content divisions. Examples: Card headers, small section titles, group labels. */
+  --typography-body-lg-default: var(--font-weight-regular) var(--font-size-lg)/var(--line-height-normal) Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif; /** Use for emphasized paragraphs, lead text, introductions. */
+  --typography-body-lg-semibold: var(--font-weight-semibold) var(--font-size-lg)/var(--line-height-normal) Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif; /** Use for emphasized inline text, strong paragraphs. */
+  --typography-body-lg-bold: var(--font-weight-bold) var(--font-size-lg)/var(--line-height-normal) Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif; /** Use for strong emphasis in large body text. */
+  --typography-body-md-default: var(--font-weight-regular) var(--font-size-md)/var(--line-height-normal) Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif; /** Default for paragraphs, lists, main content. Optimal readability. */
+  --typography-body-md-semibold: var(--font-weight-semibold) var(--font-size-md)/var(--line-height-normal) Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif; /** Use for inline emphasis, important text within body content. */
+  --typography-body-md-bold: var(--font-weight-bold) var(--font-size-md)/var(--line-height-normal) Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif; /** Use for strong emphasis in standard body text. */
+  --typography-body-sm-default: var(--font-weight-regular) var(--font-size-sm)/var(--line-height-normal) Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif; /** Use for secondary content, captions, metadata. */
+  --typography-body-sm-semibold: var(--font-weight-semibold) var(--font-size-sm)/var(--line-height-normal) Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif; /** Use for emphasized secondary content, highlighted metadata. */
+  --typography-body-sm-bold: var(--font-weight-bold) var(--font-size-sm)/var(--line-height-normal) Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif; /** Use for strong emphasis in small body text. */
+  --typography-body-xs-default: var(--font-weight-regular) var(--font-size-xs)/var(--line-height-normal) Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif; /** Use for fine print, legal text, footnotes. */
+  --typography-body-xs-semibold: var(--font-weight-semibold) var(--font-size-xs)/var(--line-height-normal) Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif; /** Use for emphasized fine print, highlighted footnotes. */
+  --typography-body-xs-bold: var(--font-weight-bold) var(--font-size-xs)/var(--line-height-normal) Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif; /** Use for strong emphasis in extra small text. */
+  --typography-label-lg: var(--font-weight-medium) var(--font-size-md)/var(--line-height-normal) Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif; /** Large form labels, prominent tags. */
+  --typography-label-md: var(--font-weight-medium) var(--font-size-sm)/var(--line-height-normal) Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif; /** Form labels, input labels, navigation items. */
+  --typography-label-sm: var(--font-weight-medium) var(--font-size-xs)/var(--line-height-normal) Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif; /** Compact labels, tags, badges. */
+  --shadow-5: 0px 1px 3px 0px rgba(10, 10, 10, 0.05); /** Minimal depth for subtle elevation. */
+  --shadow-10: 0px 4px 6px -1px rgba(10, 10, 10, 0.1); /** Subtle depth for standard elevation. */
+  --shadow-20: 0px 10px 15px -3px rgba(10, 10, 10, 0.2); /** Moderate depth for elevated elements. */
+  --shadow-60: 0px 20px 25px -5px rgba(10, 10, 10, 0.6); /** Maximum depth for highest elevation. */
+  --icon-size-xs: var(--spacing-4); /** Use for inline icons within text and compact UI elements. */
+  --icon-size-sm: var(--spacing-5); /** Use for navigation items and small buttons. */
+  --icon-size-md: var(--spacing-6); /** Default icon size for standard buttons and UI elements. */
+  --icon-size-lg: var(--spacing-8); /** Use for prominent actions and feature highlights. */
+  --icon-size-xl: var(--spacing-10); /** Use for hero sections and marketing elements. */
+}
